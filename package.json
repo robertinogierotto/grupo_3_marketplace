@@ -1,0 +1,22 @@
+{
+  "name": "grupo_3_marketplace",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador DH",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertinogierotto/grupo_3_marketplace.git"
+  },
+  "author": "Grupo 3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertinogierotto/grupo_3_marketplace/issues"
+  },
+  "homepage": "https://github.com/robertinogierotto/grupo_3_marketplace#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
