@@ -15,3 +15,6 @@ Referentes del Mercado:
 3)https://www.start.com.ar/ - tiene similitud en cuanto a los productos ofrecidos-
 4)https://www.smarts.com.ar/ -posee una interfaz de diseño sencillo pero que cumple con todos los requisitos-
 5)https://compragamer.com/ -una de las tiendas online más populares en este mercado-
+
+Tablero de Trabajo:
+https://trello.com/b/FftCkrw4/marketplace-grupo-3

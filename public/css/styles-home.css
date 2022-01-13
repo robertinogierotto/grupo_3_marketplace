@@ -1,0 +1,144 @@
+.web-title {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-right: 30vw;
+    margin-left: 10px;
+    padding-top: 2%;
+    padding-left: 2%;
+    border-bottom: white 3px solid;
+}
+/* menu de productos */
+.product-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0px;
+}
+.product-menu img {
+    width: 60px;
+    align-self: center;
+}
+.product-menu h2 {
+    font-size: 1.2rem;
+}
+.product-menu article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-menu article {
+    color: white;
+}
+/* Menu de Ofertas */
+.offers-title {
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 30vw;
+    margin-left: 10px;
+    padding-top: 2%;
+    padding-left: 2%;
+    border-bottom: white 3px solid;
+}
+.offers-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.offers-menu article {
+    background-color: white;
+    border: solid 1px gray; 
+    width: 90vw;
+    margin: 10px;  
+    box-shadow: 0px 0px 15px 3px rgba(255,255,255,0.8)
+}
+.product-info {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    border-top: gray solid 2px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.price-discount {
+    font-size: 0.9rem;
+    align-self: flex-end;
+    padding: 5px;
+    border: green solid 2px;
+    width: 30%;
+}
+.discount {
+    color:green;
+}
+.product-name {
+    font-size: 1rem;
+    width: 70%;
+}
+.offers-menu img {
+    width: 100%;
+}
+@media (min-width: 480px) {
+    .web-title {
+        margin-right: 50vw;
+    }
+    .price-discount {
+        width: 35%;
+        align-self: baseline;
+        margin-left: 5px;
+    }
+    .product-name {
+        width: 65%;
+    }
+    .discount {
+        color:green;
+    }
+    .product-menu h2 {
+        font-size: 1.5rem;
+    }
+    .product-menu img {
+        width: 70px;
+    }
+    .offers-title {
+        font-size: 1.6rem;
+        margin-right: 50vw;
+    }
+    .offers-menu article {
+        width: 45vw;
+    }
+}
+
+/* media para computadoras */
+
+
+@media (min-width: 770px) {
+    
+    .web-title {
+        margin-right: 60vw;
+    }
+    .price-discount {
+        width: 45%;
+        align-self: baseline;
+        margin-left: 5px;
+    }
+    .product-name {
+        width: 55%;
+    }
+    .product-menu h2 {
+        font-size: 1.6rem;
+    }
+    .product-menu img {
+        width: 90px;
+    }
+    .offers-title {
+        font-size: 1.8rem;
+        margin-right: 60vw;
+    }
+    .offers-menu article {
+        width: 22vw;
+    }
+}

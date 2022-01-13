@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!------------------------------------------ head ---------------------------------------------------->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles-home.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>RODAWISE - TechShop</title>
 </head>
 <body>
+    <!------------------------------------------ header ---------------------------------------------------->
+    <!-- LOGO - REGISTER/LOGIN - NAV BAR - SEARCH BAR -->
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <a href="/"><img src="images/logo.jpg" alt="Logo Rodawise"></a>
+            </div>
+            <div class="reg-login">
+                <ul>
+                    <li><a href="/register">REGISTER</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i> </div>
+            <ul>
+                <li class="home"><a href="/">HOME</a></li>
+                <li class="products"><a href="#">PRODUCTOS</a></li>
+                <li class="who-we-are"><a href="/whoWeAre">QUIENES SOMOS</a></li>
+                <li class="contact"><a href="#">CONTACTO</a></li>
+            <a href="/productCart"><img src="images/carrito.png" alt="Carrito"></a>
+
+            </ul>
+        </nav>
+        <div class="form" action="#" method="GET">
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+    </header>
+    <!------------------------------------------ main ---------------------------------------------------->
+    <!-- TITULO - CATEGORIAS DE PRODUCTOS - OFERTAS DEL DIA -->
+    <main>
+        <h1 class="web-title">LOS MEJORES PRODUCTOS <br> EN TECNOLOGÍA</h1>
+        <section class="product-menu">
+            <article>
+                <h2>CELULARES</h2>
+                <a href="#"><img src="images/celular.png" alt="celular"></a>
+            </article>
+            <article>
+                <h2>VIDEO</h2>
+                <a href="#"><img src="images/camara.png" alt="camara"></a>
+            </article>
+            <article>
+                <h2>GAMER</h2>
+                <a href="#"><img src="images/auriculares.png" alt="auriculares"></a>
+            </article>        
+        </section>
+        <h2 class="offers-title">OFERTAS DEL DÍA</h2>
+        <section class="offers-menu">
+            <article>
+                <a href="#"><img src="images/auriculares-real.jpg" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ 10000</p>
+                        <p class="discount">35% Off!</p>                    
+                    </div>
+                    <h3 class="product-name">Auriculares Gamer JBL Quantum 400</h3>
+                </div>
+            </article>
+            <article>
+                <a href="#"><img src="images/camara-real.jpg" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ 80000</p>
+                        <p class="discount">25% Off!</p>                    
+                    </div>
+                    <h3 class="product-name">Camara Digital POWERSHOT</h3>
+                </div>
+            </article>
+            <article>
+                <a href="#"><img src="images/celular-real.jpg" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ 140000</p>
+                        <p class="discount">30% Off!</p>
+                    </div>
+                    <h3 class="product-name">Apple IPhone SE 2nd Generacion 64Gb</h3>
+                </div>
+            </article>
+            <article>
+                <a href="#"><img src="images/silla-gamer.jpg" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ 39999</p>
+                        <p class="discount">40% Off!</p>                    
+                    </div>
+                    <h3 class="product-name">Silla Gamer Makkax</h3>
+                </div>
+            </article>
+
+        </section>
+    </main>
+    <!------------------------------------------ footer ---------------------------------------------------->
+
+    <footer>
+        <p class="footer-text"><i class="fa fa-copyright"></i> 2022 TECHSHOP RODAWISE - Todos los derechos reservados</p>
+        <div class="favicon">
+            <img src="images/favicon.jpg" alt="Logo Mini">
+        </div>
+    </footer>
 </body>
 </html>

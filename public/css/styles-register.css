@@ -1,0 +1,25 @@
+.home a {
+    color: white;
+    display: none;
+}
+.register a {
+    color: green !important;
+}
+
+/* AGREGAR CODIGO ACA PARA MOVILES  */
+
+
+
+
+
+@media (min-width: 480px) {
+    .home a {
+        display:block;
+    }
+    /* AGREGAR CODIGO ACA PARA TABLETS */
+}
+
+
+@media (min-width: 770px) {
+    /* AGREGAR CODIGO ACA PARA PC */
+}
