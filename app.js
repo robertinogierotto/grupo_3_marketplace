@@ -30,3 +30,7 @@ app.get('/login', (req,res)=>{
 app.get('/whoWeAre', (req,res)=>{
     res.sendFile(__dirname + '/views/whoWeAre.html');
 });
+
+app.get('/productDetails', (req,res)=>{
+    res.sendFile(__dirname + '/views/productDetails.html');
+});
