@@ -42,6 +42,7 @@
     bottom: 5px;
     left: 10px;
     padding-top: 8px;
+    transition: all 0.5s;
 }
 .add-to-cart {
     width: 40%;
@@ -55,7 +56,12 @@
     position: absolute;
     bottom: 5px;
     right: 10px;
+    transition: all 0.5s;
 }
+.add-to-cart:hover, .buy-now:hover, .add-to-cart-2:hover, .buy-now-2:hover {
+    background-color: green;
+}
+
 .add-to-cart-2, .buy-now-2 {
     display: none;
 }
@@ -169,6 +175,7 @@
         position: absolute;
         bottom: 5px;
         right: 10px;
+        transition: all 0.5s;
     }
     .buy-now-2 {
         display: block;
@@ -184,6 +191,7 @@
         bottom: 5px;
         left: 10px;
         padding-top: 8px;
+        transition: all 0.5s;
     }
 }
 
