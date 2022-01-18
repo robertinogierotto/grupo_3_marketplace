@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!------------------------------------------ head ---------------------------------------------------->
+<!------------------------------------------ head ---------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-login.css">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <title>RODAWISE - TechShop</title>
 </head>
+
 <body>
     <!------------------------------------------ header ---------------------------------------------------->
     <!-- LOGO - REGISTER/LOGIN - NAV BAR - SEARCH BAR -->
@@ -31,13 +35,14 @@
         </div>
         <nav>
             <div class="burger-menu">
-                <i class="fa fa-bars burger"></i> </div>
+                <i class="fa fa-bars burger"></i>
+            </div>
             <ul>
                 <li class="home"><a href="/">HOME</a></li>
                 <li class="products"><a href="#">PRODUCTOS</a></li>
                 <li class="who-we-are"><a href="/whoWeAre">QUIENES SOMOS</a></li>
                 <li class="contact"><a href="#">CONTACTO</a></li>
-            <a href="/productCart"><img src="images/carrito.png" alt="Carrito"></a>
+                <a href="/productCart"><img src="images/carrito.png" alt="Carrito"></a>
 
             </ul>
         </nav>
@@ -48,19 +53,47 @@
     </header>
     <!------------------------------------------ main ---------------------------------------------------->
     <main>
-
         <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
+        <h3>LOGIN</h3>
+
+        <form action="/" method="post" class="marco">
+            <div class="usuario">
+                <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
+                <div>
+                    <input type="text" name="usuario" required />
+                </div>
+            </div>
+
+            <div class="contraseña">
+                <label for="password">Contraseña<span class="red">*</span></label>
+                <div class="contenedor_ojo">
+                    <input type="password" name="password" required /><span
+                        class="fa fa-fw fa-eye password-icon show-password"></span>
+                </div>
+            </div>
+            <div class="recordar">
+                <label><input type="checkbox" name="recuerdame" value="recuerdame" />
+                    Recuerdame</label>
+
+                <button class="entrar" type="submit">Entrar</button>
+            </div>
+
+            <div class="olvidaste">
+                <label>¿Olvidaste tu contraseña?</label>
+            </div>
+        </form>
 
     </main>
-    
-    
+
     <!------------------------------------------ footer ---------------------------------------------------->
 
     <footer>
-        <p class="footer-text"><i class="fa fa-copyright"></i> 2022 TECHSHOP RODAWISE - Todos los derechos reservados</p>
+        <p class="footer-text"><i class="fa fa-copyright"></i> 2022 TECHSHOP RODAWISE - Todos los derechos reservados
+        </p>
         <div class="favicon">
             <img src="images/favicon.jpg" alt="Logo Mini">
         </div>
     </footer>
 </body>
+
 </html>
