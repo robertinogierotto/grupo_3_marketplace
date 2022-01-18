@@ -1,12 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
 .home a {
     color: white;
     display: none;
 }
 .product-cart {
     background-color: green;
+
+} 
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    height: 423px;
+}
+.article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
 }
 
-/* AGREGAR CODIGO ACA PARA MOVILES  */
+.nombre {
+    font-size: 16px;
+    font-weight: normal;
+    
+}
+.image img{
+    margin-top: auto;
+    margin-bottom: 20px;
+    Width: 20vw;
+    
+
+}
+.price{
+    font-size: 18px;
+    flex-grow: 3;
+}
+.eliminar{
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column; 
+}
+
 
 
 
@@ -16,10 +61,14 @@
     .home a {
         display:block;
     }
-    /* AGREGAR CODIGO ACA PARA TABLETS */
+    .product-cart{
+        display:flex;
+    }
 }
 
 
 @media (min-width: 770px) {
-    /* AGREGAR CODIGO ACA PARA PC */
+    .product-cart{
+       display:flex; 
+    }
 }
