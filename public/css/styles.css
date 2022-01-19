@@ -100,7 +100,8 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    width: 60vw;
 }
 header .form .submit{
     background-color: #3598FE;
@@ -116,6 +117,7 @@ header .form {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 header .form .submit i {
     width: fit-content;
@@ -187,6 +189,10 @@ footer {
     nav img {
         width: 40px;
     }
+    header .form .input{
+        width: 40vw;
+        font-size: 1rem;
+    }
 }
 
 /* media para computadoras */
@@ -220,6 +226,10 @@ footer {
         width: 50px;
     }
     .footer-text{
+        font-size: 1.2rem;
+    }
+    header .form .input{
+        width: 30vw;
         font-size: 1.2rem;
     }
 }
