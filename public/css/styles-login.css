@@ -14,6 +14,7 @@ main h3 {
   text-align: left;
   padding: 5% 5%;
   font-size: 1.3rem;
+  margin-left: 3%;
 }
 main .marco .usuario label {
   color: white;
@@ -63,7 +64,6 @@ main .marco .contraseña input {
   cursor: pointer;
   color: white;
 }
-
 main .recordar label {
   color: white;
   font-size: 0.7rem;
@@ -75,7 +75,6 @@ main .recordar label {
   padding-top: 5%;
 }
 .marco {
-  border: outset 2px white;
   padding-left: 3%;
   margin-left: 5%;
   margin-right: 55%;
@@ -85,7 +84,6 @@ main {
   padding-bottom: 10%;
   justify-content: left;
 }
-
 @media (min-width: 480px) {
   .home a {
     display: block;
@@ -96,6 +94,7 @@ main {
     text-align: left;
     padding: 5% 5%;
     font-size: 1.6rem;
+    margin-left: 3%;
   }
   main .marco .usuario label {
     color: white;
@@ -151,7 +150,6 @@ main {
     padding-top: 5%;
   }
   .marco {
-    border: outset 2px white;
     padding-left: 3%;
     margin-left: 5%;
     margin-right: 5%;
@@ -161,7 +159,6 @@ main {
     padding-bottom: 10%;
   }
 }
-
 @media (min-width: 770px) {
   /* AGREGAR CODIGO ACA PARA PC */
   main h3 {
@@ -169,6 +166,7 @@ main {
     text-align: left;
     padding: 3% 5%;
     font-size: 1.8rem;
+    margin-left: 3%;
   }
   main .marco .usuario label {
     color: white;
@@ -201,7 +199,7 @@ main {
     z-index: 1;
     padding-top: 7px;
     font-size: 20px;
-    right: 5%;
+    right: 3%;
     top: 2px;
   }
   .entrar {
@@ -224,13 +222,11 @@ main {
     padding-top: 3%;
   }
   .marco {
-    border: outset 2px white;
     padding-left: 3%;
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 1%;
   }
-
   main {
     padding-bottom: 4%;
   }
