@@ -27,9 +27,18 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 60vw;
     text-align: center;
     margin: 20px;
+}
+.container2{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        text-align: center;
+        margin-left: 50%;
+        margin-bottom: 10%;
 }
 .article {
 
@@ -56,6 +65,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: yellow;
+    font-weight: 700;
+    
 }
 .product-1 {
     display: flex;
@@ -80,6 +91,16 @@
 .eliminar {
     width: 15%;
     margin-right: 40px;
+}
+.add {
+    width: 20%;
+    color: #000000;
+    background-color: #ff0000;
+    font-family: Arial;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 3px;
+    
 }
 .q-input {
     width: 30px;
@@ -120,6 +141,18 @@
     padding: 5px;
     margin-bottom: 20px;
 }
+.agregarProducto {
+    margin: 10%;
+    width: 30%;
+    font-family: Arial;
+    color: black;
+    font-size: 20px;
+    background: yellow;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 30%;
+}
+
 
 
 
