@@ -8,19 +8,21 @@
     color: white;
     display: none;
 }
-.product-cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.cart-title {
+  color: white;
+  text-align: left;
+  font-size: 1.6rem;
+  margin-right: 70vw;
+  margin-left: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-bottom: white 3px solid;
+  align-self: normal;
 }
 .product-cart {
     background-color: green;
 
 } 
-.cart-title {
-    width: 100%;
-    text-align: center;
-}
 .container{
     background-color: white;
     display: flex;
@@ -60,21 +62,11 @@
 }
 .titles {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: yellow;
     font-weight: 700;
     
-}
-.titles-rigth {
-    width: 15%;
-    margin-left: 40px;
-}
-.titles-left {
-    display: flex;
-    width: 85%;
-    justify-content: space-evenly;
-    align-items: center;
 }
 .product-1 {
     display: flex;
@@ -82,16 +74,23 @@
     align-items: center;
 }
 .img {
-    width: 20%;
+    width: 18%;
 }
 .name {
-    width: 20%;
+    width: 15%;
+    margin-left: 30px;
+    font-size: 1.3rem;
 }
 .price {
-    width: 20%;
+    width: 10%;
 }
 .quantity {
-    width: 20%;
+    width: 15%;
+    margin-right: 80px;
+}
+.eliminar {
+    width: 15%;
+    margin-right: 40px;
 }
 .add {
     width: 20%;
@@ -110,6 +109,37 @@
     display: flex;
     width: 100%;
     align-items: center;
+    border-top: black 2px dotted;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.product-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container2 {
+    background-color: white;
+    width: 300px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+.total {
+    background-color: yellow;
+    padding: 5px;
+}
+.total-price {
+    text-align: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.confirm {
+    background-color: #3598FE;
+    align-self: flex-end;
+    margin-right: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 .addproduct {
     margin: 10%;
@@ -134,14 +164,10 @@
     .home a {
         display:block;
     }
-    .product-cart{
-        display:flex;
-    }
+    
 }
 
 
 @media (min-width: 770px) {
-    .product-cart{
-       display:flex; 
-    }
+   
 }
