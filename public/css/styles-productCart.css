@@ -31,7 +31,7 @@
     margin: 20px;
 }
 .container2{
-        background-color: white;
+        background-color: yellow;
         display: flex;
         flex-direction: column;
         width: 20%;
@@ -139,12 +139,12 @@
     padding: 5px;
     margin-bottom: 20px;
 }
-.agregarProducto {
+.addproduct {
     margin: 10%;
-    width: 30%;
+    width: 70%;
     font-family: Arial;
     color: black;
-    font-size: 20px;
+    font-size: 30px;
     background: yellow;
    margin-left: auto;
    margin-right: auto;
