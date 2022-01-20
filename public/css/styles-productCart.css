@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 .home a {
     color: white;
@@ -100,7 +99,6 @@
     font-size: 20px;
     box-sizing: border-box;
     padding: 3px;
-    
 }
 .q-input {
     width: 30px;
