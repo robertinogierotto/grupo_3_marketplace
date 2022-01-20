@@ -141,7 +141,7 @@
         position: relative;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        height: 40vh;
+        height: 300px;
         width: 50vw;
         margin: 8px;
     }
@@ -208,7 +208,7 @@
         position: relative;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        height: 45vh;
+        height: 350px;
         width: 60vw;
         margin: 12px;
     }
