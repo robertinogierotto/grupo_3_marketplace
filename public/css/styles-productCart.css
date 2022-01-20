@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
 }
 .home a {
     color: white;
@@ -12,7 +11,7 @@
   color: white;
   text-align: left;
   font-size: 1.6rem;
-  margin-right: 70vw;
+  margin-right: 40vw;
   margin-left: 10px;
   padding-top: 2%;
   padding-left: 2%;
@@ -27,7 +26,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 90vw;
     text-align: center;
     margin: 20px;
 }
@@ -61,17 +60,14 @@
     flex-grow: 3;
 }
 .titles {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: yellow;
-    font-weight: 700;
-    
+    display: none;
 }
 .product-1 {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 10px;
 }
 .img {
     width: 18%;
@@ -79,28 +75,31 @@
 .name {
     width: 15%;
     margin-left: 30px;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 }
 .price {
-    width: 10%;
+    width: 20%;
+    align-self: center;
+    margin-left: 30px;
 }
 .quantity {
-    width: 15%;
-    margin-right: 80px;
+    width: 45%;
+    margin-top: 20px;
 }
 .eliminar {
     width: 15%;
-    margin-right: 40px;
+    margin-left: 190px;
+}
+.plus-btn i, .minus-btn i {
+    font-size: 0.9rem;
 }
 .add {
-    width: 20%;
     color: #000000;
     background-color: #ff0000;
     font-family: Arial;
     font-size: 20px;
     box-sizing: border-box;
     padding: 3px;
-    
 }
 .q-input {
     width: 30px;
@@ -108,10 +107,10 @@
 .product-2 {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     align-items: center;
+    padding: 10px;
     border-top: black 2px dotted;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 .product-cart {
     display: flex;
@@ -120,7 +119,7 @@
 }
 .container2 {
     background-color: white;
-    width: 300px;
+    width: 200px;
     margin-bottom: 20px;
     align-self: flex-end;
     margin-right: 20px;
@@ -128,46 +127,129 @@
 .total {
     background-color: yellow;
     padding: 5px;
+    font-size: 1rem;
 }
 .total-price {
     text-align: right;
     margin-bottom: 5px;
     margin-right: 5px;
+    font-size: 1rem;
 }
 .confirm {
-    background-color: #3598FE;
+    background-color: yellow;
     align-self: flex-end;
     margin-right: 20px;
     padding: 5px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 .addproduct {
     margin: 10%;
-    width: 70%;
-    font-family: Arial;
     color: black;
     font-size: 30px;
     background: yellow;
-   margin-left: auto;
-   margin-right: auto;
-   border-radius: 30%;
+    border-radius: 10px;
+    font-size: 1.2rem;
 }
-
-
-
-
-
-
 
 
 @media (min-width: 480px) {
     .home a {
         display:block;
     }
-    
+    .titles {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: yellow;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    .cart-title {
+        margin-right: 70vw;
+    }
+    .product-1 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: center;
+    }
+    .img {
+        width: 18%;
+    }
+    .name {
+        width: 15%;
+        font-size: 1rem;
+        margin-left: 15px;
+    }
+    .price {
+        width: 20%;
+        margin-left: 45px;
+    }
+    .quantity {
+        width: 15%;
+        margin-left: 90px;
+    }
+    .eliminar {
+        width: 15%;
+        margin-left: 100px;
+        margin-right: 20px;
+    }
+    .product-2 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-items: center;
+        border-top: black 2px dotted;
+    }
+    .container2 {
+        background-color: white;
+        width: 200px;
+        margin-bottom: 20px;
+        align-self: flex-end;
+        margin-right: 20px;
+        margin-top: -100px;
+    }
+    .total {
+        background-color: yellow;
+        padding: 5px;
+    }
+    .addproduct {
+        margin: 10%;
+        width: 70%;
+        font-family: Arial;
+        color: black;
+        background: yellow;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+    .confirm {
+        background-color: yellow;
+        align-self: flex-end;
+        margin-right: 20px;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
 }
 
 
 @media (min-width: 770px) {
     
+    .titles {
+        font-size: 1.3rem;
+    }
+    .addproduct {
+        font-size: 1.4rem;
+    }
+    .confirm {
+        font-size: 1.4rem;
+    }
+    .total-price {
+        font-size: 1.4rem;
+    }
+    .product-1 {
+        padding: 0;
+    }
 }
