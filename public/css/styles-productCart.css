@@ -30,74 +30,53 @@
     text-align: center;
     margin: 20px;
 }
-.container2{
-        background-color: yellow;
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        text-align: center;
-        margin-left: 50%;
-        margin-bottom: 10%;
-}
-.article {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;  
-}
-.nombre {
-    font-size: 16px;
-    font-weight: normal;
-    
-}
-.img {
-    width: 100px;  
-
-}
-.price{
-    font-size: 18px;
-    flex-grow: 3;
-}
 .titles {
     display: none;
 }
 .product-1 {
     display: flex;
-    width: 100%;
+    width: 90vw;
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
+    position: relative;
+
 }
 .img {
-    width: 18%;
+    width: 22vw;
+    margin-bottom: 5px;
 }
 .name {
-    width: 15%;
-    margin-left: 30px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    width: 30vw;
+    position: relative;
+    left: 3%;;
 }
 .price {
-    width: 20%;
-    align-self: center;
-    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 30vw;
+    position: relative;
+    left: 30px;  
 }
 .quantity {
-    width: 45%;
-    margin-top: 20px;
+    font-size: 1rem;
+    position: relative;
+    left: 10px;
 }
 .eliminar {
-    width: 15%;
-    margin-left: 190px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;   
 }
 .plus-btn i, .minus-btn i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .add {
     color: #000000;
     background-color: #ff0000;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 1rem;
     box-sizing: border-box;
     padding: 3px;
 }
@@ -106,11 +85,12 @@
 }
 .product-2 {
     display: flex;
-    width: 100%;
+    width: 90vw;
     flex-wrap: wrap;
     align-items: center;
     padding: 10px;
     border-top: black 2px dotted;
+    position: relative;
 }
 .product-cart {
     display: flex;
@@ -119,10 +99,8 @@
 }
 .container2 {
     background-color: white;
-    width: 200px;
-    margin-bottom: 20px;
     align-self: flex-end;
-    margin-right: 20px;
+    margin: 10px 5vw;
 }
 .total {
     background-color: yellow;
@@ -138,18 +116,21 @@
 .confirm {
     background-color: yellow;
     align-self: flex-end;
-    margin-right: 20px;
+    margin-right: 5vw;
     padding: 5px;
     margin-bottom: 20px;
     border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .addproduct {
-    margin: 10%;
+    padding: 10px;
     color: black;
-    font-size: 30px;
     background: yellow;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    align-self: stretch;
+    margin: 0px 5vw;
 }
 
 
@@ -168,68 +149,29 @@
     .cart-title {
         margin-right: 70vw;
     }
-    .product-1 {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-        align-items: center;
-    }
     .img {
-        width: 18%;
+        width: 12vw;
     }
     .name {
-        width: 15%;
         font-size: 1rem;
-        margin-left: 15px;
+        width: 22vw;
     }
     .price {
-        width: 20%;
-        margin-left: 45px;
+        font-size: 1.1rem;
+        left: 3%;
+        width: 0;
     }
     .quantity {
-        width: 15%;
-        margin-left: 90px;
+        font-size: 1.4rem;
+        left: 22.5%;
     }
     .eliminar {
-        width: 15%;
-        margin-left: 100px;
-        margin-right: 20px;
-    }
-    .product-2 {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-        align-items: center;
-        border-top: black 2px dotted;
-    }
-    .container2 {
-        background-color: white;
-        width: 200px;
-        margin-bottom: 20px;
-        align-self: flex-end;
-        margin-right: 20px;
-        margin-top: -100px;
-    }
-    .total {
-        background-color: yellow;
-        padding: 5px;
+        position: relative;
+        left: 34%;
+        right: 0;
+        bottom: 0;
     }
     .addproduct {
-        margin: 10%;
-        width: 70%;
-        font-family: Arial;
-        color: black;
-        background: yellow;
-        border-radius: 10px;
-        font-size: 1.2rem;
-    }
-    .confirm {
-        background-color: yellow;
-        align-self: flex-end;
-        margin-right: 20px;
-        padding: 5px;
-        margin-bottom: 20px;
-        border-radius: 10px;
         font-size: 1.2rem;
     }
 }
@@ -240,16 +182,114 @@
     .titles {
         font-size: 1.3rem;
     }
+    .img {
+        width: 15vw;
+    }
+    .name {
+        font-size: 1.1rem;
+        width: 20vw;
+        left: 0%;
+    }
+    .price {
+        font-size: 1.3rem;
+        left: 2%;
+    }
+    .quantity {
+        font-size: 1.5rem;
+        left: 23%;;
+    }
+    .add {
+        font-size: 1.4rem;
+    }
+    .eliminar {
+        left: 35%;
+    }
     .addproduct {
         font-size: 1.4rem;
     }
     .confirm {
         font-size: 1.4rem;
     }
+    .total {
+        font-size: 1.1rem;
+    }
     .total-price {
         font-size: 1.4rem;
     }
-    .product-1 {
-        padding: 0;
+}
+@media (min-width: 1200px) {
+    .titles {
+        font-size: 1.5rem;
     }
+    .img {
+        width: 15vw;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .price {
+        font-size: 1.6rem;
+        left: 4%;
+    }
+    .quantity {
+        font-size: 1.8rem;
+        left: 25%;;
+    }
+    .add {
+        font-size: 1.6rem;
+    }
+    .eliminar {
+        left: 39%;
+    }
+    .addproduct {
+        font-size: 1.6rem;
+    }
+    .confirm {
+        font-size: 2rem;
+    }
+    .total {
+        font-size: 1.4rem;
+    }
+    .total-price {
+        font-size: 1.6rem;
+    }
+
+}
+@media (min-width: 1700px) {
+    .titles {
+        font-size: 1.6rem;
+    }
+    .img {
+        width: 15vw;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .price {
+        font-size: 1.8rem;
+        left: 6%;
+    }
+    .quantity {
+        font-size: 1.9rem;
+        left: 26%;
+    }
+    .add {
+        font-size: 1.8rem;
+    }
+    .eliminar {
+        left: 41%;
+    }
+    .addproduct {
+        font-size: 1.9rem;
+    }
+    .confirm {
+        font-size: 2.3rem;
+    }
+    .total {
+        font-size: 1.8rem;
+    }
+    .total-price {
+        font-size: 1.9rem;
+    }
+
 }

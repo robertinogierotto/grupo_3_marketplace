@@ -41,7 +41,6 @@
     position: absolute;
     bottom: 5px;
     left: 10px;
-    padding-top: 8px;
     transition: all 0.5s;
 }
 .add-to-cart {
@@ -190,7 +189,6 @@
         position: absolute;
         bottom: 5px;
         left: 10px;
-        padding-top: 8px;
         transition: all 0.5s;
     }
 }
