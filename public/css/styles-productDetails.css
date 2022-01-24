@@ -58,7 +58,8 @@
     transition: all 0.5s;
 }
 .add-to-cart:hover, .buy-now:hover, .add-to-cart-2:hover, .buy-now-2:hover {
-    background-color: green;
+    background-color: yellow;
+    color: black;
 }
 
 .add-to-cart-2, .buy-now-2 {
@@ -164,7 +165,7 @@
     .add-to-cart-2 {
         display: block;
         width: 40%;
-        color: white !important;
+        color: white;
         font-size: 1rem;
         background-color: #3598FE;
         text-align: center;
@@ -179,7 +180,7 @@
     .buy-now-2 {
         display: block;
         width: 40%;
-        color: white !important;
+        color: white;
         font-size: 1rem;
         background-color: #3598FE;
         text-align: center;

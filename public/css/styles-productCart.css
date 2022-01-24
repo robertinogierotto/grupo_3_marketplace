@@ -122,6 +122,7 @@
     border-radius: 10px;
     font-size: 1.3rem;
     font-weight: 600;
+    transition: all 0.5s;
 }
 .addproduct {
     padding: 10px;
@@ -131,6 +132,11 @@
     font-size: 1rem;
     align-self: stretch;
     margin: 0px 5vw;
+    transition: all 0.5s;
+}
+.addproduct:hover, .confirm:hover {
+    background-color: #3598FE;
+    color: white;
 }
 
 

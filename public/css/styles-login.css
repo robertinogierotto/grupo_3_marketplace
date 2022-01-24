@@ -1,14 +1,18 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 .home a {
   color: white;
   display: none;
 }
-.login a {
-  color: green !important;
-}
 /* AGREGAR CODIGO ACA PARA MOVILES  */
-* {
-  box-sizing: border-box;
-}
+.login1 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+} 
 main h3 {
   color: white;
   text-align: left;
@@ -45,27 +49,29 @@ main .marco .contraseña input {
   padding: 7px;
   margin-bottom: 5%;
 }
-.contenedor_ojo .password-icon {
+.password-icon {
   color: rgb(68, 65, 65);
-  position: absolute;
-  z-index: 1;
-  padding-top: 7px;
-  right: 20%;
-  font-size: 20px;
+    position: relative;
+    z-index: 1;
+    padding-top: 7px;
+    right: 35px;
+    top: 4px;;
 }
 .entrar {
-  background: #d4d8d8;
-  color: black;
+  background: #3598FE;
+  color: white;
   font-weight: bold;
   font-size: 14px;
   padding: 3px;
   box-sizing: border-box;
   border-radius: 4px;
+  width: 160px;
+  transition: all 0.5s;
 }
 .entrar:hover {
-  background-color: #1877f2;
+  background-color: yellow;
   cursor: pointer;
-  color: white;
+  color: black;
 }
 main .recordar label {
   color: white;
@@ -78,166 +84,41 @@ main .recordar label {
   padding-top: 5%;
 }
 .marco {
-  padding-left: 3%;
-  margin-left: 5%;
-  margin-right: 55%;
   width: 90vw;
-}
-main {
-  padding-bottom: 10%;
-  justify-content: left;
-}
-.marco-borde {
   border: grey 2px solid;
-  width: 95vw;
-  margin: 20px 2.5vw;
+  margin: 10px;
+  align-self: center;
+  padding: 10px;
+
 }
+
 @media (min-width: 480px) {
   .home a {
     display: block;
   }
   /* AGREGAR CODIGO ACA PARA TABLETS */
   main h3 {
-    font-size: 1.7rem;
-    
-  }
-  main .marco .usuario label {
-    color: white;
-    font-size: 1rem;
-  }
-  main .contraseña label {
-    color: white;
-    font-size: 1rem;
-  }
-  main .marco .usuario input {
-    width: 85%;
-    border-radius: 4px;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 12px;
-    padding: 7px;
-    max-width: 400px;
-  }
-  main .marco .contraseña input {
-    width: 85%;
-    border-radius: 4px;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 12px;
-    padding: 7px;
-    margin-bottom: 5%;
-    max-width: 400px;
-  }
-  .contenedor_ojo .password-icon {
-    color: rgb(68, 65, 65);
-    position: relative;
-    z-index: 1;
-    padding-top: 7px;
-    font-size: 20px;
-    right: 6%;
-    top: 3px;
-  }
-  .entrar {
-    background: #d4d8d8;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 3px;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-  main .recordar label {
-    color: white;
-    font-size: 1rem;
-  }
-  .olvidaste {
-    color: white;
-    font-size: 1rem;
-    padding-bottom: 5%;
-    padding-top: 5%;
+    font-size: 1.6rem;
+    width: 60vw;
   }
   .marco {
-    padding-left: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  main {
-    padding-bottom: 10%;
-  }
-  .marco-borde {
     width: 70vw;
-    margin: 20px 25vw 10px 5vw;
+    align-self: flex-start;
+  }
+  main .marco .usuario label, main .contraseña label, main .recordar label, .olvidaste {
+    font-size: 1rem;
   }
 }
 @media (min-width: 770px) {
   /* AGREGAR CODIGO ACA PARA PC */
   main h3 {
     font-size: 1.8rem;
-    margin-right: 55vw;
-  }
-  main .marco .usuario label {
-    color: white;
-    font-size: 1rem;
-  }
-  main .contraseña label {
-    color: white;
-    font-size: 1rem;
-  }
-  main .marco .usuario input {
-    width: 85%;
-    border-radius: 4px;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 12px;
-    padding: 7px;
-    max-width: 400px;
-  }
-  main .marco .contraseña input {
-    width: 85%;
-    border-radius: 4px;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-size: 12px;
-    padding: 7px;
-    margin-bottom: 1%;
-    max-width: 400px;
-  }
-  .contenedor_ojo .password-icon {
-    color: rgb(68, 65, 65);
-    position: relative;
-    z-index: 1;
-    padding-top: 7px;
-    font-size: 20px;
-    right: 3%;
-    top: 2px;
-  }
-  .entrar {
-    background: #d4d8d8;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 3px;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-  main .recordar label {
-    color: white;
-    font-size: 1rem;
-  }
-  .olvidaste {
-    color: white;
-    font-size: 1rem;
-    padding-bottom: 3%;
-    padding-top: 3%;
+    width: 50vw;
   }
   .marco {
-    padding-left: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 1%;
+    width: 60vw;
   }
-  main {
-    padding-bottom: 4%;
-  }
-  .marco-borde {
-    width: 50vw;
-    margin: 20px 45vw 10px 5vw;
+  main .marco .usuario label, main .contraseña label, main .recordar label, .olvidaste {
+    font-size: 1.1rem;
   }
 }
