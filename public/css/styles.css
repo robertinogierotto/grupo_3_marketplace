@@ -126,7 +126,8 @@ header .form .submit i {
 /* MAIN */
 main {
     /* background-image: url('/images/fondo.jpg');
-    background-position: right; */
+    background-position: right;
+    background-size: cover; */
     /* background-image: url('/images/fondo1.jpg');
     background-position: right; */
     background-image: url('/images/fondo2.jpg');
