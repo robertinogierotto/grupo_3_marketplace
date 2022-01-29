@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!------------------------------------------ head ---------------------------------------------------->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles-productCart.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Teko:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <title>RODAWISE - TechShop</title>
+  </head>
+  <body>
+    <!------------------------------------------ header ---------------------------------------------------->
+    <%- include('./partials/header') %>
+    <!------------------------------------------ main ---------------------------------------------------->
+    <main class="product-cart">
+      <h2 class="cart-title">TU CARRITO</h2>
+
+      <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
+      <section class="container">
+        <div class="titles">
+          <p>IMAGEN</p>
+          <p>NOMBRE</p>
+          <p>PRECIO</p>
+          <p>CANTIDAD</p>
+          <p>ELIMINAR</p>
+        </div>
+
+        <article class="product-1">
+          <img class="img" src="/images/auriculares-real.jpg" alt="" />
+          <p class="name">AURICULARES JBL QUANTUM 400</p>
+          <div class="price">$10000</div>
+
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <i class="fas fa-plus"></i>
+            </button>
+            <input class="q-input" type="text" name="name" value="1" />
+            <button class="minus-btn" type="button" name="button">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+
+          <div class="eliminar">
+            <button class="add" type="submit" name="button">Eliminar</button>
+          </div>
+        </article>
+        <article class="product-2">
+          <img class="img" src="/images/silla-gamer.jpg" alt="" />
+          <p class="name">SILLA GAMER NEGRA MAKKAX</p>
+          <div class="price">$39999</div>
+
+          <div class="quantity">
+            <button class="plus-btn" type="button" name="button">
+              <i class="fas fa-plus"></i>
+            </button>
+            <input class="q-input" type="text" name="name" value="1" />
+            <button class="minus-btn" type="button" name="button">
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+
+          <div class="eliminar">
+            <button class="add" type="submit" name="button">Eliminar</button>
+          </div>
+        </article>
+      </section>
+      <button class="addproduct" type="submit" name="button">
+        Agregar más productos
+      </button>
+      <section class="container2">
+        <p class="total">Total de la compra</p>
+        <p class="total-price">$49999.00</p>
+      </section>
+      <button class="confirm" type="submit">Confirmar Compra</button>
+    </main>
+    <!------------------------------------------ footer ---------------------------------------------------->
+    <%- include('./partials/footer') %>
+  </body>
+</html>

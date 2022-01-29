@@ -7,6 +7,9 @@
   color: white;
   display: none;
 }
+.login a {
+  color: green !important;
+}
 /* AGREGAR CODIGO ACA PARA MOVILES  */
 .login1 {
   display: flex;

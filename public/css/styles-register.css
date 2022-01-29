@@ -71,6 +71,9 @@
 }
 
 @media (min-width: 480px) {
+  .home a {
+    display: block;
+}
   .register-title {
     font-size: 1.4rem;
     margin-right: 60vw;
