@@ -3,16 +3,22 @@
     display: none;
 }
 
+.imagenLogo1{
+    width: 100%;
+}
+
+.imagenLogo{
+    width: 90vw;
+}
+
+
 /* AGREGAR CODIGO ACA PARA MOVILES  */
-
-@media (min-width: 480px) {
+  @media (min-width: 480px) {
     .home a {
-        display:block;
-    }
-    /* AGREGAR CODIGO ACA PARA TABLETS */
-}
-
-
-@media (min-width: 770px) {
-    /* AGREGAR CODIGO ACA PARA PC */
-}
+      display: block;
+  }
+    
+  }
+  @media (min-width: 770px) {
+      
+  }

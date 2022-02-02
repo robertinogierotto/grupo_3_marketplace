@@ -30,6 +30,7 @@
   border: grey solid 2px;
   margin: 20px;
   align-self: center;
+  background-color: black;
 }
 .controls {
   width: 100%;

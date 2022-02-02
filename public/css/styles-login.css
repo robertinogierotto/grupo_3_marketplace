@@ -92,7 +92,7 @@ main .recordar label {
   margin: 20px;
   align-self: center;
   padding: 10px;
-
+  background-color: black;
 }
 
 @media (min-width: 480px) {

@@ -6,12 +6,38 @@
     <!------------------------------------------ header ---------------------------------------------------->
     <%- include('./partials/header') %>
     <!------------------------------------------ main ---------------------------------------------------->
-    
-    <main>
+    <main class="register1">
+        <h4 class="register-title">Agregar Producto</h4>
+        <form action="/" method="POST">
+            <div class="imagenLogo">
+                <img class='imagenLogo1'src="/images/logo-imagen.png" alt="logo">
+                <label for="files" class="btn">Cargar Imagen</label>
+                <input type="file" id='files'name="avatar" style="visibility:hidden;">
+            </div> 
+            <div class='producto'>
+                <input type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" required>
+                
+                <label for="Precio">Precio</label>
+                <input type="number" name="Precio" id='Precio' min="0.01" step="0.01" value="0.00" placeholder="Precio" required>
+                
+                <label for="Categoria">Categoria</label>
+                <select name="categoria" id='Categoria' required>
+                    <option value="">---</option>
+                    <option value="">Celulares</option>
+                    <option value="">Video</option>
+                    <option value="">Gamer</option>
+                </select>
+            </div>
 
-        <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
+            <div class="descripcion">
+                <textarea name="descripcion" id="" cols="20" rows="5" placeholder="Descripcion del Producto"></textarea>
+            </div>
 
-    </main>
+            <input class="botons" type="submit" value="Agregar Producto">
+            <input class="botons" type="reset" value="Limpiar Informacion">
+           
+            </form>
+        </main>
    
     <!------------------------------------------ footer ---------------------------------------------------->
     <%- include('./partials/footer') %>
