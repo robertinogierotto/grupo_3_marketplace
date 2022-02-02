@@ -2,26 +2,8 @@
     color: white;
     display: none;
 }
-.who-we-are a {
-    color: green !important;
-}
-.who-we-are {
-    display: block;
-}
-main {
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-}
-.text {
-    border: grey 2px solid;
-    margin: 20px;
-}
 
-
-
-
-
+/* AGREGAR CODIGO ACA PARA MOVILES  */
 
 @media (min-width: 480px) {
     .home a {

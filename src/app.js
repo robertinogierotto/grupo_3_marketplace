@@ -15,12 +15,19 @@ app.set('views', path.join(__dirname, './views'))
 /* rutas main, las rutas generales que no se agupan en ningun modulo de la web */
 const mainRoutes = require('./routes/mainRoutes')
 app.use('/', mainRoutes); 
+
 /* rutas productos, todo lo relacionado a productos */
 const productRoutes = require ('./routes/productRoutes')
 app.use('/products', productRoutes);
+
 /* rutas usuarios, todo lo relacionado a usuarios */
 const userRoutes = require ('./routes/userRoutes')
 app.use('/user', userRoutes);
+
+/* rutas administradores, todo lo relacionado a admin */
+const adminRoutes = require ('./routes/adminRoutes')
+app.use('/admin', adminRoutes);
+
 
 //Levantar servidor 
 app.listen(3000, ()=>{
