@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!------------------------------------------ head ---------------------------------------------------->
-<%- include('./partials/head') %>
+<%- include('../partials/head') %>
 
     <body>
         <!------------------------------------------ header ---------------------------------------------------->
-        <%- include('./partials/header') %>
+        <%- include('../partials/header') %>
             <!------------------------------------------ main ---------------------------------------------------->
             <main class="">
-                <h4 class="tituloProducto">CREAR PRODUCTOS</h4>
+                <h4 class="tituloProducto">MODIFICAR PRODUCTO</h4>
                 <form action= "#" method="POST">
                     <div class="imagenLogo">
                         <img class='imagenLogo1' src="/images/logo-imagen2.png" alt="logo">
@@ -34,14 +34,13 @@
                             placeholder="Descripcion del Producto"></textarea>
                     </div>
 
-                    <input class="botons" type="submit" value="Crear Producto">
-                    <input class="botons" type="reset" value="Limpiar">
+                    <input class="botons" type="submit" value="Modificar Producto">
 
                 </form>
             </main>
 
             <!------------------------------------------ footer ---------------------------------------------------->
-            <%- include('./partials/footer') %>
+            <%- include('../partials/footer') %>
     </body>
 
 </html>

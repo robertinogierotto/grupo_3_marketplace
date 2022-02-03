@@ -1,9 +1,9 @@
 const product = {
     productDetails: (req,res) => {
-        res.render ('productDetails', { styles: 'styles-productDetails.css'});
+        res.render ('./products/productDetails', { styles: 'styles-productDetails.css'});
     },
     productCart: (req,res) => {
-        res.render ('productCart', { styles: 'styles-productCart.css'});
+        res.render ('./products/productCart', { styles: 'styles-productCart.css'});
     },
 }
 
