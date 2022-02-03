@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!------------------------------------------ head ---------------------------------------------------->
-    <%- include('./partials/head') %>
-<body>
-    <!------------------------------------------ header ---------------------------------------------------->
-    <%- include('./partials/header') %>
-    <!------------------------------------------ main ---------------------------------------------------->
-    <main class="register1">
-        <h4 class="register-title">Agregar Producto</h4>
-        <form action="/" method="POST">
-            <div class="imagenLogo">
-                <img class='imagenLogo1'src="/images/logo-imagen.png" alt="logo">
-                <label for="files" class="btn">Cargar Imagen</label>
-                <input type="file" id='files'name="avatar" style="visibility:hidden;">
-            </div> 
-            <div class='producto'>
-                <input type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" required>
-                
-                <label for="Precio">Precio</label>
-                <input type="number" name="Precio" id='Precio' min="0.01" step="0.01" value="0.00" placeholder="Precio" required>
-                
-                <label for="Categoria">Categoria</label>
-                <select name="categoria" id='Categoria' required>
-                    <option value="">---</option>
-                    <option value="">Celulares</option>
-                    <option value="">Video</option>
-                    <option value="">Gamer</option>
-                </select>
-            </div>
+<!------------------------------------------ head ---------------------------------------------------->
+<%- include('./partials/head') %>
 
-            <div class="descripcion">
-                <textarea name="descripcion" id="" cols="20" rows="5" placeholder="Descripcion del Producto"></textarea>
-            </div>
+    <body>
+        <!------------------------------------------ header ---------------------------------------------------->
+        <%- include('./partials/header') %>
+            <!------------------------------------------ main ---------------------------------------------------->
+            <main class="">
+                <h4 class="tituloProducto">CREAR PRODUCTOS</h4>
+                <form action= "#" method="POST">
+                    <div class="imagenLogo">
+                        <img class='imagenLogo1' src="/images/logo-imagen2.png" alt="logo">
+                    </div>
+                    <label for="files" class="btn">Cargar Imagen</label>
+                    <input type="file" id='files' name="avatar" style="display:none">
+                    <div class='formularioProducto'>
+                        <input class="infoCategoria" type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" required>
+                       <!-- <label for="Precio">Precio</label>-->
+                        <input class="infoCategoria" type="number" name="Precio" id='Precio' placeholder="Precio" required>
 
-            <input class="botons" type="submit" value="Agregar Producto">
-            <input class="botons" type="reset" value="Limpiar Informacion">
-           
-            </form>
-        </main>
-   
-    <!------------------------------------------ footer ---------------------------------------------------->
-    <%- include('./partials/footer') %>
-</body>
+                       <!--  <label for="Categoria">Categoria</label>-->
+                        <select  class="infoCategoria" name="categoria" required>
+                            <option hidden value="" >Seleccione Categoria</option hidden>
+                            <option value="">Celulares</option>
+                            <option value="">Video</option>
+                            <option value="">Gamer</option>
+                        </select>
+                    </div>
+
+                    <div class="descripcionProducto">
+                        <textarea required name="descripcion" id="" cols="20" rows="5"
+                            placeholder="Descripcion del Producto"></textarea>
+                    </div>
+
+                    <input class="botons" type="submit" value="Crear Producto">
+                    <input class="botons" type="reset" value="Limpiar">
+
+                </form>
+            </main>
+
+            <!------------------------------------------ footer ---------------------------------------------------->
+            <%- include('./partials/footer') %>
+    </body>
+
 </html>

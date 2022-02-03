@@ -3,44 +3,44 @@
 <!------------------------------------------ head ---------------------------------------------------->
 <%- include('./partials/head') %>
 
-<body>
-    <!------------------------------------------ header ---------------------------------------------------->
-    <%- include('./partials/header') %>
-    <!------------------------------------------ main ---------------------------------------------------->
-    <main class="login1">
-        <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
-        <h3>LOGIN</h3>
-            <form action="/" method="post" class="marco">
-                <div class="usuario">
-                    <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
-                    <div>
-                        <input type="text" name="usuario" required />
+    <body>
+        <!------------------------------------------ header ---------------------------------------------------->
+        <%- include('./partials/header') %>
+            <!------------------------------------------ main ---------------------------------------------------->
+            <main class="login1">
+                <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
+                <h3>LOGIN</h3>
+                <form action="/" method="post" class="marco">
+                    <div class="usuario">
+                        <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
+                        <div>
+                            <input type="text" name="usuario" required />
+                        </div>
                     </div>
-                </div>
-    
-                <div class="contraseña">
-                    <label for="password">Contraseña<span class="red">*</span></label>
-                    <div class="contenedor_ojo">
-                        <input type="password" name="password" required /><span
-                            class="fa fa-fw fa-eye password-icon show-password"></span>
+
+                    <div class="contraseña">
+                        <label for="password">Contraseña<span class="red">*</span></label>
+                        <div class="contenedor_ojo">
+                            <input type="password" name="password" required /><span
+                                class="fa fa-fw fa-eye password-icon show-password"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="recordar">
-                    <label><input type="checkbox" name="recuerdame" value="recuerdame" />
-                        Recuerdame</label>
-    
-                    <button class="entrar" type="submit">Entrar</button>
-                </div>
-    
-                <div class="olvidaste">
-                    <label>¿Olvidaste tu contraseña?</label>
-                </div>
-            </form>       
+                    <div class="recordar">
+                        <label><input type="checkbox" name="recuerdame" value="recuerdame" />
+                            Recuerdame</label>
 
-    </main>
+                        <button class="entrar" type="submit">Entrar</button>
+                    </div>
 
-    <!------------------------------------------ footer ---------------------------------------------------->
-    <%- include('./partials/footer') %>
-</body>
+                    <div class="olvidaste">
+                        <label>¿Olvidaste tu contraseña?</label>
+                    </div>
+                </form>
+
+            </main>
+
+            <!------------------------------------------ footer ---------------------------------------------------->
+            <%- include('./partials/footer') %>
+    </body>
 
 </html>

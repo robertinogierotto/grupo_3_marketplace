@@ -1,36 +1,81 @@
 .home a {
-    color: white;
-    display: none;
+  color: white;
+  display: none;
 }
 .who-we-are a {
-    color: green !important;
+  color: green !important;
 }
 .who-we-are {
-    display: block;
+  display: block;
 }
-main {
-    color: white;
-    font-size: 1rem;
-    text-align: center;
+
+h3 {
+  border-bottom: white 3px solid;
 }
+
+main h3 {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-top: 2%;
+  padding-left: 2%;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.list li {
+  margin-bottom: 12px;
+  text-align: center;
+  list-style: none;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
 .text {
-    border: grey 2px solid;
-    margin: 20px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: grey 2px solid;
+  margin: 20px;
+  font-size: 1rem;
+  padding: 5px;
 }
-
-
-
-
-
 
 @media (min-width: 480px) {
-    .home a {
-        display:block;
-    }
-    /* AGREGAR CODIGO ACA PARA TABLETS */
+  .home a {
+    display: block;
+  }
+  /* AGREGAR CODIGO ACA PARA TABLETS */
+
+  .text {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 1.1rem;
+  }
+
+  main h3 {
+    font-size: 1.5rem;
+  }
 }
 
-
-@media (min-width: 770px) {
+  @media (min-width: 770px) {
     /* AGREGAR CODIGO ACA PARA PC */
+    .text {
+      margin-left: 10vw;
+      margin-right: 10vw;
+      font-size: 1.2rem;
+    }
+
+    main h3 {
+      font-size: 1.5rem;
+    }
+  
 }

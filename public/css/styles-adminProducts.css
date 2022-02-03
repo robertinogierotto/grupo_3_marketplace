@@ -1,24 +1,143 @@
 .home a {
-    color: white;
-    display: none;
+  color: white;
+  display: none;
 }
 
-.imagenLogo1{
-    width: 100%;
+.imagenLogo1 {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.imagenLogo{
-    width: 90vw;
+.imagenLogo {
+  width: 40vw;
+  margin-left: 20px;
 }
 
+main h4 {
+  color: white;
+  text-align: left;
+  font-size: 1.3rem;
+  margin-right: 30vw;
+  margin-left: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-bottom: white 3px solid;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #3598fe;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 4px;
+  margin-left: 20px;
+  width: 160px;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+}
+
+.formularioProducto {
+  width: 90vw;
+  padding: 25px;
+  border-radius: 4px;
+  color: white;
+  border: grey solid 2px;
+  margin-left: 20px;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.infoCategoria {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #3598fe;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.descripcionProducto {
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.descripcionProducto textarea {
+  width: 90vw;
+}
+
+.botons {
+  background: #3598fe;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 4px;
+  margin-left: 28px;
+  width: 160px;
+  transition: all 0.5s;
+}
+
+.botons:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+}
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */
-  @media (min-width: 480px) {
-    .home a {
-      display: block;
+@media (min-width: 480px) {
+  .home a {
+    display: block;
   }
-    
+
+  .imagenLogo {
+    width: 30vw;
+    margin-left: 20px;
   }
-  @media (min-width: 770px) {
-      
+
+  .botons {
+    margin-bottom: 10px;
   }
+}
+
+@media (min-width: 770px) {
+  .imagenLogo {
+    width: 15vw;
+    margin-left: 20px;
+  }
+
+  .formularioProducto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+  }
+  main h4 {
+    margin-right: 50vw;
+  }
+
+  .descripcionProducto textarea {
+    width: 70vw;
+  }
+
+  .infoCategoria {
+    height: 100%;
+    margin-inline: 5px;
+  }
+
+  .botons {
+    margin-bottom: 10px;
+  }
+}
