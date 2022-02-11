@@ -8,7 +8,6 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const admin = {
-    
     adminIndex: (req,res) => {
         res.render ('./admin/adminIndex', { styles: 'styles-adminIndex.css'})
     },

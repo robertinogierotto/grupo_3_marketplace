@@ -138,9 +138,13 @@ main {
     background-size: cover; */
     /* background-image: url('/images/fondo1.jpg');
     background-position: right; */
-    background-image: url('/images/fondo2.jpg');
+    /* background-image: url('/images/fondo2.jpg'); */
     /* background-image: url('/images/fondo3.jpg'); */
-    
+    background: url('/images/fondo2.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
