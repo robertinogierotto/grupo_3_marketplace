@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------------------ head ---------------------------------------------------->
+<%- include('../partials/head') %>
+
+    <body>
+        <!------------------------------------------ header ---------------------------------------------------->
+        <%- include('../partials/header') %>
+            <!------------------------------------------ main ---------------------------------------------------->
+            <main class="">
+                <h4 class="tituloProducto">EDITAR</h4>
+                <form action= "#" method="POST">
+                    <div class="imagenLogo">
+                        <img class='imagenLogo1' src="/images/<%= productToEdit.image %>" alt="logo">
+                    </div>
+                    <label for="files" class="btn">Modificar Imagen</label>
+                    <input type="file" id='files' name="avatar" style="display:none">
+                    <div class='formularioProducto'>
+                        <input class="infoCategoria short" type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" value="<%= productToEdit.name %>" required>
+                       <!-- <label for="Precio">Precio</label>-->
+                        <input class="infoCategoria short" type="number" name="Precio" id='Precio' placeholder="Precio" value="<%= productToEdit.price %>" required>
+                        <input class="infoCategoria short" type="number" name="discount" id='discount' placeholder="Descuento" value="<%= productToEdit.discount %>" required>
+                        <% if (productToEdit.category == 'phones') { %>
+                       <!--  <label for="Categoria">Categoria</label>-->
+                        <select  class="infoCategoria short" name="categoria">
+                            <option value="">Celulares</option>
+                            <option value="">Video</option>
+                            <option value="">Gamer</option>
+                        </select>
+                        <% } %>
+                        <% if (productToEdit.category == 'gamer') { %>
+                            <!--  <label for="Categoria">Categoria</label>-->
+                             <select  class="infoCategoria short" name="categoria">
+                                 <option value="">Gamer</option>
+                                 <option value="">Celulares</option>
+                                 <option value="">Video</option>
+                             </select>
+                        <% } %>
+                        <% if (productToEdit.category == 'video') { %>
+                            <!--  <label for="Categoria">Categoria</label>-->
+                             <select  class="infoCategoria short" name="categoria">
+                                 <option value="">Video</option>
+                                 <option value="">Gamer</option>
+                                 <option value="">Celulares</option>
+                             </select>
+                        <% } %>
+
+                        <input class="infoCategoria" type="text" name="caract1" id="caract1" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract1 %>">
+                        <input class="infoCategoria" type="text" name="caract2" id="caract2" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract2 %>">
+                        <input class="infoCategoria" type="text" name="caract3" id="caract3" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract3 %>">
+                        <input class="infoCategoria" type="text" name="caract4" id="caract4" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract4 %>">
+                    </div>
+
+                    <div class="descripcionProducto">
+                        <textarea required name="descripcion" id="" cols="20" rows="5"><%= productToEdit.description %></textarea>
+                    </div>
+                    
+
+                    <input class="botons" type="submit" value="Modificar Producto">
+                    <a href="/admin/productsList"><input class="botons"  value="Volver"></a>
+                    
+                    
+
+                </form>
+            </main>
+
+            <!------------------------------------------ footer ---------------------------------------------------->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

@@ -71,6 +71,7 @@
     padding: 5px;
     border: green solid 2px;
     width: 30%;
+    text-align: center;
 }
 .discount {
     color:green;

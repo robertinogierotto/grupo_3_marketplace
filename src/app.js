@@ -28,6 +28,11 @@ app.use('/user', userRoutes);
 const adminRoutes = require ('./routes/adminRoutes')
 app.use('/admin', adminRoutes);
 
+/* Error 404, falta crear html not found */ 
+app.use((req, res, next) => {
+    res.status(404).send("not-found");
+  })
+
 
 //Levantar servidor 
 app.listen(3000, ()=>{

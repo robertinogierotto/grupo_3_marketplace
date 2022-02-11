@@ -12,23 +12,29 @@
 
         <article class="product-details">
             <section class="product-title-img">
-            <h3 class="product-d-title">Auriculares Gamer JBL Quantum 400 PC/PS4/XBOX</h3>
-            <img src="/images/auriculares-real.jpg" alt="celular">
-            <button class ="buy-now" type="submit" name="123"> Compre Ahora</button>
-            <button class ="add-to-cart" type="submit" name="button"> Agregar al Carrito</button>
-            <p class="off">35% OFF!</p>
+            <h3 class="product-d-title"><%= productToShow.name %></h3>
+            <img src="/images/<%= productToShow.image %>" alt="celular">
+            <div class="final-price">
+               <p class="final-price2">Precio Final:</p>  $<%= productToShow.price.toLocaleString('es') %>
+            </div>
+            <div class="buy-add">
+                <button class ="buy-now" type="submit" name="123"> Compre Ahora</button>
+                <button class ="add-to-cart" type="submit" name="button"> Agregar al Carrito</button>
+            </div>
+            <p class="off"><%= productToShow.discount %>% OFF!</p>
             </section>
             <section class="product-d-description">
+                <div class="buy-add2">
+                    <button class ="buy-now" type="submit" name="123"> Compre Ahora</button>
+                    <button class ="add-to-cart" type="submit" name="button"> Agregar al Carrito</button>
+                </div>
                 <ul>
-                    <li>Modelo: Quantum 400</li>
-                    <li>Es inalámbrico: No</li>
-                    <li>Con Bluetooth: No</li>
-                    <li>Tipo de conector: Jack 3.5 mm</li>
+                    <li><%= productToShow.caract1 %></li>
+                    <li><%= productToShow.caract2 %></li>
+                    <li><%= productToShow.caract3 %></li>
+                    <li><%= productToShow.caract4 %></li>
                 </ul>
-            <p>Auriculares diseñados con precisión junto a un software personalizado y de vanguardia para llevarte al corazón de la acción. 
-            Experimenta un sonido hiper preciso e inmersivo que revela cada detalle del mundo que te rodea, para que puedas superar a tus rivales.</p>
-            <button class ="buy-now-2" type="submit" name="123"> Compre Ahora</button>
-            <button class ="add-to-cart-2" type="submit" name="button"> Agregar al Carrito</button>
+            <p><%= productToShow.description %></p>
             </section>
 
         </article>

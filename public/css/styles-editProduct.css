@@ -88,6 +88,8 @@ main h4 {
   margin-left: 28px;
   width: 160px;
   transition: all 0.5s;
+  text-align: center;
+
 }
 
 .botons:hover {
@@ -120,6 +122,7 @@ main h4 {
 
   .formularioProducto {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 70vw;
@@ -134,7 +137,10 @@ main h4 {
 
   .infoCategoria {
     height: 100%;
-    margin-inline: 5px;
+  }
+  .short {
+    width: 70%;
+    align-self: flex-start;
   }
 
   .botons {

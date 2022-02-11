@@ -22,7 +22,7 @@
     background-color: green;
 
 } 
-.container{
+.containerA {
     background-color: white;
     display: flex;
     flex-direction: column;

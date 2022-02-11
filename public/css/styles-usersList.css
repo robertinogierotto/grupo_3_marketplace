@@ -1,0 +1,89 @@
+.home a {
+  color: white;
+}
+header .form .input {
+  font-size: 0.7rem;
+}
+header .form .submit {
+  padding-top: 0;
+}
+.productList {
+  display: flex;
+  justify-content: center;
+}
+.movile {
+  display: none;
+}
+.table {
+  width: 95vw;
+  margin: 20px;
+  font-size: 0.6rem;
+}
+th,
+td {
+  text-align: center;
+}
+.img-tb {
+  width: 75px;
+}
+.btn {
+  width: 70px;
+  padding: 0px;
+  margin-bottom: 4px;
+}
+/* btn detalles */
+.btn-info {
+  color: #fff;
+  background-color: #3598fe;
+  border-color: #3598fe;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: blue;
+  border-color: blue;
+}
+/* btn editar */
+.btn-success {
+  color: black;
+  background-color: yellow;
+  border-color: yellow;
+}
+.btn-success:hover {
+  color: black;
+  background-color: gold;
+  border-color: gold;
+}
+/* btn eliminar */
+.btn-danger {
+  color: #fff;
+  background-color: red;
+  border-color: red;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+}
+@media (min-width: 480px) {
+  .home a {
+    display: block;
+  }
+  header .form .input {
+    font-size: 0.8rem;
+  }
+  .table {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 770px) {
+  header .form .input {
+    width: 40vw;
+    font-size: 1rem;
+  }
+  .movile {
+    display: revert;
+  }
+  .table {
+    font-size: 1.2rem;
+  }
+}

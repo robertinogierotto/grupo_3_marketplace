@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------------------ head ---------------------------------------------------->
+<%- include('../partials/head') %>
+
+    <body>
+        <!------------------------------------------ header ---------------------------------------------------->
+        <%- include('../partials/header') %>
+            <!------------------------------------------ main ---------------------------------------------------->
+            <main class="admIndex">
+                <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
+                <h3>Panel de Control de Administrador</h3>
+                <div class="marco">
+                    <div class="btn"><a href="/admin/createProduct"><button class="btn-in">Crear Producto</button></a></div>
+                    <div class="btn"><a href="/admin/productsList"><button class="btn-in">Lista de Productos</button></a></div>
+                    <div class="btn"><a href="/admin/usersList"><button class="btn-in">Lista de Usuarios</button></a></div>
+                    <div class="btn"><a href="#"><button class="btn-in">Boton XXX</button></a></div>               
+                </div>
+            </main>
+
+            <!------------------------------------------ footer ---------------------------------------------------->
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

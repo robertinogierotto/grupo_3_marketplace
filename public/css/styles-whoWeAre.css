@@ -5,8 +5,11 @@
 .who-we-are a {
   color: green !important;
 }
+
 .who-we-are {
   display: block;
+  position: absolute;
+
 }
 
 h3 {
@@ -59,6 +62,9 @@ main h3 {
     margin-left: 10vw;
     margin-right: 10vw;
     font-size: 1.1rem;
+  }
+  .who-we-are {
+    position: unset;
   }
 
   main h3 {

@@ -8,7 +8,7 @@
         <%- include('../partials/header') %>
             <!------------------------------------------ main ---------------------------------------------------->
             <main class="">
-                <h4 class="tituloProducto">MODIFICAR PRODUCTO</h4>
+                <h4 class="tituloProducto">CREAR PRODUCTOS</h4>
                 <form action= "#" method="POST">
                     <div class="imagenLogo">
                         <img class='imagenLogo1' src="/images/logo-imagen2.png" alt="logo">
@@ -16,25 +16,33 @@
                     <label for="files" class="btn">Cargar Imagen</label>
                     <input type="file" id='files' name="avatar" style="display:none">
                     <div class='formularioProducto'>
-                        <input class="infoCategoria" type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" required>
+                        <input class="infoCategoria short" type="text" name="nombreProducto" id="nombre" placeholder="Nombre del Producto" required>
                        <!-- <label for="Precio">Precio</label>-->
-                        <input class="infoCategoria" type="number" name="Precio" id='Precio' placeholder="Precio" required>
+                        <input class="infoCategoria short" type="number" name="Precio" id='Precio' placeholder="Precio" required>
+                        <input class="infoCategoria short" type="number" name="discount" id='discount' placeholder="Descuento" required>
 
                        <!--  <label for="Categoria">Categoria</label>-->
-                        <select  class="infoCategoria" name="categoria" required>
+                        <select  class="infoCategoria short" name="categoria" required>
                             <option hidden value="" >Seleccione Categoria</option hidden>
                             <option value="">Celulares</option>
                             <option value="">Video</option>
                             <option value="">Gamer</option>
                         </select>
+                        <input class="infoCategoria" type="text" name="caract1" id="caract1" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
+                        <input class="infoCategoria" type="text" name="caract2" id="caract2" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
+                        <input class="infoCategoria" type="text" name="caract3" id="caract3" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
+                        <input class="infoCategoria" type="text" name="caract4" id="caract4" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
                     </div>
 
                     <div class="descripcionProducto">
                         <textarea required name="descripcion" id="" cols="20" rows="5"
                             placeholder="Descripcion del Producto"></textarea>
                     </div>
+                    
 
-                    <input class="botons" type="submit" value="Modificar Producto">
+                    <input class="botons" type="submit" value="Crear Producto">
+                    <input class="botons" type="reset" value="Limpiar">
+                    <a href="/admin"><input class="botons"  value="Volver"></a>
 
                 </form>
             </main>
