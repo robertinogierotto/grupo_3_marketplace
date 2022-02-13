@@ -1,9 +1,9 @@
 .home a {
-    color: white;
-    display: none;
+  color: white;
+  display: none;
 }
 .register a {
-    color: green !important;
+  color: green !important;
 }
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */
@@ -24,28 +24,34 @@
 }
 .form-register {
   width: 90vw;
-  padding: 30px;
   border-radius: 4px;
   color: white;
   border: grey solid 2px;
   margin: 20px;
   align-self: center;
   background-color: black;
+  padding: 10px 20px 10px 20px;
 }
 .controls {
   width: 100%;
   background: white;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #3598FE;
+  border: 1px solid #3598fe;
   font-size: 0.9rem;
-  color: #3598FE;
+  color: #3598fe;
 }
-.terms-cond, .terms-cond a {
+.terms-cond,
+.terms-cond a {
   color: white;
   font-size: 1rem;
 }
-.form-register p  {
+.term-cond {
+  width: 100%;
+  border-top: white solid 2px;
+  margin-top: 14px;
+}
+.form-register p {
   height: 40px;
   text-align: center;
   font-size: 18px;
@@ -57,7 +63,7 @@
 }
 .form-register .botons {
   width: 100%;
-  background: #3598FE;
+  background: #3598fe;
   border: none;
   padding: 12px;
   color: white;
@@ -70,11 +76,52 @@
   background-color: yellow;
   color: black;
 }
+.profilePicture {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#profilePictureP {
+  text-align: left;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.profilePicture img {
+  width: 100px;
+  margin: 0 5px 0 5px;
+}
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+[type="radio"] + img {
+  cursor: pointer;
+}
+[type="radio"]:checked + img {
+  outline: 4px solid yellow;
+}
+.inputAvatar {
+  width: 250px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  background-color: #3598fe;
+  align-items: center;
+}
+input#files {
+  background: #3598fe;
+  color: black;
+  width: 100%;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
 
 @media (min-width: 480px) {
   .home a {
     display: block;
-}
+  }
   .register-title {
     font-size: 1.4rem;
     margin-right: 60vw;
@@ -82,7 +129,10 @@
   .form-register {
     width: 60vw;
     align-self: flex-start;
-  }   
+  }
+  #profilePictureP {
+    font-size: 0.9rem;
+  }
 }
 @media (min-width: 770px) {
   .register-title {
@@ -91,8 +141,11 @@
   }
   .form-register {
     width: 50vw;
-  } 
-    
+  }
+  #profilePictureP {
+    font-size: 1.2rem;
+  }
+  input#files {
+    font-size: 0.9rem;
+  }
 }
-
-    

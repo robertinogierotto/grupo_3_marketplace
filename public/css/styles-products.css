@@ -1,16 +1,32 @@
+.home a {
+    color: white;
+    display: none;
+}
+.products a {
+    color: green;
+    
+}
+.products {
+    display: block;
+    position: absolute;
+}
 .web-title {
     font-size: 1.5rem;
     color: white;
     text-align: center;
-    margin-right: 30vw;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding-top: 2%;
     padding-left: 2%;
     border-bottom: white 3px solid;
+    align-self: center;
 }
 /* menu de productos */
-.product-menu {
+.title-category {
     display: flex;
+    flex-direction: column;
+}
+.product-menu {
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     margin: 20px 0px;
@@ -32,17 +48,6 @@
     color: white;
 }
 /* Menu de Ofertas */
-.offers-title {
-    font-size: 1.3rem;
-    color: white;
-    margin-top: 10px;
-    text-align: center;
-    margin-right: 30vw;
-    margin-left: 10px;
-    padding-top: 2%;
-    padding-left: 2%;
-    border-bottom: white 3px solid;
-}
 .offers-menu {
     display: flex;
     flex-wrap: wrap;
@@ -85,8 +90,20 @@
     width: 100%;
 }
 @media (min-width: 480px) {
+    .home a {
+        display: block;
+    }
     .web-title {
-        margin-right: 50vw;
+        width: 50%;
+        border: none;
+        
+    }
+    .products {
+        position: relative;
+    }
+    .title-category {
+        flex-direction: row;
+        border-bottom: white 3px solid;
     }
     .price-discount {
         width: 35%;
@@ -102,12 +119,12 @@
     .product-menu h2 {
         font-size: 1.5rem;
     }
-    .product-menu img {
-        width: 70px;
-    }
-    .offers-title {
-        font-size: 1.6rem;
-        margin-right: 50vw;
+    .product-menu {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px 0px;
     }
     .offers-menu article {
         width: 45vw;
@@ -120,7 +137,8 @@
 @media (min-width: 770px) {
     
     .web-title {
-        margin-right: 60vw;
+        width: 40%;
+        
     }
     .price-discount {
         width: 45%;
@@ -130,15 +148,14 @@
     .product-name {
         width: 55%;
     }
+    .product-menu {
+        width: 60%;
+    }
     .product-menu h2 {
         font-size: 1.6rem;
     }
     .product-menu img {
         width: 90px;
-    }
-    .offers-title {
-        font-size: 1.8rem;
-        margin-right: 60vw;
     }
     .offers-menu article {
         width: 22vw;

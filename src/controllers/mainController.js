@@ -10,7 +10,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const main = {
     home: (req,res) => {
-        res.render ('home', { styles: 'styles-home.css', productosEnOferta: products})
+        let productosEnOferta = products.filter (product => product.dailyOnSale == 0);
+        res.render ('home', { styles: 'styles-home.css', productosEnOferta})
     },
     whoWeAre: (req,res) => {
         res.render ('whoWeAre', { styles: 'styles-whoWeAre.css'} )

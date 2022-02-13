@@ -25,17 +25,22 @@
                     </tr>
                     <% products.forEach(product => { %>
                     <tr>
-                        <td><%= product.id %></td>
-                        <td><img class="img-tb" src="/images/<%= product.image %>" alt=""></td>
+                        <td id="<%= product.id %>"><%= product.id %></td>
+                        <td><img class="img-tb" src="/images/products/<%= product.image %>" alt=""></td>
                         <td><%= product.name %></td>
                         <td class="movile">$<%= product.price %></td>
                         <td class="movile"><%= product.discount %>%</td>
-                        <td class="movile"><%= product.category %></td>
+                        <% if (product.dailyOnSale == 0) { %>
+                        <td class="movile"><%= product.category %>  Home </td>
+                        <% } %>
+                        <% if (product.dailyOnSale == 1) { %>
+                        <td class="movile"><%= product.category %></td> 
+                        <% } %>                        
                         <td>
                             <a href="/products/details/<%= product.id %>" class="btn btn-info">Detalle</a>
 							<a href="/admin/editProduct/<%= product.id %>" class="btn btn-success">Editar</a>
 							
-							<form action="#" method="POST" class="d-inline form-delete">
+							<form action="/admin/<%= product.id %>?_method=DELETE" method="POST" class="d-inline form-delete">
 								<button class="btn btn-danger" type="submit">Borrar</button>
 							</form>
                         </td>

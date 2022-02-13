@@ -10,15 +10,61 @@
         <h4 class="register-title">Formulario de Registro</h4>
         <form action="/" method="POST">
             <section class="form-register">
+                <p id="profilePictureP">Ingresa tus datos personales:</p>
                 <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
                 <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
                 <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
                 <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña" required>
                 <input class="controls" type="password" name="correo" id="correo" placeholder="Confirme su Contraseña" required>
-                <input type="checkbox" name="interests" value="a" id="terms-cond">
-                <label class="terms-cond" for="terms-cond">Estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></label>
+
+                <p id="profilePictureP">Elige tu imagen de perfil!</p>
+                <div class="profilePicture">
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-1" value="1"/>
+                        <img src="/images/user/any-1.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-2" value="2"/>
+                        <img src="/images/user/any-2.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-3" value="1"/>
+                        <img src="/images/user/any-3.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-4" value="1"/>
+                        <img src="/images/user/any-4.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-5" value="1"/>
+                        <img src="/images/user/any-5.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-6" value="1"/>
+                        <img src="/images/user/any-6.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-7" value="1"/>
+                        <img src="/images/user/any-7.png" />
+                    </label>
+                    <label>
+                        <input type="radio" name="profilePicture" id="choose-8" value="1"/>
+                        <img src="/images/user/any-8.png" />
+                    </label>
+                    <p id="profilePictureP">O sube tu propio avatar:</p>
+                    <div class="inputAvatar">
+                        <input type="file" id='files' name="avatar">
+                    </div>
+                </div>
+                
+
+
+                <div class="term-cond">
+                    <input type="checkbox" name="terms-cond" value="a" id="terms-cond" required>
+                    <label class="terms-cond" for="terms-cond">Estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></label>
+                </div>
                 <input class="botons" type="submit" value="Registrarse">
-                <p><a href="#">¿Ya tengo Cuenta?</a></p>
+                <p><a href="#">¿Ya tienes una Cuenta?</a></p>
             </section>
             </form>
         </main>

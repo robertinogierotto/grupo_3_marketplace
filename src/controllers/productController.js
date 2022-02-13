@@ -6,6 +6,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const product = {
+    allProducts: (req,res) => {
+        res.render ('./products/products', { styles: 'styles-products.css', products});
+    },
     productDetails: (req,res) => {
         const productToShow = products.find( product => product.id == req.params.id)
         res.render ('./products/productDetails', { styles: 'styles-productDetails.css', productToShow});
