@@ -5,9 +5,6 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-
-
-
 const main = {
     home: (req,res) => {
         let productosEnOferta = products.filter (product => product.dailyOnSale == 0);
@@ -17,9 +14,6 @@ const main = {
         res.render ('whoWeAre', { styles: 'styles-whoWeAre.css'} )
     },
 }
-
-
-
 
 
 module.exports = main;

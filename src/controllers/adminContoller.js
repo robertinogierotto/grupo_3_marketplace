@@ -25,12 +25,11 @@ const admin = {
 
             id: products[products.length - 1].id + 1,
             ...req.body,
-            dailyOnSale: req.body.dailyOnSale,
             image: req.file.filename,
-        }
+        };
         products.push (newProduct);
 		fs.writeFileSync(productsFilePath, JSON.stringify (products, null, ''));
-        res.redirect ('/admin/productsList#' + newProduct.id)
+        res.redirect ('/admin/productsList#' + newProduct.id);
     },
     editProduct: (req,res) => {
         let productToEdit = products.find( product => product.id == req.params.id)
@@ -38,11 +37,14 @@ const admin = {
     },
     saveProduct: (req,res) => {
         let productToEdit = products.find( product => product.id == req.params.id);
+
         productToEdit = {
+
             id: productToEdit.id,
             ...req.body,
             image: req.file ? req.file.filename : productToEdit.image,
         }
+        
         let productsNew = products.map (product => {
             if (product.id == productToEdit.id) {
                 return product = {...productToEdit};
