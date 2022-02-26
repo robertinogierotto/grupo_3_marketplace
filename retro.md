@@ -10,3 +10,6 @@ Nivel  satisfactorio de Sprint 2 : Excelente
 Análisis Retrospectivo Sprint 3: 
 Llevamos a cabo muy buena organización, pudimos realizar todas las consignas solicitadas para el sprint en tiempo y forma. El tablero de trabajo y la reunión semanal nos ayudó mucho para poder evaluar/analizar las tareas pendientes y poder dividir las asignaciones de este sprint. Como equipo hay muy buena comunicación y predisposición para ayudar al otro. 
 Nivel satisfactorio Sprint 3: Excelente
+
+Análisis Retrospectivo Sprint 4 : Pudimos realizar todos los entregables requeridos por el sprint. Fuimos guiandonos en las tareas por el tablero de trabajo  y durante las reuniones pudimos evaluar lo que necesitabamos realizar para llegar a tiempo y en forma con la entrega. Excelente comunicación en el equipo, mucha ayuda y soporte por parte del scrum master para que todo esté de forma organizada y prolija. 
+Nivel satisfactorio Sprint 4 : Excelente 
