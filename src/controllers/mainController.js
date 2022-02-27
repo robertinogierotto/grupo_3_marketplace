@@ -14,6 +14,4 @@ const main = {
         res.render ('whoWeAre', { styles: 'styles-whoWeAre.css'} )
     },
 }
-
-
 module.exports = main;
