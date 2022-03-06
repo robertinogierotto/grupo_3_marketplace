@@ -35,7 +35,10 @@ const user = {
 
             res.redirect ('/user/login');
         }
-    }
+    },
+    userProfile: (req,res) => {
+        res.render ('./user/userProfile', { styles: 'styles-userProfile.css'})
+    },
 }
 
 module.exports = user;

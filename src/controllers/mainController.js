@@ -13,5 +13,8 @@ const main = {
     whoWeAre: (req,res) => {
         res.render ('whoWeAre', { styles: 'styles-whoWeAre.css'} )
     },
+    contact: (req,res) => {
+        res.render ('contact', { styles: 'styles-contact.css'} )
+    }
 }
 module.exports = main;
