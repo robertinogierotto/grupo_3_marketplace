@@ -117,6 +117,15 @@ input#files {
   font-size: 0.8rem;
   margin-left: 10px;
 }
+#validation-error {
+  color: red;
+  font-size: 0.6rem;
+  text-align: left;
+  line-height: inherit;
+  height: inherit;
+  width: 100%;
+  margin: 5px 0 5px;
+}
 
 @media (min-width: 480px) {
   .home a {
@@ -133,6 +142,9 @@ input#files {
   #profilePictureP {
     font-size: 0.9rem;
   }
+  #validation-error {
+    font-size: 0.8rem;
+  }
 }
 @media (min-width: 770px) {
   .register-title {
@@ -148,4 +160,8 @@ input#files {
   input#files {
     font-size: 0.9rem;
   }
+  #validation-error {
+    font-size: 0.9rem;
+  }
+
 }

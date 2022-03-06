@@ -57,6 +57,24 @@ const admin = {
         let productsNew = products.filter (product => product.id != req.params.id);
         fs.writeFileSync(productsFilePath, JSON.stringify (productsNew, null, ''));
         res.redirect ('/admin');
+    },
+    deleteUser: (req,res) => {
+        let usersNew = users.filter (user => user.id != req.params.id);
+        fs.writeFileSync(usersFilePath, JSON.stringify (usersNew, null, ''));
+        res.redirect ('/admin');
+    },
+    mkAdm: (req,res) => {
+        let userToEdit = users.find (user => user.id == req.params.id);
+
+        userToEdit.category === 'user' ? userToEdit.category = 'admin': userToEdit.category = 'user';
+
+        let usersNew = users.map (user => {
+            if (user.id == userToEdit.id) {
+                return user = {...userToEdit};
+            } return user;
+        })
+        fs.writeFileSync(usersFilePath, JSON.stringify (usersNew, null, ''));
+        res.redirect ('/admin' );
     }
 }
 

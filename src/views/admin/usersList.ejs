@@ -21,13 +21,15 @@
                     </tr>
                     <% users.forEach(user => { %>
                     <tr>
-                        <td><img class="img-tb" src="/images/user/<%= user.image %>" alt=""></td>
-                        <td><%= user.first_name + ' ' + user.last_name %></td>
+                        <td><img class="img-tb" src="/images/user/<%= user.profilePicture %>" alt=""></td>
+                        <td><%= user.name + ' ' + user.lastName %></td>
                         <td class="movile"><%= user.email %></td>
                         <td><%= user.category %></td>
                         <td>
-                            <a href="#" class="btn btn-info">Admin</a>
-							<form action="#" method="POST" class="d-inline form-delete">
+                            <form action= "/admin/users/<%= user.id %>?_method=PUT" method="POST">
+                                <button type="submit" class="btn btn-info">Admin/User</button>
+                            </form>
+							<form action="/admin/users/<%= user.id %>?_method=DELETE" method="POST" class="d-inline form-delete">
 								<button class="btn btn-danger" type="submit">Borrar</button>
 							</form>
                         </td>

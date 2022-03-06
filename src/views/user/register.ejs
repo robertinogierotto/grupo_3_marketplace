@@ -8,47 +8,72 @@
     <!------------------------------------------ main ---------------------------------------------------->
     <main class="register1">
         <h4 class="register-title">Formulario de Registro</h4>
-        <form action="/" method="POST">
+        <form action="/user" method="POST" enctype="multipart/form-data">
             <section class="form-register">
                 <p id="profilePictureP">Ingresa tus datos personales:</p>
-                <input class="controls" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" required>
-                <input class="controls" type="text" name="lastName" id="apellidos" placeholder="Ingrese su Apellido" required>
-                <input class="controls" type="email" name="email" id="correo" placeholder="Ingrese su Correo" required>
-                <input class="controls" type="password" name="password" id="correo" placeholder="Ingrese su Contraseña" required>
-                <input class="controls" type="password" name="rePasword" id="correo" placeholder="Confirme su Contraseña" required>
-
+                <% if (locals.errors && errors.name) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.name.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>#nombres {border: red 2px solid}</style>
+                <% } %>
+                <input class="controls" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.name %>">
+                <% if (locals.errors && errors.lastName) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.lastName.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>#apellidos {border: red 2px solid}</style>
+                <% } %>
+                <input class="controls" type="text" name="lastName" id="apellidos" placeholder="Ingrese su Apellido" value="<%= locals.old && old.lastName %>">
+                <% if (locals.errors && errors.email) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.email.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>#correo {border: red 2px solid}</style>
+                <% } %>
+                <input class="controls" type="email" name="email" id="correo" placeholder="Ingrese su Correo" value="<%= locals.old && old.email %>">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.password.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>#pass {border: red 2px solid}</style>
+                <% } %>
+                <input class="controls" type="password" name="password" id="pass" placeholder="Ingrese su Contraseña">
+                <% if (locals.errors && errors.rePassword) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.rePassword.msg %> <i class="fa fa-arrow-up"></i> <i class="fa fa-arrow-down"></i></p>
+                    <style>#pass,#rePass {border: red 2px solid}</style>
+                <% } %>
+                <input class="controls" type="password" name="rePassword" id="rePass" placeholder="Confirme su Contraseña">
+                
+                
                 <p id="profilePictureP">Elige tu imagen de perfil!</p>
-                <div class="profilePicture">
+                <% if (locals.errors && errors.profilePicture) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.profilePicture.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>#profileP {border: red 2px solid}</style>
+                <% } %>
+                <div class="profilePicture" id="profileP">
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-1" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-1" value="any-1.png"/>
                         <img src="/images/user/any-1.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-2" value="2"/>
+                        <input type="radio" name="profilePicture" id="choose-2" value="any-2.png"/>
                         <img src="/images/user/any-2.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-3" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-3" value="any-3.png"/>
                         <img src="/images/user/any-3.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-4" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-4" value="any-4.png"/>
                         <img src="/images/user/any-4.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-5" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-5" value="any-5.png"/>
                         <img src="/images/user/any-5.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-6" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-6" value="any-6.png"/>
                         <img src="/images/user/any-6.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-7" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-7" value="any-7.png"/>
                         <img src="/images/user/any-7.png" />
                     </label>
                     <label>
-                        <input type="radio" name="profilePicture" id="choose-8" value="1"/>
+                        <input type="radio" name="profilePicture" id="choose-8" value="any-8.png"/>
                         <img src="/images/user/any-8.png" />
                     </label>
                     <p id="profilePictureP">O sube tu propio avatar:</p>
@@ -56,11 +81,14 @@
                         <input type="file" id='files' name="ownImage">
                     </div>
                 </div>
-                
 
+                <% if (locals.errors && errors.terms) { %>
+                    <p class="validation-error" id="validation-error"> <%= errors.terms.msg %> <i class="fa fa-arrow-down"></i></p>
+                    <style>.term-cond {border: red 2px solid}</style>
+                <% } %>              
 
                 <div class="term-cond">
-                    <input type="checkbox" name="terms-cond" value="a" id="terms-cond" required>
+                    <input type="checkbox" name="terms" id="terms-cond">
                     <label class="terms-cond" for="terms-cond">Estoy de acuerdo con los <a href="#">Terminos y Condiciones</a></label>
                 </div>
                 <input class="botons" type="submit" value="Registrarse">

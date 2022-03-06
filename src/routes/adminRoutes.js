@@ -35,6 +35,11 @@ router.get ('/editProduct/:id', adminController.editProduct);
 router.put ('/:id', upload.single('image'), adminController.saveProduct);
 /* para eliminar productos */
 router.delete ('/:id', adminController.deleteProduct);
+/* para eliminar usuarios */
+router.delete ('/users/:id', adminController.deleteUser);
+/* para hacer administrador o sacarle permisos */
+router.put ('/users/:id', adminController.mkAdm)
+
 
 module.exports = router;
 
