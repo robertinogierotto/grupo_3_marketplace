@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require ('path');
 
 const userController = require ('../controllers/userContoller');
-const loginValidation = require('../middlewares/loginValidation');
+const registerValidation = require('../middlewares/registerValidation');
 
 /* Multer para subir imagen de perfil */
 const storage = multer.diskStorage({
@@ -22,9 +22,12 @@ const upload = multer({ storage })
 
 /* para el login*/
 router.get ('/login', userController.login); 
+router.post ('/login', userController.authenticate); 
+/*para el logout */
+router.post('/logout', userController.logout);
 /* para el register */
 router.get ('/register', userController.register); 
-router.post ('/', upload.single('ownImage'), loginValidation, userController.saveUser);
+router.post ('/', upload.single('ownImage'), registerValidation, userController.saveUser);
 /* para el perfil del usuario */
 router.get ('/userProfile', userController.userProfile);
 

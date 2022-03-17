@@ -4,12 +4,27 @@
         <div class="logo">
             <a href="/"><img src="/images/logo.jpg" alt="Logo Rodawise"></a>
         </div>
+        <% if (locals.user) { %>
+            <div class="userAll">
+                <div class="userImgInfo">
+                    <p><%= user.name + ' ' + user.lastName %></p>
+                    <img src="/images/user/<%= user.profilePicture %>">
+                </div>
+            <div class="userAcctions">
+                <a href="/user/userProfile">Perfil</a>
+                <form action="/user/logout" method="POST" class="logout">
+                    <a class="logout" onclick="this.closest('form').submit();return false;">Cerrar Sesion</a>
+                </form>
+            </div>  
+            </div>
+        <% } else { %>
         <div class="reg-login">
             <ul>
                 <li class="register"><a href="/user/register">REGISTER</a></li>
                 <li class="login" ><a href="/user/login">LOGIN</a></li>
             </ul>
         </div>
+        <% }  %>
     </div>
     <nav>
         <div class="burger-menu">

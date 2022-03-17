@@ -10,27 +10,27 @@
             <main class="login1">
                 <!-- CONTENIDO ESPECIFICO DE LA PAGINA -->
                 <h3>LOGIN</h3>
-                <form action="/" method="post" class="marco">
+                <form action="/user/login" method="POST" class="marco">
                     <div class="usuario">
                         <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
                         <div>
-                            <input type="text" name="usuario" required />
+                            <input type="email" name="email" required />
                         </div>
                     </div>
 
                     <div class="contraseña">
                         <label for="password">Contraseña<span class="red">*</span></label>
                         <div class="contenedor_ojo">
-                            <input type="password" name="password" required /><span
+                            <input type="password" name="password" required />
                                 class="fa fa-fw fa-eye password-icon show-password"></span>
                         </div>
                     </div>
                     <div class="recordar">
-                        <label><input type="checkbox" name="recuerdame" value="recuerdame" />
+                        <label><input type="checkbox" name="remember" value="remember" />
                             Recuerdame</label>
 
-                        <button class="entrar" type="submit">Entrar</button>
-                    </div>
+                        <input class="entrar" type="submit" value="Ingresar"></input>
+                        </div>
 
                     <div class="olvidaste">
                         <label>¿Olvidaste tu contraseña?</label>

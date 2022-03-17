@@ -1,8 +1,13 @@
 //Módulos
 const path = require("path")
 const express = require('express');
-const app = express();
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
+
+
+const app = express();
 
 //Configuración
 app.use(express.static(path.join(__dirname, '../public')))
@@ -10,10 +15,25 @@ app.use(express.static(path.join(__dirname, '../public')))
 //Engine (ejs)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'))
+app.use(express.urlencoded({ extended: false }));
+
+// Sesiones y cookies
+app.use(session({
+  secret: 'rodawise secret',
+  resave: false,
+  saveUninitialized: true,
+}));
+app.use(cookieParser());
+app.use(logger('dev'));
 
 // method-override para procesamiento de put y delete //
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
+
+//Middleware para la autentificacion de usuario
+const auth = require('./middlewares/auth');
+app.use(auth);
+
 
 // Rutas
 /* rutas main, las rutas generales que no se agupan en ningun modulo de la web */
