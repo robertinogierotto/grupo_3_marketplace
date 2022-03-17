@@ -15,8 +15,8 @@
 }
 .titulo1 {
   color: white;
-  text-align: left;
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 2rem;
   margin-right: 30vw;
   margin-left: 10px;
   padding-top: 2%;
@@ -37,17 +37,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-self: left;
+  margin: 5%;
 }
 .boton {
-  width: 100%;
-  background: #3598fe;
-  border: none;
-  padding: 12px;
+  width: 50%;
+  border-radius: 4px;
+  background: black;
+  border: grey solid 2px;
+  margin: 20px;
+  align-self: left;
+  padding: 10px 20px 10px 20px;
   color: white;
-  margin: 16px 0;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.5s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+
+}
+.userProfile .boton:hover {
+  background-color: #3598fe;
+color: black;
 }
 
 
@@ -55,7 +64,8 @@
   .home a {
     display: block;
   }
-  .userProfile {
+
+  .titulo1 {
     font-size: 1.4rem;
     margin-right: 60vw;
   }
@@ -66,11 +76,11 @@
 
 }
 @media (min-width: 770px) {
-  .userProfile {
+  .titulo1 {
     font-size: 1.5rem;
     margin-right: 60vw;
   }
- .datosUser {
-  width: 50vw;
+ .userProfile {
+  width: 100vw;
  }
 }
