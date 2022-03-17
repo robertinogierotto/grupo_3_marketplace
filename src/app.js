@@ -34,6 +34,9 @@ app.use(methodOverride('_method'));
 const auth = require('./middlewares/auth');
 app.use(auth);
 
+//requerir middlewares para las rutas
+const adminRoute = require('./middlewares/adminRoute');
+
 
 // Rutas
 /* rutas main, las rutas generales que no se agupan en ningun modulo de la web */
@@ -50,7 +53,7 @@ app.use('/user', userRoutes);
 
 /* rutas administradores, todo lo relacionado a admin */
 const adminRoutes = require ('./routes/adminRoutes')
-app.use('/admin', adminRoutes);
+app.use('/admin',adminRoute, adminRoutes);
 
 /* Error 404 */ 
 app.use((req, res, next) => {
