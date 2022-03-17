@@ -158,5 +158,15 @@
   "profilePicture": "any-1.png",
   "terms": "on",
   "category": "user"
+ },
+ {
+  "id": 17,
+  "name": "Dalila",
+  "lastName": "conti",
+  "email": "dalila.contigoyeneche@gmail.com",
+  "password": "$2a$10$6LHoAdpA7Qxn7XGr.1mYa.H0Uejmi5dzF7c2Q6MZChE.jgywuQz1a",
+  "profilePicture": "any-1.png",
+  "terms": "on",
+  "category": "user"
  }
 ]
