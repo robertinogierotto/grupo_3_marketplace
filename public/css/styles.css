@@ -22,7 +22,7 @@ body {
 .top-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 .top-header ul {
     width: 20vw;
@@ -40,6 +40,35 @@ body {
     color: #3598FE;
     font-weight: 600;
     margin-left: 20px;
+}
+.userAll {
+    font-size: 0.8rem;
+    width: 50%;
+    margin: 5px;
+}
+.userImgInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.userImgInfo p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    
+}
+.userImgInfo img {
+    width: 35px;
+    border-radius: 50%;
+    border: #3598FE 2px solid;
+    margin: 5px 10px 5px 20px;
+}
+.userAcctions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.userAcctions .logout {
+    margin:0;
 }
 
 /* nav */

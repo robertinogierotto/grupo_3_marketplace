@@ -1,6 +1,6 @@
 const { check, oneOf } = require('express-validator');
 
-const loginValidation = [
+const registerValidation = [
     check('name')
         .notEmpty().withMessage('Debe completar el campo: Nombre').bail()
         .isString().withMessage('Debe utilizar caracteres alfanumericos').bail()
@@ -28,4 +28,4 @@ const loginValidation = [
         .notEmpty().withMessage('Debe aceptar los Terminos y Condiciones'),
 ];
 
-module.exports = loginValidation;
+module.exports = registerValidation;
