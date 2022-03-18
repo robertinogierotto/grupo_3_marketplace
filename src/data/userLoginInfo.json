@@ -1,12 +1,1 @@
-[
- {
-  "id": 18,
-  "name": "User",
-  "lastName": "Test",
-  "email": "usertest@gmail.com",
-  "profilePicture": "any-3.png",
-  "terms": "on",
-  "category": "user",
-  "token": "IvJxDTkjfD9l27K2NOsJOl+vSCzzgbNpDmOh3rXbCXJkOlW5DZ/kXaerqcWuQeu995/3jDHpkQS3nKtU2e2MdA=="
- }
-]
+[]

@@ -53,7 +53,7 @@ app.use('/user', userRoutes);
 
 /* rutas administradores, todo lo relacionado a admin */
 const adminRoutes = require ('./routes/adminRoutes')
-app.use('/admin',adminRoute, adminRoutes);
+app.use('/admin', adminRoute, adminRoutes);
 
 /* Error 404 */ 
 app.use((req, res, next) => {

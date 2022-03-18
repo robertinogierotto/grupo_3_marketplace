@@ -10,17 +10,17 @@
             <main class="userProfile">
              <section class = "titulo1" >Mi Perfil</section>
              <div class="profilePicture">
-                <img src="/images/user/any-1.png" alt="">
+                <img src="/images/user/<%= user.profilePicture %>" alt="">
                 </div>
-             <p class="datosUser"> Nombre: Santiago </p>
-             <p class="datosUser"> Apellido: Guzman </p>
-             <p class="datosUser"> Correo: lacasadepapel@gmail.com</p>
-             <p class="datosUser"> Tipo de Usuario: Usuario</p>
+             <p class="datosUser"> Nombre: <%= user.name %> </p>
+             <p class="datosUser"> Apellido: <%= user.lastName %> </p>
+             <p class="datosUser"> Correo: <%= user.email %></p>
+             
 
              
-             <button class="boton" type="submit" name="button">Editar Perfil</button>
+             <a href="/user/editProfile"><button class="boton">Editar Perfil</button></a>
           
-           
+            </main>
 
 
 

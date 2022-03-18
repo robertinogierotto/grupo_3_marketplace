@@ -14,8 +14,8 @@ const user = {
         res.render ('./user/login', { styles: 'styles-login.css'})
     },
     authenticate:(req, res)=>{
-        //recuperamos los datos ingresados por el usuario
         
+		//recuperamos los datos ingresados por el usuario
 		const { email, password } = req.body;
         // buscamos el email ingresado en la db
 		let user = users.find(user => user.email == email)
@@ -118,6 +118,9 @@ const user = {
     },
     userProfile: (req,res) => {
         res.render ('./user/userProfile', { styles: 'styles-userProfile.css'})
+    },
+	editProfile: (req,res) => {
+        res.render ('./user/editProfile', { styles: 'styles-editProfile.css'})
     }
 }
 
