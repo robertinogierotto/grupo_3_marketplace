@@ -9,7 +9,47 @@
             <!------------------------------------------ main ---------------------------------------------------->
 
             <main>
-            </main>
+                <h3>CONTACTO</h3>
+                <div class="text">
+                    <p class="title"> 
+                        Estamos contentos de recibir sus consultas y comentarios.
+                        Si desea ponerse en contacto con nosotros, complete el siguiente formulario y le responderemos lo antes posible.
+                    </p>
+                    <section class="form-contacto">
+                        <p id="datosNombre">NOMBRE</p>
+                        <% if (locals.errors && errors.name) { %>
+                            <p class="validation-error" id="validation-error"> <%= errors.name.msg %> <i class="fa fa-arrow-down"></i></p>
+                            <style>#nombres {border: red 2px solid}</style>
+                        <% } %>
+                        <input class="controls" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.name %>">
+
+                        <p id="datosNombre">CORREO ELECTRONICO</p>
+                        <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico">
+                        
+                        <p id="datosNombre">TELEFONO</p>
+                        <input class="controls" type="number" name="numero" id="numero" placeholder="Ingrese su Telefono">
+                        
+                        <select  class="infoPais" name="category" required>
+                            <option hidden value="" >Seleccione su Pais</option hidden>
+                            <option value="argentina">Argentina</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="chile">Chile</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="peru">Peru</option>
+                            <option value="paraguay">Paraguay</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="venezuela">Venezuela</option>
+                        </select>
+
+                        <p id="datosNombre">MENSAJE</p>
+                        <div class="infoMensaje">
+                            <textarea  id="" cols="40" rows="9" required></textarea>
+                        </div>
+                        <input class="botons" type="submit" value="ENVIAR">
+
+                    </section>
+                    </main>
 
             <!------------------------------------------ footer ---------------------------------------------------->
             <%- include('./partials/footer') %>
