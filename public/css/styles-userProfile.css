@@ -8,15 +8,79 @@
   display: none;
 }
 /* AGREGAR CODIGO ACA PARA MOVILES  */
+.userProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.titulo1 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-right: 30vw;
+  margin-left: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-bottom: white 3px solid;
+}
+.datosUser {
+  width: 90vw;
+  border-radius: 4px;
+  color: white;
+  border: grey solid 2px;
+  margin: 20px;
+  align-self: center;
+  background-color: black;
+  padding: 10px 20px 10px 20px;
+}
+.profilePicture {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-self: left;
+  margin: 5%;
+}
+.boton {
+  width: 50%;
+  border-radius: 4px;
+  background: black;
+  border: grey solid 2px;
+  margin: 20px;
+  align-self: left;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+
+}
+.userProfile .boton:hover {
+  background-color: #3598fe;
+color: black;
+}
 
 
 @media (min-width: 480px) {
   .home a {
     display: block;
   }
-  /* AGREGAR CODIGO ACA PARA TABLETS */
+
+  .titulo1 {
+    font-size: 1.4rem;
+    margin-right: 60vw;
+  }
+  .datosUser {
+    width: 60vw;
+    align-self: flex-start;
+  }
+
 }
 @media (min-width: 770px) {
-  /* AGREGAR CODIGO ACA PARA PC */
-
+  .titulo1 {
+    font-size: 1.5rem;
+    margin-right: 60vw;
+  }
+ .userProfile {
+  width: 100vw;
+ }
 }
