@@ -1,9 +1,21 @@
-
+main {
+  /* background-image: url('/images/fondo.jpg');
+  background-position: right;
+  background-size: cover; */
+  /* background-image: url('/images/fondo1.jpg');
+  background-position: right; */
+  /* background-image: url('/images/fondo2.jpg'); */
+  /* background-image: url('/images/fondo3.jpg'); */
+  background: url('/images/fondo.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .home a {
   color: white;
   display: none;
-  background-image: url('/images/fondo.jpg');
 }
 .contact a {
   color: green !important;
