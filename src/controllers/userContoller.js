@@ -44,9 +44,13 @@ const user = {
 					// Recordamos al usuario por 3 meses         msegs  segs  mins  hs   días
 					res.cookie('rememberToken', token, { maxAge: 1000 * 60  * 60 *  24 * 90 });                
 				}
-
-				// Finalmente lo mandamos a la home
-				return res.redirect('/');
+					
+				// Finalmente lo mandamos a la home o a la pagina de administrador si es un admin
+				if (req.session.user.category == 'admin') {
+					return res.redirect('/admin');
+				} else {
+					return res.redirect('/');
+				}
 			} else {
 				// Si la contraseña esta mal
 				return res.render('./user/login', { 

@@ -161,11 +161,21 @@
  },
  {
   "id": 17,
-  "name": "Dalila",
-  "lastName": "conti",
-  "email": "dalila.contigoyeneche@gmail.com",
-  "password": "$2a$10$6LHoAdpA7Qxn7XGr.1mYa.H0Uejmi5dzF7c2Q6MZChE.jgywuQz1a",
+  "name": "Adm",
+  "lastName": "Test",
+  "email": "admtest@gmail.com",
+  "password": "$2a$10$80ohaxfEcqhTo4UMndNr8OykgPuOKHiVh1jMG2FhztqlZNPZ5NWla",
   "profilePicture": "any-1.png",
+  "terms": "on",
+  "category": "admin"
+ },
+ {
+  "id": 18,
+  "name": "User",
+  "lastName": "Test",
+  "email": "usertest@gmail.com",
+  "password": "$2a$10$1O8so8quUNR8SPu4aiIye.rwNFetIkYY1oUpP0M2TEuQmapdN3fNC",
+  "profilePicture": "any-3.png",
   "terms": "on",
   "category": "user"
  }
