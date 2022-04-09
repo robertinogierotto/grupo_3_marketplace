@@ -22,7 +22,7 @@ body {
 .top-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 .top-header ul {
     width: 20vw;
@@ -41,15 +41,22 @@ body {
     font-weight: 600;
     margin-left: 20px;
 }
+.logo {
+    align-self: center;
+}
 .userAll {
     font-size: 0.8rem;
-    width: 50%;
+    width: 170px;
     margin: 5px;
+    border: #3598FE 3px solid;
+    border-radius: 10px;
 }
 .userImgInfo {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    text-decoration: none;
+    margin-right: 3px;
 }
 .userImgInfo p {
     font-size: 0.9rem;

@@ -7,11 +7,11 @@
         <% if (locals.user) { %>
             <div class="userAll">
                 <div class="userImgInfo">
-                    <p><%= user.name + ' ' + user.lastName %></p>
-                    <img src="/images/user/<%= user.profilePicture %>">
+                    <p>Hola!<br></i><%= ' ' + user.name + ' ' + user.lastName + ' ' %></p>
+                    <img src="/images/user/<%= user.profilePicture %>"><i class="fa fa-chevron-down"></i>
                 </div>
             <div class="userAcctions">
-                <a href="/user/userProfile">Perfil</a>
+                <a href="/user/userProfile"></a>
                 <form action="/user/logout" method="POST" class="logout">
                     <a class="logout" onclick="this.closest('form').submit();return false;">Cerrar Sesion</a>
                 </form>
