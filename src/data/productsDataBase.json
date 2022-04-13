@@ -99,7 +99,7 @@
   },
   {
     "id": 8,
-    "name": "Silla Gamer Ergonómico",
+    "name": "Silla Gamer Ergonómica",
     "price": "21999",
     "discount": "15",
     "category": "gamer",
@@ -127,7 +127,7 @@
   },
   {
     "id": 10,
-    "name": "CORSAIR VIRTUOSO WIRELESS",
+    "name": "AURICULARES CORSAIR VIRTUOSO WIRELESS",
     "price": "33535",
     "discount": "10",
     "category": "video",
@@ -159,7 +159,7 @@
     "price": "1587",
     "discount": "15",
     "category": "gamer",
-    "caract1": "CARACTERÍSTICAS: MODELO RGB GTX3000",
+    "caract1": "MODELO RGB GTX3000",
     "caract2": "",
     "caract3": "",
     "caract4": "",
