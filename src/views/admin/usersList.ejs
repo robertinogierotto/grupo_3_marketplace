@@ -24,7 +24,7 @@
                         <td><img class="img-tb" src="/images/user/<%= user.profilePicture %>" alt=""></td>
                         <td><%= user.name + ' ' + user.lastName %></td>
                         <td class="movile"><%= user.email %></td>
-                        <td><%= user.category %></td>
+                        <td><%= user.UserCategory.name %></td>
                         <td>
                             <form action= "/admin/users/<%= user.id %>?_method=PUT" method="POST">
                                 <button type="submit" class="btn btn-info">Admin/User</button>

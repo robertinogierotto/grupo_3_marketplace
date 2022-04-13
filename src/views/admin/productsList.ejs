@@ -31,10 +31,10 @@
                         <td class="movile">$<%= product.price %></td>
                         <td class="movile"><%= product.discount %>%</td>
                         <% if (product.dailyOnSale == 0) { %>
-                        <td class="movile"><%= product.category %>  Home </td>
+                        <td class="movile"><%= product.ProductCategory.name %>  Home </td>
                         <% } %>
                         <% if (product.dailyOnSale == 1) { %>
-                        <td class="movile"><%= product.category %></td> 
+                        <td class="movile"><%= product.ProductCategory.name %></td> 
                         <% } %>                        
                         <td>
                             <a href="/products/details/<%= product.id %>" class="btn btn-info">Detalle</a>

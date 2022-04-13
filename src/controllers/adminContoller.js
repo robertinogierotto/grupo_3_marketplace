@@ -6,17 +6,36 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+const db = require('../database/models');
 
 const admin = {
     adminIndex: (req,res) => {
         res.render ('./admin/adminIndex', { styles: 'styles-adminIndex.css'})
     },
-    productsList: (req,res) => {
+    /*productsList: (req,res) => {
         res.render ('./admin/productsList', { styles: 'styles-productsList.css', products})
+    }*/
+    productsList: async (req,res) => {
+        try {
+            const products = await db.Product.findAll({include: ['ProductCategory']});
+            console.log(products);
+            res.render ('./admin/productsList', { styles: 'styles-productsList.css', products})
+        } catch (error) {
+            console.log(error)
+        }
+
     },
-    usersList: (req,res) => {
+    /*usersList: (req,res) => {
         res.render ('./admin/usersList', { styles: 'styles-usersList.css', users})
-    }, 
+    },*/
+    usersList: async (req,res) => {
+        try {
+            const users = await db.User.findAll({include: ['UserCategory']});
+            res.render ('./admin/usersList', { styles: 'styles-usersList.css', users})
+        } catch (error) {
+            console.log(error)
+        }
+    },
     createProduct: (req,res) => {
         res.render ('./admin/createProduct', { styles: 'styles-createProduct.css'})
     },

@@ -52,7 +52,7 @@ const userRoutes = require ('./routes/userRoutes')
 app.use('/user', userRoutes);
 
 /* rutas administradores, todo lo relacionado a admin */
-const adminRoutes = require ('./routes/adminRoutes')
+const adminRoutes = require ('./routes/adminRoutes');
 app.use('/admin', adminRoute, adminRoutes);
 
 /* Error 404 */ 
