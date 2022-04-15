@@ -37,14 +37,14 @@ module.exports = (sequelize, dataTypes) => {
             as: "UserCategory",
             foreignKey: "categoryId"
         })
-    }
 
-   /* User.associate =  (models) => {
+        
         User.hasMany(models.UserLog, {
             as: "UserLog",
             foreignKey: "userId"
         })
-    }*/
+    }
+
 
     return User
 }

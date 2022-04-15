@@ -49,7 +49,7 @@
 .term-cond {
   width: 100%;
   border-top: white solid 2px;
-  margin-top: 14px;
+  margin-top: 5px;
 }
 .form-register p {
   height: 40px;
@@ -79,7 +79,8 @@
 .profilePicture {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 4px;
 }
 #profilePictureP {
   text-align: left;
@@ -103,7 +104,7 @@
   outline: 4px solid yellow;
 }
 .inputAvatar {
-  width: 250px;
+  width: 95%;
   height: 30px;
   display: flex;
   text-align: center;
@@ -162,6 +163,9 @@ input#files {
   }
   #validation-error {
     font-size: 0.9rem;
+  }
+  .inputAvatar {
+    width: 80%;
   }
 
 }

@@ -20,28 +20,28 @@
                        <!-- <label for="Precio">Precio</label>-->
                         <input class="infoCategoria short" type="number" name="price" id='Precio' placeholder="Precio" value="<%= productToEdit.price %>" required>
                         <input class="infoCategoria short" type="number" name="discount" id='discount' placeholder="Descuento" value="<%= productToEdit.discount %>" required>
-                        <% if (productToEdit.category == 'phones') { %>
+                        <% if (productToEdit.productsCategoryId == 3) { %>
                        <!--  <label for="Categoria">Categoria</label>-->
-                        <select  class="infoCategoria short" name="category" required>
-                            <option selected="selected" value="phones">Celulares</option>
-                            <option value="video">Video</option>
-                            <option value="gamer">Gamer</option>
+                        <select  class="infoCategoria short" name="productsCategoryId" required>
+                            <option selected="selected" value="3">Celulares</option>
+                            <option value="2">Video</option>
+                            <option value="1">Gamer</option>
                         </select>
                         <% } %>
-                        <% if (productToEdit.category == 'gamer') { %>
+                        <% if (productToEdit.productsCategoryId == '1') { %>
                             <!--  <label for="Categoria">Categoria</label>-->
-                             <select  class="infoCategoria short" name="category" required>
-                                 <option value="phones">Celulares</option>
-                                 <option value="video">Video</option>
-                                 <option selected="selected" value="gamer">Gamer</option>
+                             <select  class="infoCategoria short" name="productsCategoryId" required>
+                                 <option value="3">Celulares</option>
+                                 <option value="2">Video</option>
+                                 <option selected="selected" value="1">Gamer</option>
                              </select>
                         <% } %>
-                        <% if (productToEdit.category == 'video') { %>
+                        <% if (productToEdit.productsCategoryId == '2') { %>
                             <!--  <label for="Categoria">Categoria</label>-->
-                             <select  class="infoCategoria short" name="category" required>
-                                 <option value="phones">Celulares</option>
-                                 <option selected="selected" value="video">Video</option>
-                                 <option value="gamer">Gamer</option>
+                             <select  class="infoCategoria short" name="productsCategoryId" required>
+                                 <option value="3">Celulares</option>
+                                 <option selected="selected" value="2">Video</option>
+                                 <option value="1">Gamer</option>
                              </select>
                         <% } %>
 

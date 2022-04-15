@@ -1,4 +1,5 @@
-const { check, oneOf } = require('express-validator');
+const { check } = require('express-validator');
+const db = require('../database/models');
 
 const registerValidation = [
     check('name')
@@ -11,7 +12,12 @@ const registerValidation = [
         .isLength({ min: 3, max: 30 }).withMessage('El Apellido debe tener entre 4 y 30 caracteres').bail(),
     check('email')
         .notEmpty().withMessage('Debe ingresar un Email').bail()
-        .isEmail().withMessage('Debe introducir un email valido').bail(),
+        .isEmail().withMessage('Debe introducir un email valido').bail()
+        .custom( async value => {
+            if(await db.User.findOne({where: {email: value}})){
+                return Promise.reject();
+            } return Promise.resolve();
+        }).withMessage('El email que ingresó ya esta en uso'),
     check('password')
         .notEmpty().withMessage('Debe ingresar una Contraseña').bail()
         .isLength({ min: 5, max: 20 }).withMessage('La Contraseña debe tener entre 5 y 20 caracteres').bail(),

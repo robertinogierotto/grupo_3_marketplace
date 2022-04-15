@@ -26,12 +26,22 @@
                         <td class="movile"><%= user.email %></td>
                         <td><%= user.UserCategory.name %></td>
                         <td>
+                            <% if(locals.user.email == user.email) { %>
                             <form action= "/admin/users/<%= user.id %>?_method=PUT" method="POST">
-                                <button type="submit" class="btn btn-info">Admin/User</button>
+                                <button type="submit" class="btn btn-info disabled">Admin/User</button>
                             </form>
 							<form action="/admin/users/<%= user.id %>?_method=DELETE" method="POST" class="d-inline form-delete">
-								<button class="btn btn-danger" type="submit">Borrar</button>
+								<button class="btn btn-danger disabled" type="submit">Borrar</button>
 							</form>
+                            <% } %>
+                            <% if(locals.user.email != user.email) { %>
+                                <form action= "/admin/users/<%= user.id %>?_method=PUT" method="POST">
+                                    <button type="submit" class="btn btn-info ">Admin/User</button>
+                                </form>
+                                <form action="/admin/users/<%= user.id %>?_method=DELETE" method="POST" class="d-inline form-delete">
+                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                </form>
+                                <% } %>
                         </td>
                     </tr>
                     <% }) %>
