@@ -9,46 +9,37 @@
             <!------------------------------------------ main ---------------------------------------------------->
 
            <!-- ----TÍTULO----  -->
-           <div class="register-title">
-            <h1 class="register-h1"> <i class= "fas fa-user"></i></i>&nbsp&nbsp Datos de Usuario </h1>
+           <main class="userEditProfile">
+            <h1 class="titulo1"> <i class= "fas fa-user"></i></i>&nbsp&nbsp Datos de Usuario </h1>
         </div>
 
         <!-- ----IMAGEN----  -->
-        <!--acá hay que cambiar la línea siguiente por una dinámica-->
-        <div class="user-img">
-        <img src="images/user/any-1.png" alt="">
-        </div>
-
+        
+        <div class="profilePicture">
+        <img src="/images/user/<%= user.profilePicture %>" alt=""> </div>
+        <button type="submit" class="boton">Cambiar Imágen</button>
+        
         <!-- ----NOMBRE----  FALTA CONCATENAR EL BIENVENIDO+NOMBRE--> 
-        <div class="register-cajas-input">
-            <label for="">Nombre: Maria</label></br>
+        <div class="datosUser">
+            <label for="">Nombre: </label></br>
             <input type="text" name="firstName" placeholder="Ingresá tu nombre" required>
         </div>
 
         <!-- ----APELLIDO----  -->
 
-        <div class="register-cajas-input">
-            <label for="">Apellido: Perez</label></br>
+        <div class="datosUser">
+            <label for="">Apellido: </label></br>
             <input type="text" name="lastName" placeholder="Ingresá tu apellido" required>
         </div>
 
 
-        <!-- ----EMAIL----  -->
-        <div class="register-cajas-input">
-            <label for="">E-mail: mariaperez@gmail.com</label></br>
-            <input type="email" name="email" placeholder="✉ Ingresá tu email" required>
-        </div>
+      
 
-        <!-- ----CONTRASEÑA----  -->
-        <div class="register-cajas-input">
-            <label for="">Contraseña</label></br>
-            <input type="password" name="password" placeholder="🔓 Ingresá contraseña" minlength="8" required>
-        </div>
-
+       
 
 
         <!-- ----BOTÓN "REGISTRAR"----  -->
-        <button type="submit" class="register-button">Cambiar Contraseña</button>
+        <button type="submit" class="boton">Guardar Datos</button>
 
 
 
