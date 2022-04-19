@@ -11,25 +11,31 @@
             <main>
                 <h3>CONTACTO</h3>
                 <div class="text">
-                    <p class="title"> 
+                    <p class="title1"> 
                         Estamos contentos de recibir sus consultas y comentarios.
+                    </p>
+                    <br>
+                    <p class="title2"> 
                         Si desea ponerse en contacto con nosotros, complete el siguiente formulario y le responderemos lo antes posible.
                     </p>
+
+                    <br>
+
                     <section class="form-contacto">
-                        <p id="datosNombre">NOMBRE</p>
+                        <p id="datosNombre">NOMBRE <span class="red">*</span></p>
                         <% if (locals.errors && errors.name) { %>
                             <p class="validation-error" id="validation-error"> <%= errors.name.msg %> <i class="fa fa-arrow-down"></i></p>
                             <style>#nombres {border: red 2px solid}</style>
                         <% } %>
-                        <input class="controls" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.name %>">
+                        <input class="controlNombre" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.name %>">
 
-                        <p id="datosNombre">CORREO ELECTRONICO</p>
-                        <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico">
+                        <p id="datosNombre">CORREO ELECTRONICO <span class="red">*</span></p>
+                        <input class="controlCorreo" type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico">
                         
-                        <p id="datosNombre">TELEFONO</p>
-                        <input class="controls" type="number" name="numero" id="numero" placeholder="Ingrese su Telefono">
+                        <p id="datosNombre">TELEFONO <span class="red">*</span></p>
+                        <input class="controlTelefono" type="number" name="numero" id="numero" placeholder="Ingrese su Telefono">
                         
-                        <select  class="infoPais" name="category" required>
+                        <select class="infoPais" name="category" required>PAIS
                             <option hidden value="" >Seleccione su Pais</option hidden>
                             <option value="argentina">Argentina</option>
                             <option value="bolivia">Bolivia</option>
@@ -42,15 +48,19 @@
                             <option value="venezuela">Venezuela</option>
                         </select>
 
-                        <p id="datosNombre">MENSAJE</p>
+                        <p id="datosNombre">MENSAJE <span class="red">*</span></p>
                         <div class="infoMensaje">
-                            <textarea  id="" cols="40" rows="9" required></textarea>
+                            <textarea  id="" class="textarea" cols="110" rows="80" required></textarea>
                         </div>
+                    
+                        <p class="campo"><span class="red">*</span>Este campo es obligatorio</p>
+                    
                         <input class="botons" type="submit" value="ENVIAR">
 
                     </section>
+                </div>
+                <br>
                     </main>
-
             <!------------------------------------------ footer ---------------------------------------------------->
             <%- include('./partials/footer') %>
     </body>

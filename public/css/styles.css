@@ -46,17 +46,18 @@ body {
 }
 .userAll {
     font-size: 0.8rem;
-    width: 170px;
+    width: 165px;
     margin: 5px;
     border: #3598FE 3px solid;
     border-radius: 10px;
+    position: relative;
 }
 .userImgInfo {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
     text-decoration: none;
-    margin-right: 3px;
+    margin: 3px;
 }
 .userImgInfo p {
     font-size: 0.9rem;
@@ -67,16 +68,36 @@ body {
     width: 35px;
     border-radius: 50%;
     border: #3598FE 2px solid;
-    margin: 5px 10px 5px 20px;
+    margin: 5px 10px 5px 5px;
 }
 .userAcctions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    display: none;
+    position: absolute;
+    right: -8px;
+    background-color: white;
+    width: 165px;
+    border: #3598FE 3px solid;
+    border-radius: 10px;
+    margin: 5px;
+    z-index: 1000;
 }
-.userAcctions .logout {
-    margin:0;
+.userAcctions ul {
+    display: block;
+    text-align: right;
+    width: 100%;
 }
+.userAcctions li {
+    padding: 10px;
+}
+.userAcctions li a {
+    width: 100%;
+    margin: 0;
+}
+.logout {
+    cursor: pointer;
+}
+
+
 
 /* nav */
 
@@ -128,6 +149,26 @@ div.burger-menu i{
     height: 40px;
     padding: 10px;
     width: 40px;
+}
+.dropdown-burger {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    background-color: #3598FE;
+    border-radius: 10px;
+}
+.dropdown-burger ul {
+    display: block;
+}
+.dropdown-burger li{
+    border-bottom: white 1px solid;
+    padding: 10px;
+}
+.contactDD {
+    border-bottom: none !important;
+}
+.homeDD {
+    display: none;
 }
 
 /* search bar */
@@ -242,6 +283,15 @@ footer {
         width: 50vw;
         font-size: 0.9rem;
     }
+    .userAll, .userAcctions  {
+        width: 190px;
+    }
+    .userImgInfo p {
+        font-size: 1rem;
+    }
+    .userAcctions li a {
+        font-size: 1rem;
+    }
 }
 
 /* media para computadoras */
@@ -280,6 +330,15 @@ footer {
     header .form .input{
         width: 30vw;
         font-size: 0.9rem;
+    }
+    .userAll, .userAcctions  {
+        width: 210px;
+    }
+    .userImgInfo p {
+        font-size: 1.1rem;
+    }
+    .userAcctions li a {
+        font-size: 1.1rem;
     }
 }
 

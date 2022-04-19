@@ -1,9 +1,12 @@
-.home a {
+.home a, .who-we-areDD {
   color: white;
   display: none;
 }
 .who-we-are a {
   color: green !important;
+}
+.homeDD {
+  display: block;
 }
 
 .who-we-are {
@@ -50,6 +53,56 @@ main h3 {
   margin: 20px;
   font-size: 1rem;
   padding: 5px;
+}
+
+section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section div {
+  margin: 20px;
+  
+}
+
+section div img {
+  max-width: 100%;
+  border-radius:150px;
+  height: 120px;
+}
+
+.contenedor:hover .imagen{
+  -webkit-transform:scale(1.3);transform:scale(1.1);
+}
+
+.contenedor {
+  overflow:hidden; border-radius:150px;
+}
+
+.imagen{
+  filter: grayscale(80%);
+}
+
+.imagen:hover {
+  filter: saturate(150%);
+}
+
+h4 {
+  border-bottom: white 3px solid;
+}
+
+h4 {
+ 
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-left: 2%;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 480px) {

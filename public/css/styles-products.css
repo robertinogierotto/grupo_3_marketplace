@@ -1,10 +1,13 @@
-.home a {
+.home a, .productsDD {
     color: white;
     display: none;
 }
 .products a {
     color: green;
     
+}
+.homeDD {
+    display: block;
 }
 .products {
     display: block;

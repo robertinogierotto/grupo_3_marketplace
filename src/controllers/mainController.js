@@ -1,13 +1,6 @@
-// const fs = require('fs');
-// const path = require('path');
-
 const db = require('../database/models');
 
 const main = {
-    // home: (req,res) => {
-    //     let productosEnOferta = products.filter (product => product.dailyOnSale == 0);
-    //     res.render ('home', { styles: 'styles-home.css', productosEnOferta})
-    // },
     home: async (req,res) => {
         let productosEnOferta = await db.Product.findAll({
             where: {

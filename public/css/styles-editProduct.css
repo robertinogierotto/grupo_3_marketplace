@@ -2,6 +2,9 @@
   color: white;
   display: none;
 }
+.homeDD {
+  display: block;
+}
 
 .imagenLogo1 {
   width: 100%;
