@@ -5,6 +5,9 @@
 .register a {
   color: green !important;
 }
+.homeDD {
+  display: block;
+}
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */
 .register1 {

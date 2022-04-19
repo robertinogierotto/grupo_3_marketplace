@@ -2,6 +2,9 @@
     color: white;
     display: none;
 }
+.homeDD {
+    display: block;
+  }
 .product-details {
     display: flex;
     flex-direction: column;

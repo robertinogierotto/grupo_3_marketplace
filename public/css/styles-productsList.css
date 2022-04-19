@@ -2,6 +2,9 @@
   color: white;
   display: none;
 }
+.homeDD {
+  display: block;
+}
 header .form .input {
   font-size: 0.7rem;
 }

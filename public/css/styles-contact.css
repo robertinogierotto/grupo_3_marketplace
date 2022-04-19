@@ -13,9 +13,15 @@ main {
   background-size: cover;
 }
 
-.home a {
+.home a, .contactDD {
   color: white;
   display: none;
+}
+.homeDD {
+  display: block;
+}
+.who-we-areDD {
+  border-bottom: none !important;
 }
 .contact a {
   color: green !important;

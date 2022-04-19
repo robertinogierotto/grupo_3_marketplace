@@ -7,6 +7,9 @@
   color: white;
   display: none;
 }
+.homeDD {
+  display: block;
+}
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */
 .admIndex {

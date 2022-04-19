@@ -29,7 +29,7 @@ const registerValidation = [
     .isEmail()
     .withMessage("Debe introducir un email valido")
     .bail()
-    .custom(async (value) => {
+    .custom( async (value) => {
       if (await db.User.findOne({ where: { email: value } })) {
         return Promise.reject();
       }

@@ -7,6 +7,9 @@
     color: white;
     display: none;
 }
+.homeDD {
+    display: block;
+}
 .cart-title {
   color: white;
   text-align: left;
@@ -103,7 +106,7 @@
     margin: 10px 5vw;
 }
 .total {
-    background-color: yellow;
+    background-color: #3598FE;
     padding: 5px;
     font-size: 1rem;
 }
@@ -114,7 +117,7 @@
     font-size: 1rem;
 }
 .confirm {
-    background-color: yellow;
+    background-color: #3598FE;
     align-self: flex-end;
     margin-right: 5vw;
     padding: 5px;
@@ -123,11 +126,12 @@
     font-size: 1.3rem;
     font-weight: 600;
     transition: all 0.5s;
+    color: white;
 }
 .addproduct {
     padding: 10px;
-    color: black;
-    background: yellow;
+    color: white;
+    background: #3598FE;
     border-radius: 10px;
     font-size: 1rem;
     align-self: stretch;
@@ -135,8 +139,8 @@
     transition: all 0.5s;
 }
 .addproduct:hover, .confirm:hover {
-    background-color: #3598FE;
-    color: white;
+    background-color: yellow;
+    color: black;
 }
 
 
@@ -148,9 +152,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: yellow;
+        background-color: #3598FE;
         font-weight: 700;
         font-size: 1rem;
+        color: white;
     }
     .cart-title {
         margin-right: 70vw;

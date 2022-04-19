@@ -1,6 +1,9 @@
 .home a {
   color: white;
 }
+.homeDD {
+  display: block;
+}
 header .form .input {
   font-size: 0.7rem;
 }

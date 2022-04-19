@@ -1,9 +1,12 @@
-.home a {
+.home a, .who-we-areDD {
   color: white;
   display: none;
 }
 .who-we-are a {
   color: green !important;
+}
+.homeDD {
+  display: block;
 }
 
 .who-we-are {

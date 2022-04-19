@@ -1,22 +1,28 @@
 <!-- LOGO - REGISTER/LOGIN - NAV BAR - SEARCH BAR -->
+<script src="/js/header.js"></script>
 <header>
     <div class="top-header">
         <div class="logo">
             <a href="/"><img src="/images/logo.jpg" alt="Logo Rodawise"></a>
         </div>
         <% if (locals.user) { %>
-            <div class="userAll">
+        <div class="userAll">
                 <div class="userImgInfo">
                     <p>Hola!<br></i><%= ' ' + user.name + ' ' + user.lastName + ' ' %></p>
                     <img src="/images/user/<%= user.profilePicture %>"><i class="fa fa-chevron-down"></i>
                 </div>
             <div class="userAcctions">
-                <a href="/user/userProfile"></a>
-                <form action="/user/logout" method="POST" class="logout">
-                    <a class="logout" onclick="this.closest('form').submit();return false;">Cerrar Sesion</a>
-                </form>
+                <ul>
+                    <li><a class="profileLink" href="/user/userProfile">Perfil de Usuario</a></li>
+                    <% if (locals.user.categoryId == 2) { %>
+                    <li><a class="adminLink" href="/admin">Página de Administrador</a></li>
+                    <% }  %>
+                    <li><form action="/user/logout" method="POST" class="logout">
+                        <a class="logout" onclick="this.closest('form').submit();return false;">Cerrar Sesión</a>
+                    </form></li>
+                </ul>
             </div>  
-            </div>
+        </div>
         <% } else { %>
         <div class="reg-login">
             <ul>
@@ -28,7 +34,16 @@
     </div>
     <nav>
         <div class="burger-menu">
-            <i class="fa fa-bars burger"></i> </div>
+            <i class="fa fa-bars burger"></i> 
+        </div>
+        <div class="dropdown-burger">
+            <ul>
+                <li class="homeDD"><a href="/">HOME</a></li>
+                <li class="productsDD"><a href="/products">PRODUCTOS</a></li>
+                <li class="who-we-areDD"><a href="/whoWeAre">QUIENES SOMOS</a></li>
+                <li class="contactDD"><a href="/contact">CONTACTO</a></li>    
+            </ul>
+        </div>
         <ul>
             <li class="home"><a href="/">HOME</a></li>
             <li class="products"><a href="/products">PRODUCTOS</a></li>
