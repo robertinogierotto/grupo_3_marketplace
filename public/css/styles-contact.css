@@ -12,7 +12,7 @@ main {
   background-position: right; */
   /* background-image: url('/images/fondo2.jpg'); */
   /* background-image: url('/images/fondo3.jpg'); */
-  background: url('/images/fondo2.jpg') no-repeat center center fixed; 
+  background: url('/images/fondo2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -114,7 +114,7 @@ main h3 {
   background: white;
   padding: 1px;
   border-radius: 4px;
-  
+
 }
 
 .textarea {width:82%;
@@ -178,23 +178,21 @@ main h3 {
     /* AGREGAR CODIGO ACA PARA PC */
     .home a {
       color: white;
-      display: none;
     }
     .contact a {
       color: green !important;
     }
-    
+
     .contact {
       display: block;
-      position: absolute;
-    
+
     }
-    
+
     h3 {
       border-bottom: white 3px solid;
     }
-    
-    main h3 {
+
+    /* main h3 {
       color: white;
       text-align: left;
       font-size: 30px;
@@ -203,15 +201,15 @@ main h3 {
       padding-top: 2%;
       padding-left: 2%;
       margin-bottom: 20px;
-    }
-    
-    .title {
+    } */
+
+    /* .title {
       text-align: center;
       margin-bottom: 10px;
       margin-right: 60px;
       color: white;
       text-align: center;
       font-size: 1.3rem;
-    }
-      
+    } */
+
 }
