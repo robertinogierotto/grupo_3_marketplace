@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener('load', function(){
     
 let burgerMenu = document.querySelector('.burger-menu');
 let burgerDropDown = document.querySelector('.dropdown-burger');
@@ -20,4 +20,4 @@ userDropDown.addEventListener('click', e => {
 userActions.addEventListener('mouseleave', e => {
     userActions.style.display = 'none';
 })
-};
+});
