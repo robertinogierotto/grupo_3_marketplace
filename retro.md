@@ -17,4 +17,5 @@ Nivel satisfactorio Sprint 4 : Excelente
 Análisis Retrospectivo Sprint 5 : Hicimos una primera reunión para poder dividir las tareas y analizar el sprint anterior, fue muy productiva, ya que pudimos organizar la división de los pendientes y organizar el tablero de trabajo. A lo largo de estas semanas pudimos ir consultandonos sobre dudas y/o diferentes formas de realizar lo que cada uno tenía asignado. Afianzamos  la comunicación y la solidaridad entre pares. Llegamos a realizar todo lo requerido por el sprint e incluso adelantar algunos detalles más. 
 Nivel satisfactorio Sprint 5 : Excelente 
 
-Análisis Retrospectivo Sprint 6 : 
+Análisis Retrospectivo Sprint 6 : Logramos completar todos los requerimientos del sprint, aunque éste nos llevó un poco más de tiempo y dedicación que los anteriores. Seguimos usando Trello para poder hacer  seguimiento de las tareas y al hacer la presentación de nuestro proyecto quedamos muy satisfechos con lo que venimos logrando y contentos de que se ve toda la dedicación y el esfuerzo que pusimos hasta ahora en cada entregable. 
+Nivel satisfactorio Sprint 6 : Excelente 
