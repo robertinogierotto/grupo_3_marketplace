@@ -108,6 +108,17 @@ main h4 {
   align-self: flex-start;
   font-size: 0.8rem;
 }
+.error {
+  border: 2px red solid;
+}
+.errorsStyle {
+  background-color: rgba(255, 0, 0, 0.5);
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px;
+}
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */
 @media (min-width: 480px) {

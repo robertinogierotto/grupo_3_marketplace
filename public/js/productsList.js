@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
     
     let deleteForm = document.querySelectorAll('.form-delete');
-    
+   
     deleteForm.forEach(form => {
         form.addEventListener('click', e => {
             e.preventDefault();

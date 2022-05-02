@@ -2,6 +2,8 @@
 <html lang="en">
 <!------------------------------------------ head ---------------------------------------------------->
 <%- include('../partials/head') %>
+<script src="/js/createProductValidation.js"></script>
+
 
     <body>
         <!------------------------------------------ header ---------------------------------------------------->
@@ -9,27 +11,28 @@
             <!------------------------------------------ main ---------------------------------------------------->
             <main class="">
                 <h4 class="tituloProducto">CREAR PRODUCTOS</h4>
-                <form action= "/admin" method="POST" enctype="multipart/form-data">
+                <form class="productForm" action= "/admin" method="POST" enctype="multipart/form-data">
                     <div class="imagenLogo">
                         <img class='imagenLogo1' src="/images/logo-imagen2.png" alt="logo">
                     </div>
                     <label for="files" class="btn">Cargar Imagen</label>
                     <input type="file" id='files' name="image" style="display:none">
                     <div class='formularioProducto'>
-                        <input class="infoCategoria short" type="text" name="name" id="nombre" placeholder="Nombre del Producto" required>
+                        <ul class="errors"></ul>
+                        <input class="infoCategoria short" type="text" name="name" id="name" placeholder="Nombre del Producto" >
                         <!-- <label for="Precio">Precio</label>-->
-                        <input class="infoCategoria short" type="number" name="price" id='Precio' placeholder="Precio"  required>
-                        <input class="infoCategoria short" type="number" name="discount" id='Descuento' placeholder="Descuento" max="99" required>
+                        <input class="infoCategoria short" type="number" name="price" id='price' placeholder="Precio"  >
+                        <input class="infoCategoria short" type="number" name="discount" id='discount' placeholder="Descuento">
 
                         <!--  <label for="Categoria">Categoria</label>-->
-                        <select  class="infoCategoria short" name="productsCategoryId" required>
+                        <select  class="infoCategoria short" name="productsCategoryId" id="productsCategoryId" >
                             <option hidden value="" >Seleccione Categoria</option hidden>
                             <option value="3">Celulares</option>
                             <option value="2">Video</option>
                             <option value="1">Gamer</option>
                         </select>
-                        <input class="infoCategoria" type="text" name="caract1" id="caract1" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" required>
-                        <input class="infoCategoria" type="text" name="caract2" id="caract2" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" required>
+                        <input class="infoCategoria" type="text" name="caract1" id="caract1" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" >
+                        <input class="infoCategoria" type="text" name="caract2" id="caract2" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" >
                         <input class="infoCategoria" type="text" name="caract3" id="caract3" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
                         <input class="infoCategoria" type="text" name="caract4" id="caract4" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS">
                         <div class="dailyOnSale">
@@ -42,7 +45,7 @@
                     </div>
 
                     <div class="descripcionProducto">
-                        <textarea required name="description" id="" cols="20" rows="5"
+                        <textarea  name="description" id="description" cols="20" rows="5"
                             placeholder="Descripcion del Producto"></textarea>
                     </div>
                     
