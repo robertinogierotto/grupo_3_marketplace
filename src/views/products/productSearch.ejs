@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!------------------------------------------ head ---------------------------------------------------->
+    <%- include('../partials/head') %>
+<body>
+    <!------------------------------------------ header ---------------------------------------------------->
+    <%- include('../partials/header') %>
+    <!------------------------------------------ main ---------------------------------------------------->
+    <!-- TITULO - CATEGORIAS DE PRODUCTOS - OFERTAS DEL DIA -->
+    <main>
+        <div class="title-category">
+            <h1 class="web-title">RESULTADOS DE SU BUSQUEDA</h1>
+            <section class="product-menu">
+                <article>
+                    <h2>CELULARES</h2>
+                    <a href="#"><img src="/images/celular.png" alt="celular"></a>
+                </article>
+                <article>
+                    <h2>VIDEO</h2>
+                    <a href="#"><img src="/images/camara.png" alt="camara"></a>
+                </article>
+                <article>
+                    <h2>GAMER</h2>
+                    <a href="#"><img src="/images/auriculares.png" alt="auriculares"></a>
+                </article>        
+            </section>
+        </div>
+        <section class="offers-menu">
+            <% if(products.length > 0 ) { %>
+            <% products.forEach( producto => { %>
+            <article>
+                <a href="/products/details/<%= producto.id %>"><img src="/images/products/<%= producto.image %>" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ <%= producto.price %></p>
+                        <p class="discount"><%= producto.discount %>% Off!</p>                    
+                    </div>
+                    <h3 class="product-name"><%= producto.name %></h3>
+                </div>
+            </article>
+            <% })} else { %>
+                <div class="productsNotFound">No se encontraron productos! Cambia el valor buscado e intenta de nuevo!</div>
+            <% } %>
+        </section>
+    </main>
+    <!------------------------------------------ footer ---------------------------------------------------->
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

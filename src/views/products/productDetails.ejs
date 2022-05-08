@@ -2,6 +2,8 @@
 <html lang="en">
     <!------------------------------------------ head ---------------------------------------------------->
     <%- include('../partials/head') %>
+    <script src="/js/productDetails.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <body>
     <!------------------------------------------ header ---------------------------------------------------->
     <%- include('../partials/header') %>
@@ -18,15 +20,19 @@
                <p class="final-price2">Precio Final:</p>  $<%= productToShow.price.toLocaleString('es') %>
             </div>
             <div class="buy-add">
-                <button class ="buy-now" type="submit" name="123"> Compre Ahora</button>
-                <button class ="add-to-cart" type="submit" name="button"> Agregar al Carrito</button>
+                <button class ="buy-now" type="submit" id="buyNowButton" name="123"> Compre Ahora</button>
+                <button class ="add-to-cart" type="submit" name="button" id="submitButton"> Agregar al Carrito</button>
             </div>
             <p class="off"><%= productToShow.discount %>% OFF!</p>
             </section>
             <section class="product-d-description">
                 <div class="buy-add2">
-                    <button class ="buy-now" type="submit" name="123"> Compre Ahora</button>
-                    <button class ="add-to-cart" type="submit" name="button"> Agregar al Carrito</button>
+                    <button class ="buy-now" type="submit" id="buyNowButton" name="123"> Compre Ahora</button>
+                        <input type="hidden" id="productName" value="<%= productToShow.name %>">
+                        <input type="hidden" id="productPrice" value="<%= productToShow.price %>">
+                        <input type="hidden" id="productImg" value="<%= productToShow.image %>">
+                        <input type="hidden" id="productId" value="<%= productToShow.id %>">
+                    <button class ="add-to-cart" name="button" id="submitButton"> Agregar al Carrito</button>
                 </div>
                 <ul>
                     <li><%= productToShow.caract1 %></li>

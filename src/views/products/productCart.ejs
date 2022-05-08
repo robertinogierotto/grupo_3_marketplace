@@ -2,6 +2,7 @@
 <html lang="en">
   <!------------------------------------------ head ---------------------------------------------------->
   <%- include('../partials/head') %>
+  
   <body>
     <!------------------------------------------ header ---------------------------------------------------->
     <%- include('../partials/header') %>
@@ -19,11 +20,11 @@
           <p>ELIMINAR</p>
         </div>
 
-        <article class="product-1">
+        <!-- <article class="product-1">
           <img class="img" src="/images/products/auriculares-real.jpg" alt="" />
           <p class="name">AURICULARES JBL QUANTUM 400</p>
           <div class="price">$10000</div>
-
+          
           <div class="quantity">
             <button class="plus-btn" type="button" name="button">
               <i class="fas fa-plus"></i>
@@ -37,8 +38,8 @@
           <div class="eliminar">
             <button class="add" type="submit" name="button">Eliminar</button>
           </div>
-        </article>
-        <article class="product-2">
+        </article> -->
+        <!-- <article class="product-2">
           <img class="img" src="/images/products/silla-gamer.jpg" alt="" />
           <p class="name">SILLA GAMER NEGRA MAKKAX</p>
           <div class="price">$39999</div>
@@ -56,18 +57,21 @@
           <div class="eliminar">
             <button class="add" type="submit" name="button">Eliminar</button>
           </div>
-        </article>
+        </article> -->
       </section>
-      <button class="addproduct" type="submit" name="button">
-        Agregar más productos
-      </button>
+      <a href="/products">
+        <button class="addproduct" type="submit" name="button">
+          Agregar más productos
+        </button>
+      </a>
       <section class="container2">
         <p class="total">Total de la compra</p>
-        <p class="total-price">$49999.00</p>
+        <p class="total-price"></p>
       </section>
       <button class="confirm" type="submit">Confirmar Compra</button>
     </main>
     <!------------------------------------------ footer ---------------------------------------------------->
     <%- include('../partials/footer') %>
   </body>
-</html>
+  <script src="/js/productCart.js"></script>
+  </html>

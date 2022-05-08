@@ -170,6 +170,24 @@ div.burger-menu i{
 .homeDD {
     display: none;
 }
+.productCartContainer {
+    text-decoration: none;
+    position: relative;
+}
+.numberOfProducts {
+    color: white;
+    background-color: red;
+    position: absolute;
+    font-size: 0.7rem;
+    padding: 2px;
+    border-radius: 100%;
+    top: 19px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: green 2px solid;
+}
 
 /* search bar */
 

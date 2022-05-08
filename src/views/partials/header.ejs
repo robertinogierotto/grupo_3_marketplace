@@ -49,12 +49,12 @@
             <li class="products"><a href="/products">PRODUCTOS</a></li>
             <li class="who-we-are"><a href="/whoWeAre">QUIENES SOMOS</a></li>
             <li class="contact"><a href="/contact">CONTACTO</a></li>
-            <a href="/products/cart"><img src="/images/carrito.png" alt="Carrito" class="product-cart"></a>
+            <a class="productCartContainer" href="/products/cart"><img src="/images/carrito.png" alt="Carrito" class="product-cart"><p id="numberOfProductsInCart" class="numberOfProducts"></p></a>
 
         </ul>
     </nav>
-    <div class="form" action="#" method="GET">
-        <div class="input">Buscar productos, marcas y más</div>
-        <div class="submit"><i class="fa fa-search"></i></div>
-    </div>
+    <form class="form" action="/products/search" method="GET">
+        <input type="text" class="input" placeholder="Buscar productos, marcas y más" name="search"></input>
+        <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+    </form>
 </header>
