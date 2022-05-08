@@ -13,20 +13,52 @@
             <section class="product-menu">
                 <article>
                     <h2>CELULARES</h2>
-                    <a href="#"><img src="images/celular.png" alt="celular"></a>
+                    <a href="/products#celulares"><img src="images/celular.png" alt="celular"></a>
                 </article>
                 <article>
                     <h2>VIDEO</h2>
-                    <a href="#"><img src="images/camara.png" alt="camara"></a>
+                    <a href="/products#video"><img src="images/camara.png" alt="camara"></a>
                 </article>
                 <article>
                     <h2>GAMER</h2>
-                    <a href="#"><img src="images/auriculares.png" alt="auriculares"></a>
+                    <a href="/products#gamer"><img src="images/auriculares.png" alt="auriculares"></a>
                 </article>        
             </section>
         </div>
+
+        <h2 class="categoryTitle" id="celulares"><span>CELULARES</span></h2>
         <section class="offers-menu">
-            <% products.forEach( producto => { %>
+            <% phones.forEach( producto => { %>
+            <article>
+                <a href="/products/details/<%= producto.id %>"><img src="images/products/<%= producto.image %>" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ <%= producto.price %></p>
+                        <p class="discount"><%= producto.discount %>% Off!</p>                    
+                    </div>
+                    <h3 class="product-name"><%= producto.name %></h3>
+                </div>
+            </article>
+            <% }) %>
+        </section>
+        <h2 class="categoryTitle" id="video"><span>VIDEO</span></h2>
+        <section class="offers-menu">
+            <% video.forEach( producto => { %>
+            <article>
+                <a href="/products/details/<%= producto.id %>"><img src="images/products/<%= producto.image %>" alt="celular"></a>
+                <div class="product-info">
+                    <div class="price-discount">
+                        <p>$ <%= producto.price %></p>
+                        <p class="discount"><%= producto.discount %>% Off!</p>                    
+                    </div>
+                    <h3 class="product-name"><%= producto.name %></h3>
+                </div>
+            </article>
+            <% }) %>
+        </section>
+        <h2 class="categoryTitle" id="gamer"><span>GAMER</span></h2>
+        <section class="offers-menu">
+            <% gamer.forEach( producto => { %>
             <article>
                 <a href="/products/details/<%= producto.id %>"><img src="images/products/<%= producto.image %>" alt="celular"></a>
                 <div class="product-info">

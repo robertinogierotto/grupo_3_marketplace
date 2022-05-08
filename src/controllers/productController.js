@@ -9,9 +9,15 @@ const product = {
       const products = await db.Product.findAll({
         include: ["ProductCategory"],
       });
+      let phones = products.filter (product => product.productsCategoryId == 3);
+      let video = products.filter (product => product.productsCategoryId == 2);
+      let gamer = products.filter (product => product.productsCategoryId == 1);
+
       res.render("./products/products", {
         styles: "styles-products.css",
-        products,
+        phones,
+        video,
+        gamer
       });
     } catch (error) {
       console.log(error);
