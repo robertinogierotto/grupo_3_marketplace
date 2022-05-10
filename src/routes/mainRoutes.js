@@ -9,5 +9,7 @@ router.get("/", mainController.home);
 router.get("/whoWeAre", mainController.whoWeAre);
 /* para contacto */
 router.get("/contact", mainController.contact);
+/* para enviar mensaje*/
+router.post('/contact', mainController.sendEmail);
 
 module.exports = router;

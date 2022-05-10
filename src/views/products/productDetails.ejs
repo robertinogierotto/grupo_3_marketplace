@@ -11,7 +11,6 @@
     
     <main>
         <h2 class="product-detail-title">DETALLES DEL PRODUCTO</h2>
-
         <article class="product-details">
             <section class="product-title-img">
             <h3 class="product-d-title"><%= productToShow.name %></h3>
@@ -41,8 +40,8 @@
                     <li><%= productToShow.caract4 %></li>
                 </ul>
             <p><%= productToShow.description %></p>
+            <button class="goBackButton" onclick="history.back()"> <i class="fa fa-backward"></i> Volver </button>
             </section>
-
         </article>
     </main>
     

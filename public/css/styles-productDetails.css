@@ -124,6 +124,7 @@
     align-items: stretch;
     margin-top: 10px;
     margin-bottom: 10px;
+    position: relative;
 }
 .product-d-description p {
     font-size: 0.9rem;
@@ -138,6 +139,23 @@
     list-style-type: none;
     font-size: 1rem;
     color: #3598FE;
+}
+.goBackButton {
+    color: white;
+    background-color: #3598FE;
+    padding: 3px;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    top: -596px;
+    right: 0px;
+    border-radius: 10px;
+    border: solid 1px gray;
+    transition: all 0.5s;
+}
+.goBackButton:hover {
+    background-color: yellow;
+    color: black;
 }
 
 
@@ -188,6 +206,10 @@
         justify-content: space-around;
         align-items: center;
         margin: 8px;
+    }
+    .goBackButton {
+        bottom: -40px;
+        top: initial;
     }
 }
 

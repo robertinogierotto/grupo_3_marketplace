@@ -14,7 +14,11 @@
                     <div class="usuario">
                         <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
                         <div>
+                            <% if (locals.old) { %>
+                            <input type="email" name="email" value="<%= old.email %>" required />
+                            <% } else { %>
                             <input type="email" name="email" required />
+                            <% } %>
                         </div>
                     </div>
 
@@ -22,9 +26,14 @@
                         <label for="password">Contraseña<span class="red">*</span></label>
                         <div class="contenedor_ojo">
                             <input type="password" name="password" required />
-                                class="fa fa-fw fa-eye password-icon show-password"></span>
+                                <span class="fa fa-fw fa-eye password-icon show-password"></span>
                         </div>
                     </div>
+                    <% if (locals.errors) { %>
+                    <ul class="errors errorsStyle">
+                        <li><%= errors.email %></li>
+                    </ul>
+                    <% } %>
                     <div class="recordar">
                         <label><input type="checkbox" name="remember" value="remember" />
                             Recuerdame</label>
@@ -33,7 +42,7 @@
                         </div>
 
                     <div class="olvidaste">
-                        <label>¿Olvidaste tu contraseña?</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
                 </form>
 

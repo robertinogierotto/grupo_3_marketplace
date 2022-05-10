@@ -55,7 +55,7 @@ const user = {
           return res.render("./user/login", {
             old: req.body,
             errors: {
-              email: "La constraseña es incorrecta",
+              email: "La contraseña es incorrecta, intente nuevamente",
             },
             styles: "styles-login.css",
           });

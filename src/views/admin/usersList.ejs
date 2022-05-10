@@ -9,8 +9,9 @@
         <!------------------------------------------ header -------------------------------------------------->
         <%- include('../partials/header') %>
             <!------------------------------------------ main ---------------------------------------------------->
-
-            <main class="productList">
+        <main>  
+            <a href="/admin"><button class="goBackButton"> <i class="fa fa-backward"></i> Volver </button></a>
+            <div class="productList">
                 <table class="table table-responsive table-dark table-striped table-hover align-middle ">
                     <tr>
                         <th>Imagen</th>
@@ -46,7 +47,8 @@
                     </tr>
                     <% }) %>
                 </table>
-            </main>
+            </div>
+        </main>  
 
             <!------------------------------------------ footer ---------------------------------------------------->
             <%- include('../partials/footer') %>

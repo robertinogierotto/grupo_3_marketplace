@@ -53,15 +53,15 @@ main .marco .contraseña input {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 12px;
   padding: 7px;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
 }
 .password-icon {
   color: rgb(68, 65, 65);
-    position: relative;
-    z-index: 1;
-    padding-top: 7px;
-    right: 35px;
-    top: 4px;;
+  position: relative;
+  z-index: 1;
+  padding-top: 7px;
+  right: 48px;
+  top: 4px;;
 }
 .entrar {
   background: #3598FE;
@@ -83,11 +83,9 @@ main .recordar label {
   color: white;
   font-size: 0.7rem;
 }
-.olvidaste {
+.olvidaste a {
   color: white;
-  font-size: 0.7rem;
-  padding-bottom: 5%;
-  padding-top: 5%;
+  font-size: 0.9rem;
 }
 .marco {
   width: 90vw;
@@ -96,6 +94,18 @@ main .recordar label {
   align-self: center;
   padding: 10px;
   background-color: black;
+}
+.error {
+  border: 2px red solid;
+}
+.errorsStyle {
+  background-color: rgba(255, 0, 0, 0.5);
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px;
+  color: white;
 }
 
 @media (min-width: 480px) {
@@ -126,5 +136,8 @@ main .recordar label {
   }
   main .marco .usuario label, main .contraseña label, main .recordar label, .olvidaste {
     font-size: 1.1rem;
+  }
+  .errorsStyle {
+    font-size: 1rem;
   }
 }

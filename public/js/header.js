@@ -44,4 +44,27 @@ window.addEventListener("load", function () {
     logOut.addEventListener('click', () => {
         sessionStorage.removeItem('products')
     })
+
+    let searchForm = document.querySelector('.form');
+
+    searchForm.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        let searchText = document.querySelector('.input').value;
+        let searchError = document.querySelector('.searchError');
+
+        searchError.innerHTML = '';
+
+        if(searchText) {
+
+            searchForm.submit();
+
+        } else {
+
+            searchError.innerHTML += 'Debe introducir un producto/marca para realizar la busqueda'
+            
+        }
+
+    })
 });

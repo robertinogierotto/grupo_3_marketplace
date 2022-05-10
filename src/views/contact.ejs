@@ -22,21 +22,19 @@
                     <br>
 
                     <section class="form-contacto">
+                        <form action="/contact" method="POST">
                         <p id="datosNombre">NOMBRE <span class="red">*</span></p>
-                        <% if (locals.errors && errors.name) { %>
-                            <p class="validation-error" id="validation-error"> <%= errors.name.msg %> <i class="fa fa-arrow-down"></i></p>
-                            <style>#nombres {border: red 2px solid}</style>
-                        <% } %>
+                        
                         <input class="controlNombre" type="text" name="name" id="nombres" placeholder="Ingrese su Nombre" value="<%= locals.old && old.name %>">
 
                         <p id="datosNombre">CORREO ELECTRONICO <span class="red">*</span></p>
                         <input class="controlCorreo" type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico">
                         
                         <p id="datosNombre">TELEFONO <span class="red">*</span></p>
-                        <input class="controlTelefono" type="number" name="numero" id="numero" placeholder="Ingrese su Telefono">
+                        <input class="controlTelefono" type="number" name="phoneNumber" id="numero" placeholder="Ingrese su Telefono">
                         
-                        <select class="infoPais" name="category" required>PAIS
-                            <option hidden value="" >Seleccione su Pais</option hidden>
+                        <select class="infoPais" name="category" required>PAÍS
+                            <option hidden value="" >País</option hidden>
                             <option value="argentina">Argentina</option>
                             <option value="bolivia">Bolivia</option>
                             <option value="chile">Chile</option>
@@ -50,13 +48,13 @@
 
                         <p id="datosNombre">MENSAJE <span class="red">*</span></p>
                         <div class="infoMensaje">
-                            <textarea  id="" class="textarea" cols="110" rows="80" required></textarea>
+                            <textarea  name="message" class="textarea" cols="110" rows="80" required></textarea>
                         </div>
                     
                         <p class="campo"><span class="red">*</span>Este campo es obligatorio</p>
                     
                         <input class="botons" type="submit" value="ENVIAR">
-
+                    </form>
                     </section>
                 </div>
                 <br>

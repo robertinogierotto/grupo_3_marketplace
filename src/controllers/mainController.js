@@ -17,6 +17,9 @@ const main = {
     },
     contact: (req,res) => {
         res.render ('contact', { styles: 'styles-contact.css'} )
-    }
+    },
+    sendEmail: (req,res) => {
+        console.log(req.body)
+    } 
 }
 module.exports = main;
