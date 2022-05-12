@@ -22,8 +22,6 @@ const main = {
     },
     sendEmail: (req, res) => {
 
-        console.log(req.body)
-
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -170,7 +168,7 @@ const main = {
                                           </tbody>
                                         </table>
                                         <div class="text-muted text-center" style="color: #718096;" align="center">
-                                          RODAWISE <br>
+                                          <strong>RODAWISE</strong>  <br>
                                           El mejor marketplace de tecnología.
                                         </div>
                                         <table class="s-6 w-full" role="presentation" border="0" cellpadding="0" cellspacing="0" style="width: 100%;" width="100%">

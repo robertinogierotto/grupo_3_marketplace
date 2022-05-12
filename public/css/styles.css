@@ -233,7 +233,15 @@ header .form {
 header .form .submit i {
     width: fit-content;
 }
-
+header .form .input:focus{
+    border: 2px  solid #3598FE;
+ 
+}
+header .form .submit:focus{
+   
+    -webkit-transform:scale(0.9);transform:scale(0.9);
+   
+}
 /* MAIN */
 main {
     /* background-image: url('/images/fondo.jpg');

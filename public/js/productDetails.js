@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
 
 
     const submitsAddToCart = document.querySelectorAll('#submitButton');
+    console.log(submitsAddToCart)
 
     function addProductToCart() {
         let name = document.getElementById('productName').value
@@ -67,7 +68,6 @@ window.addEventListener('load', function () {
                 })
             }
         }
-
     }
 
     for (let submit of submitsAddToCart) {
