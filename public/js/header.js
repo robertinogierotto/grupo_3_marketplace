@@ -31,7 +31,9 @@ window.addEventListener("load", function () {
     burgerDropDown.addEventListener("mouseleave", (e) => {
         burgerDropDown.style.display = "none";
     });
-
+    
+       
+     
     userDropDown.addEventListener("click", (e) => {
         userActions.style.display = "block";
     });

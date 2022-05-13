@@ -2,12 +2,12 @@
 <html lang="en">
 <!------------------------------------------ head ---------------------------------------------------->
 <%- include('../partials/head') %>
-
+<script src="/js/editProductValidation.js"></script>
     <body>
         <!------------------------------------------ header ---------------------------------------------------->
         <%- include('../partials/header') %>
             <!------------------------------------------ main ---------------------------------------------------->
-            <main class="">
+            <main class="editProduct">
                 <h4 class="tituloProducto">EDITAR</h4>
                 <form action= "/admin/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="imagenLogo">

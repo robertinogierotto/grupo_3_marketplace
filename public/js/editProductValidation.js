@@ -1,54 +1,41 @@
 window.addEventListener('load', function(){
-    
 
-    let form = document.querySelector('.productForm');
-     
+    let form = document.querySelector('.editProduct');
+  
 
-    form.addEventListener('submit', (e) => {
+     form.addEventListener('submit', (e) => {
 
         e.preventDefault();
 
         let errors = [];
         
-        let image = document.querySelector('#files');
         let name = document.querySelector('#name');
         let price = document.querySelector('#price');
         let discount = document.querySelector('#discount');
         let category = document.querySelector('#productsCategoryId');
-        let caract1 = document.querySelector('#caract1');
-        let caract2 = document.querySelector('#caract2');
-        let caract3 = document.querySelector('#caract3');
-        let caract4 = document.querySelector('#caract4');
-        let dailyOnSaleCheck = document.getElementsByName('dailyOnSale');
-        let dailyOnSale = document.querySelector('.dailyOnSale');
-        let description = document.querySelector('#description');
+         let caract1 = document.querySelector('#caract1');
+       let caract2 = document.querySelector('#caract2');
+       let caract3 = document.querySelector('#caract3');
+       let caract4 = document.querySelector('#caract4');
+       let dailyOnSaleCheck = document.getElementsByName('dailyOnSale');
+       let dailyOnSale = document.querySelector('.dailyOnSale');
+       let description = document.querySelector('#description');
 
-        if (image.files.length == 0) {
-            errors.push('Debe cargar una imagen');
-        } else if (image.value) {
-            
-            fileName = image.value;
-            idxDot = fileName.lastIndexOf(".") + 1,
-            extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-            if (!(extFile == "jpg" || extFile == "jpeg" || extFile == "png")){
-                errors.push('Debe cargar una imagen en formato jpg/jpeg/png')
-            }
-        };
-        if(!name.value) {
-            errors.push('Debe introducir el nombre del producto');
+         if(!name.value) {
+             errors.push('Debe introducir el nombre del producto');
             name.classList.add('error');
         } else {
-            name.classList.remove('error');
+             name.classList.remove('error');
         };
-        if (!price.value) {
+         if (!price.value) {
             errors.push('Debe introducir el precio del producto');
-            price.classList.add('error');            
+             price.classList.add('error');            
         } else {
             price.classList.remove('error');
-        };
+         };
         if (discount.value <= 0 || discount.value >= 100) {
             errors.push('Debe introducir el descuento del producto(1-99)');
-            discount.classList.add('error');            
+             discount.classList.add('error');            
         } else {
             discount.classList.remove('error');
         };
