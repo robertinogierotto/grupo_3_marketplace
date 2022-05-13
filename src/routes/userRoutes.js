@@ -26,8 +26,9 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = async (req, file, cb) => {
+  
   let email = await db.User.findOne({ where: { email: req.body.email } })
-  console.log(email);
+
   if (req.body.name.length >= 3 && req.body.name.length <= 30 &&
     req.body.lastName.length >= 3 && req.body.lastName.length <= 30 &&
     req.body.email && !email &&
@@ -35,7 +36,7 @@ const fileFilter = async (req, file, cb) => {
     req.body.terms &&
     (file.mimetype == 'image/jpeg' || file.mimetype == 'image/png' || file.mimetype == 'image/jpg')) {
 
-      cb(null, true)
+      cb(null, true);
     
   } else {
 
