@@ -19,3 +19,7 @@ Nivel satisfactorio Sprint 5 : Excelente
 
 Análisis Retrospectivo Sprint 6 : Logramos completar todos los requerimientos del sprint, aunque éste nos llevó un poco más de tiempo y dedicación que los anteriores. Seguimos usando Trello para poder hacer  seguimiento de las tareas y al hacer la presentación de nuestro proyecto quedamos muy satisfechos con lo que venimos logrando y contentos de que se ve toda la dedicación y el esfuerzo que pusimos hasta ahora en cada entregable. 
 Nivel satisfactorio Sprint 6 : Excelente 
+
+Análisis Retrospectivo Sprint 7:
+
+Análisis Retrospectivo Sprint 8:

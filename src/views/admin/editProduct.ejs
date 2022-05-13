@@ -2,6 +2,7 @@
 <html lang="en">
 <!------------------------------------------ head ---------------------------------------------------->
 <%- include('../partials/head') %>
+    <script src="/js/editProductValidation.js"></script>
 
     <body>
         <!------------------------------------------ header ---------------------------------------------------->
@@ -9,72 +10,89 @@
             <!------------------------------------------ main ---------------------------------------------------->
             <main class="">
                 <h4 class="tituloProducto">EDITAR</h4>
-                <form action= "/admin/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form class="editProduct" action="/admin/<%= productToEdit.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
                     <div class="imagenLogo">
+
                         <img class='imagenLogo1' src="/images/products/<%= productToEdit.image %>" alt="logo">
                     </div>
                     <label for="files" class="btn">Modificar Imagen</label>
                     <input type="file" id='files' name="image" style="display:none">
                     <div class='formularioProducto'>
-                        <input class="infoCategoria short" type="text" name="name" id="nombre" placeholder="Nombre del Producto" value="<%= productToEdit.name %>" required>
-                       <!-- <label for="Precio">Precio</label>-->
-                        <input class="infoCategoria short" type="number" name="price" id='Precio' placeholder="Precio" value="<%= productToEdit.price %>" required>
-                        <input class="infoCategoria short" type="number" name="discount" id='discount' placeholder="Descuento" value="<%= productToEdit.discount %>" required>
-                        <% if (productToEdit.productsCategoryId == 3) { %>
-                       <!--  <label for="Categoria">Categoria</label>-->
-                        <select  class="infoCategoria short" name="productsCategoryId" required>
-                            <option selected="selected" value="3">Celulares</option>
-                            <option value="2">Video</option>
-                            <option value="1">Gamer</option>
-                        </select>
-                        <% } %>
-                        <% if (productToEdit.productsCategoryId == '1') { %>
+                        <ul class="errors"></ul>
+                        <input class="infoCategoria short" type="text" name="name" id="name"
+                            placeholder="Nombre del Producto" value="<%= productToEdit.name %>">
+                        <!-- <label for="Precio">Precio</label>-->
+                        <input class="infoCategoria short" type="number" name="price" id='price' placeholder="Precio"
+                            value="<%= productToEdit.price %>">
+                        <input class="infoCategoria short" type="number" name="discount" id='discount'
+                            placeholder="Descuento" value="<%= productToEdit.discount %>">
+                        <% if (productToEdit.productsCategoryId==3) { %>
                             <!--  <label for="Categoria">Categoria</label>-->
-                             <select  class="infoCategoria short" name="productsCategoryId" required>
-                                 <option value="3">Celulares</option>
-                                 <option value="2">Video</option>
-                                 <option selected="selected" value="1">Gamer</option>
-                             </select>
-                        <% } %>
-                        <% if (productToEdit.productsCategoryId == '2') { %>
-                            <!--  <label for="Categoria">Categoria</label>-->
-                             <select  class="infoCategoria short" name="productsCategoryId" required>
-                                 <option value="3">Celulares</option>
-                                 <option selected="selected" value="2">Video</option>
-                                 <option value="1">Gamer</option>
-                             </select>
-                        <% } %>
+                            <select class="infoCategoria short" name="productsCategoryId" id='productsCategoryId'>
+                                <option selected="selected" value="3">Celulares</option>
+                                <option value="2">Video</option>
+                                <option value="1">Gamer</option>
+                            </select>
+                            <% } %>
+                                <% if (productToEdit.productsCategoryId=='1' ) { %>
+                                    <!--  <label for="Categoria">Categoria</label>-->
+                                    <select class="infoCategoria short" name="productsCategoryId">
+                                        <option value="3">Celulares</option>
+                                        <option value="2">Video</option>
+                                        <option selected="selected" value="1">Gamer</option>
+                                    </select>
+                                    <% } %>
+                                        <% if (productToEdit.productsCategoryId=='2' ) { %>
+                                            <!--  <label for="Categoria">Categoria</label>-->
+                                            <select class="infoCategoria short" name="productsCategoryId">
+                                                <option value="3">Celulares</option>
+                                                <option selected="selected" value="2">Video</option>
+                                                <option value="1">Gamer</option>
+                                            </select>
+                                            <% } %>
 
-                        <input class="infoCategoria" type="text" name="caract1" id="caract1" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract1 %>">
-                        <input class="infoCategoria" type="text" name="caract2" id="caract2" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract2 %>">
-                        <input class="infoCategoria" type="text" name="caract3" id="caract3" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract3 %>">
-                        <input class="infoCategoria" type="text" name="caract4" id="caract4" placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS" value="<%= productToEdit.caract4 %>">
-                        <div class="dailyOnSale">
-                            <p>Oferta del día?</p> 
-                            <% if (productToEdit.dailyOnSale == 0) { %>
-                            <label for="si">Si</label>
-                            <input type="radio" id="si" name="dailyOnSale" value=0 checked="checked">
-                            <label for="no">No</label>
-                            <input type="radio" id="no" name="dailyOnSale" value=1 >
-                            <% } %>
-                            <% if (productToEdit.dailyOnSale == '1') { %>
-                            <label for="si">Si</label>
-                            <input type="radio" id="si" name="dailyOnSale" value=0>
-                            <label for="no">No</label>
-                            <input type="radio" id="no" name="dailyOnSale" value=1 checked="checked">
-                            <% } %>
-                        </div>
+                                                <input class="infoCategoria" type="text" name="caract1" id="caract1"
+                                                    placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS"
+                                                    value="<%= productToEdit.caract1 %>">
+                                                <input class="infoCategoria" type="text" name="caract2" id="caract2"
+                                                    placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS"
+                                                    value="<%= productToEdit.caract2 %>">
+                                                <input class="infoCategoria" type="text" name="caract3" id="caract3"
+                                                    placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS"
+                                                    value="<%= productToEdit.caract3 %>">
+                                                <input class="infoCategoria" type="text" name="caract4" id="caract4"
+                                                    placeholder="Caracteristica del producto: Informacion Ej: Modelo: XRS"
+                                                    value="<%= productToEdit.caract4 %>">
+                                                <div class="dailyOnSale">
+                                                    <p>Oferta del día?</p>
+                                                    <% if (productToEdit.dailyOnSale==0) { %>
+                                                        <label for="si">Si</label>
+                                                        <input type="radio" id="si" name="dailyOnSale" value=0
+                                                            checked="checked">
+                                                        <label for="no">No</label>
+                                                        <input type="radio" id="no" name="dailyOnSale" value=1>
+                                                        <% } %>
+                                                            <% if (productToEdit.dailyOnSale=='1' ) { %>
+                                                                <label for="si">Si</label>
+                                                                <input type="radio" id="si" name="dailyOnSale" value=0>
+                                                                <label for="no">No</label>
+                                                                <input type="radio" id="no" name="dailyOnSale" value=1
+                                                                    checked="checked">
+                                                                <% } %>
+                                                </div>
                     </div>
 
                     <div class="descripcionProducto">
-                        <textarea required name="description" id="" cols="20" rows="5"><%= productToEdit.description %></textarea>
+                        <textarea name="description" id="description" cols="20"
+                            rows="5"><%= productToEdit.description %></textarea>
                     </div>
-                    
+
 
                     <input class="botons" type="submit" value="Modificar Producto">
-                    <a href="/admin/productsList"><input class="botons"  value="Volver"></a>
-                    
-                    
+                    <a href="/admin/productsList"><input class="botons" value="Volver"></a>
+
+
 
                 </form>
             </main>
