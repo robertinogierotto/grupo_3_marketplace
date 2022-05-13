@@ -10,7 +10,7 @@ window.addEventListener('load', function load(){
         if (products == null) {
             container.innerHTML = 'Todavia no seleccionaste ningun producto! <br> Clickea en "Agregar mas productos"'
         } else {
-            for (let [i,product] of products.entries()) {
+            for (let [i, product] of products.entries()) {
     
                 container.innerHTML += `<article class="product-1">
                 <img class="img" src="/images/products/${product.img}" alt="" />
@@ -18,13 +18,13 @@ window.addEventListener('load', function load(){
                 <div class="price" id="price${product.id}">${toThousand(product.price)}</div>
       
                 <div class="quantity" onclick="priceUpdate(${product.id})">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"  class="plus-btn" type="button" name="button">
-                    <i class="fas fa-plus"></i>
-                    </button>
-                    <input id="quantInput${product.id}"  class="q-input" min="1" name="quantity" type="number" name="name" value="1" />
                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus-btn" type="button" name="button">
                     <i class="fas fa-minus"></i>
                     </button>
+                    <input id="quantInput${product.id}"  class="q-input" min="1" name="quantity" type="number" name="name" value="1" />
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"  class="plus-btn" type="button" name="button">
+                    <i class="fas fa-plus"></i>
+                    </button> 
                 </div>
       
                 <div class="eliminar">
@@ -37,9 +37,8 @@ window.addEventListener('load', function load(){
 
     showProductsInCart();
 
-    window.deleteProduct =function (productId) {
+    window.deleteProduct = function (productId) {
     
-        console.log(productId)
         let products = JSON.parse(sessionStorage.getItem('products'))
     
         console.log(products);
@@ -53,8 +52,8 @@ window.addEventListener('load', function load(){
         } else {
             sessionStorage.removeItem('products')
         }
-        location.reload();
-        
+
+        location.reload(); 
     }
     
 

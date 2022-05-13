@@ -29,7 +29,7 @@ const registerValidation = [
     .isEmail()
     .withMessage("Debe introducir un email valido")
     .bail()
-    .custom( async (value) => {
+    .custom(async (value) => {
       if (await db.User.findOne({ where: { email: value } })) {
         return Promise.reject();
       }
@@ -55,7 +55,7 @@ const registerValidation = [
       }
       return false;
     })
-    .withMessage("Debe seleccionar una imagen de perfil o subir una"),
+    .withMessage("Debe seleccionar una imagen de perfil o subir una en formato jpeg/png/jpg"),
   check("terms")
     .notEmpty()
     .withMessage("Debe aceptar los Terminos y Condiciones"),

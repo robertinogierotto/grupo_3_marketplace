@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Si, Borrar Producto!'
+                confirmButtonText: 'Si, Borrar Usuario!'
               }).then((result) => {
                 if (result.isConfirmed) {
                     form.submit();

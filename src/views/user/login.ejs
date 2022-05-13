@@ -12,7 +12,7 @@
                 <h3>LOGIN</h3>
                 <form action="/user/login" method="POST" class="marco">
                     <div class="usuario">
-                        <label for="usuario">Usuario o correo electronico<span class="red">*</span></label>
+                        <label for="usuario">Correo electronico<span class="red">*</span></label>
                         <div>
                             <% if (locals.old) { %>
                             <input type="email" name="email" value="<%= old.email %>" required />
@@ -36,7 +36,7 @@
                     <% } %>
                     <div class="recordar">
                         <label><input type="checkbox" name="remember" value="remember" />
-                            Recuerdame</label>
+                            Recuérdame</label>
 
                         <input class="entrar" type="submit" value="Ingresar"></input>
                         </div>

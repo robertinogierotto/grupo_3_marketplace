@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const db = require("../database/models");
 
 const userController = require("../controllers/userContoller");
 const registerValidation = require("../middlewares/registerValidation");
+const { validationResult } = require("express-validator");
 
 //require para la ruta de usuarios
 const userRoute = require("../middlewares/userRoute");
@@ -23,7 +25,24 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const fileFilter = async (req, file, cb) => {
+  let email = await db.User.findOne({ where: { email: req.body.email } })
+  console.log(email);
+  if (req.body.name.length >= 3 && req.body.name.length <= 30 &&
+    req.body.lastName.length >= 3 && req.body.lastName.length <= 30 &&
+    req.body.email && !email &&
+    req.body.password && req.body.rePassword && req.body.password == req.body.rePassword &&
+    req.body.terms &&
+    (file.mimetype == 'image/jpeg' || file.mimetype == 'image/png' || file.mimetype == 'image/jpg')) {
+
+      cb(null, true)
+    
+  } else {
+
+    cb(null, false);
+
+  }
+};
 
 /* para el login*/
 router.get("/login", guestRoute, userController.login);
@@ -35,7 +54,7 @@ router.get("/register", guestRoute, userController.register);
 router.post(
   "/",
   guestRoute,
-  upload.single("ownImage"),
+  multer({ storage: storage, fileFilter: fileFilter }).single("ownImage"),
   registerValidation,
   userController.saveUser
 );
