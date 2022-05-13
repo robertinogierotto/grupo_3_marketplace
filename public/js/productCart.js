@@ -37,7 +37,7 @@ window.addEventListener('load', function load(){
 
     showProductsInCart();
 
-    window.deleteProduct = function (productId) {
+    deleteProduct = function (productId) {
     
         let products = JSON.parse(sessionStorage.getItem('products'))
     
@@ -57,7 +57,7 @@ window.addEventListener('load', function load(){
     }
     
 
-    window.priceUpdate = function (productId) {
+    priceUpdate = function (productId) {
 
         let price = document.querySelector('#price' + productId);
         let quantity = document.querySelector('#quantInput' + productId).value;
@@ -88,9 +88,9 @@ window.addEventListener('load', function load(){
 
         return Number(number.join(''));
     }
-
-    let totalInit = window.onclick = () => {
-
+    
+    function totalInit () {
+        
         let totalPrice = 0;
         let prices = document.querySelectorAll('.price');
         
@@ -102,8 +102,19 @@ window.addEventListener('load', function load(){
         
         total.innerHTML = '$ ' + toThousand(totalPrice);
     }
-
+    
     totalInit();
+    
+    let quantityDivs = document.querySelectorAll('.quantity');
+
+    for (const quantityDiv of quantityDivs) {
+        
+        quantityDiv.addEventListener('click', () => {
+    
+            totalInit();
+    
+        })
+    }
 });
 
 
