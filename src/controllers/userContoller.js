@@ -131,9 +131,40 @@ const user = {
   userProfile: (req, res) => {
     res.render("./user/userProfile", { styles: "styles-userProfile.css" });
   },
-  editProfile: (req, res) => {
-    res.render("./user/editProfile", { styles: "styles-editProfile.css" });
+
+  editProfile: async (req, res) => {
+    try {
+      let userToEdit = await db.User.findByPk(req.params.id);
+      res.render("./user/editProfile", {
+        styles: "styles-editProfile.css",
+        userToEdit,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
+
+  saveProfile: async (req, res) => {
+    try {
+      const userToEdit = await db.User.findByPk(req.params.id);
+      
+      await db.User.update(
+        {
+          ...req.body,
+          profilePicture: req.file ? req.file.filename : userToEdit.profilePicture,
+        },
+        {
+          where: { id: req.params.id },
+        }
+      );
+      const user = await db.User.findOne({ where: { id: req.params.id } });
+      delete user.password;
+      req.session.user = user;
+      req.locals.user = user;
+    } catch (error) {
+      console.log(error);
+    }
+      },
 };
 
 module.exports = user;

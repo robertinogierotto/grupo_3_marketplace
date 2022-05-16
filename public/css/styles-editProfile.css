@@ -1,89 +1,136 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.home a {
+  color: white;
+  display: none;
+}
+.homeDD {
+  display: block;
+}
+/* AGREGAR CODIGO ACA PARA MOVILES  */
+.userEditProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.titulo1 {
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-right: 50vw;
+  margin-left: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-bottom: white 3px solid;
+}
+div img {
+  width: 40%;
+  margin: 10px;
+}
+.datosUser {
+  width: 50%;
+  color: white;
+  border: grey solid 2px;
+  margin: 10px;
+  background-color: black;
+  font-size: 1rem;
+}
+.datosUser input {
+  width: 49vw;
+}
+.boton {
+  width: 30%;
+  border-radius: 4px;
+  background: #3598fe;
+  border: grey solid 2px;
+  margin: 10px;
+  align-self: left;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 550;
+}
+.userEditProfile .boton:hover {
+  background-color: yellow;
+  color: black;
+}
+.error {
+  border: 2px red solid;
+}
+.errorsStyle {
+  width: 20vw;
+  background-color: rgba(255, 0, 0, 0.5);
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 5px;
+  color: white;
+}
+
+.btn {
+  background: #3598fe;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 4px;
+  margin-left: 20px;
+  width: 160px;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+}
+
+@media (min-width: 480px) {
   .home a {
-    color: white;
-    display: none;
-  }
-  .homeDD {
     display: block;
   }
-  /* AGREGAR CODIGO ACA PARA MOVILES  */
-  .userEditProfile {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
+
   .titulo1 {
-    color: white;
-    text-align: center;
-    font-size: 1.4rem;
-    margin-right: 30vw;
-    margin-left: 10px;
-    padding-top: 2%;
-    padding-left: 2%;
-    border-bottom: white 3px solid;
+    font-size: 1.3rem;
+    margin-right: 40vw;
   }
   .datosUser {
     width: 50vw;
-    border-radius: 4px;
-    color: white;
-    border: grey solid 2px;
-    margin: 20px;
-    align-self: center;
-    background-color: black;
-    padding: 10px 20px 10px 20px;
+    font-size: 1.3rem;
+    align-self: flex-start;
   }
-  .profilePicture {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self: left;
-    margin: 5%;
+  div img {
+    width: 30%;
+    margin: 10px;
+  }
+  .datosUser input {
+    width: 49vw;
+  }
+
+}
+@media (min-width: 770px) {
+  .titulo1 {
+    font-size: 1.7rem;
+    margin-right: 50vw;
+  }
+  div img {
+    width: 15%;
+    margin: 10px;
+  }
+  .datosUser {
+    width: 30vw;
+    font-size: 1.5rem;
+  }
+  .datosUser input {
+    width: 29.7vw;
   }
   .boton {
-    width: 50%;
-    border-radius: 4px;
-    background: black;
-    border: grey solid 2px;
-    margin: 20px;
-    align-self: left;
-    padding: 10px 20px 10px 20px;
-    color: white;
-    font-size: 1.5rem;
+    width: 20%;
     font-weight: 700;
-    
-  
   }
-  .userEditProfile .boton:hover {
-    background-color: #3598fe;
-  color: black;
-  }
-  
-  
-  @media (min-width: 480px) {
-    .home a {
-      display: block;
-    }
-  
-    .titulo1 {
-      font-size: 1.8rem;
-      margin-right: 60vw;
-    }
-    .datosUser {
-      width: 50vw;
-      align-self: flex-start;
-    }
-  
-  }
-  @media (min-width: 770px) {
-    .titulo1 {
-      font-size: 2rem;
-      margin-right: 60vw;
-    }
-   .userProfile {
-    width: 100vw;
-   }
-  }
+
+}

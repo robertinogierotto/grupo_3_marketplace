@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -20,48 +20,43 @@
   color: white;
   text-align: center;
   font-size: 1.4rem;
-  margin-right: 30vw;
+  margin-right: 50vw;
   margin-left: 10px;
   padding-top: 2%;
   padding-left: 2%;
   border-bottom: white 3px solid;
 }
-.datosUser {
-  width: 90vw;
-  border-radius: 4px;
-  color: white;
-  border: grey solid 2px;
-  margin: 20px;
-  align-self: center;
-  background-color: black;
-  padding: 10px 20px 10px 20px;
-}
-.profilePicture {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-self: left;
-  margin: 5%;
-}
-.boton {
-  width: 50%;
-  border-radius: 4px;
-  background: black;
-  border: grey solid 2px;
-  margin: 20px;
-  align-self: left;
-  padding: 10px 20px 10px 20px;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  
 
+div img {
+  width: 40%;
+  margin: 10px;
+}
+
+.datosUser {
+  width: 70%;
+  color: white;
+  border: grey solid 2px;
+  margin: 10px;
+  background-color: black;
+  font-size: 1rem;
+}
+
+.boton {
+  width: 30%;
+  border-radius: 4px;
+  background: #3598fe;
+  border: grey solid 2px;
+  margin: 10px;
+  align-self: left;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 550;
 }
 .userProfile .boton:hover {
-  background-color: #3598fe;
-color: black;
+  background-color: yellow;
+  color: black;
 }
-
 
 @media (min-width: 480px) {
   .home a {
@@ -69,21 +64,35 @@ color: black;
   }
 
   .titulo1 {
-    font-size: 1.8rem;
-    margin-right: 60vw;
-  }
-  .datosUser {
-    width: 60vw;
-    align-self: flex-start;
+    font-size: 1.7rem;
+    margin-right: 50vw;
   }
 
+  div img {
+    width: 30%;
+  }
+  .datosUser {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+
+  .boton {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
+
 @media (min-width: 770px) {
   .titulo1 {
-    font-size: 2rem;
-    margin-right: 60vw;
+    font-size: 1.7rem;
+    margin-right: 50vw;
   }
- .userProfile {
-  width: 100vw;
- }
+
+  .datosUser {
+    width: 40%;
+    font-size: 1.5rem;
+  }
+  div img {
+    width: 15%;
+  }
 }

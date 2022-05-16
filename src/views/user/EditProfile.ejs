@@ -2,54 +2,55 @@
 <html lang="en">
 <!------------------------------------------ head ---------------------------------------------------->
 <%- include('../partials/head') %>
+<script src="/js/editProfileValidation.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <body>
         <!------------------------------------------ header -------------------------------------------------->
         <%- include('../partials/header') %>
             <!------------------------------------------ main ---------------------------------------------------->
 
-           <!-- ----TÍTULO----  -->
-           <main class="userEditProfile">
-            <h1 class="titulo1"> <i class= "fas fa-user"></i></i>&nbsp&nbsp Datos de Usuario </h1>
-        </div>
+            <!-- ----TÍTULO----  -->
+            <main class="userEditProfile">
+                <h1 class="titulo1"> <i class="fas fa-user"></i></i> Datos de Usuario </h1>
+                </div>
+                <ul class="errors"></ul>
+                <form class="editProfile" action="/user/<%= userToEdit.id %>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <!-- ----IMAGEN----  -->
 
-        <!-- ----IMAGEN----  -->
-        
-        <div class="profilePicture">
-        <img src="/images/user/<%= user.profilePicture %>" alt=""> </div>
-        <button type="submit" class="boton">Cambiar Imágen</button>
-        
-        <!-- ----NOMBRE----  FALTA CONCATENAR EL BIENVENIDO+NOMBRE--> 
-        <div class="datosUser">
-            <label for="">Nombre: </label></br>
-            <input type="text" name="firstName" placeholder="Ingresá tu nombre" required>
-        </div>
+                    <div class="profilePicture">
+                        <img src="/images/user/<%= userToEdit.profilePicture %>" alt="">
+                    </div>
+                    <!-- <button type="submit" class="boton">Cambiar Imágen</button> -->
+                    <label for="files" class="btn">Cambiar Imágen</label>
+                    <input type="file" id='files' name="profilePicture" style="display:none">
 
-        <!-- ----APELLIDO----  -->
+                    <!-- ----NOMBRE----  FALTA CONCATENAR EL BIENVENIDO+NOMBRE-->
+                    <div class="datosUser">
+                        <label for="">Nombre: </label>
+                        <input type="text" id="name" name="name" value=<%=userToEdit.name %>>
+                    </div>
 
-        <div class="datosUser">
-            <label for="">Apellido: </label></br>
-            <input type="text" name="lastName" placeholder="Ingresá tu apellido" required>
-        </div>
+                    <!-- ----APELLIDO----  -->
 
-
-      
-
-       
-
-
-        <!-- ----BOTÓN "REGISTRAR"----  -->
-        <button type="submit" class="boton">Guardar Datos</button>
+                    <div class="datosUser">
+                        <label for="">Apellido: </label>
+                        <input type="text" id="lastName" name="lastName" value=<%=userToEdit.lastName %>>
+                    </div>
 
 
+                    <!-- ----BOTÓN "REGISTRAR"----  -->
+                    <button type="submit" class="boton">Guardar Datos</button>
 
-    </form>
 
-</section>
-</main>
+                </form>
 
- <!------------------------------------------ footer ---------------------------------------------------->
- <%- include('../partials/footer') %>
-</body>
+                </section>
+            </main>
+
+            <!------------------------------------------ footer ---------------------------------------------------->
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>

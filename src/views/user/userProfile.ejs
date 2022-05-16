@@ -12,13 +12,13 @@
              <div class="profilePicture">
                 <img src="/images/user/<%= user.profilePicture %>" alt="">
                 </div>
-             <p class="datosUser"> Nombre: <%= user.name %> </p>
-             <p class="datosUser"> Apellido: <%= user.lastName %> </p>
-             <p class="datosUser"> Correo: <%= user.email %></p>
+             <div class="datosUser"> Nombre: <%=user.name %> </div>
+             <div class="datosUser"> Apellido: <%=user.lastName %> </div>
+             <div class="datosUser"> Correo: <%= user.email %> </div>
              
 
              
-             <a href="/user/editProfile"><button class="boton">Editar Perfil</button></a>
+             <a href="/user/editProfile/<%= user.id %>"><button class="boton">Editar Perfil</button></a>
           
             </main>
 
