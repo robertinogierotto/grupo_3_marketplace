@@ -55,6 +55,10 @@ app.use('/user', userRoutes);
 const adminRoutes = require ('./routes/adminRoutes');
 app.use('/admin', adminRoute, adminRoutes);
 
+/*rutas api*/
+const apiRoutes = require ('./routes/apiRoutes');
+app.use('/api', apiRoutes);
+
 /* Error 404 */ 
 app.use((req, res, next) => {
     res.status(404).render("error404", {styles:'styles-error404.css'});
@@ -62,6 +66,6 @@ app.use((req, res, next) => {
 
 
 //Levantar servidor 
-app.listen(3000, ()=>{
-    console.log('Servidor funcionando en el puerto 3000');
+app.listen(3001, ()=>{
+    console.log('Servidor funcionando en el puerto 3001');
 });
