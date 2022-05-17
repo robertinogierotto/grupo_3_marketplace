@@ -48,7 +48,8 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsTo(models.ProductCategory, {
             as: "ProductCategory",
             foreignKey: "productsCategoryId"
-        })
+        });
+        Product.hasOne(models.ClicksByProduct, { foreignKey: "id" });
     };
 
     return Product

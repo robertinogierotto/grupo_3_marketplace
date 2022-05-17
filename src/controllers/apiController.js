@@ -1,10 +1,12 @@
 const db = require("../database/models");
+const { Sequelize } = require("../database/models");
+
 
 const apiController = {
     getProducts: async (req, res) => {
         try {
             const products = await db.Product.findAll({
-                include: ["ProductCategory"],
+                include: {all: true},
             });
 
             let response = {
@@ -17,6 +19,9 @@ const apiController = {
             };
 
             res.json(response);
+
+            //await db.ClicksByProduct.increment('numberOfClicks', {by: 1, where: {id: 1}});
+
         } catch (error) {
             console.log(error);
         }
@@ -103,6 +108,30 @@ const apiController = {
             console.log(error);
         }
     },
+    getProductsAndClicks: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                include: {all: true},
+                order: [[Sequelize.literal('clicksbyproduct.numberOfClicks DESC LIMIT 6')]]
+            });
+
+            let response = {
+                meta: {
+                    status: 200,
+                    total: products.length,
+                    url: "api/products",
+                },
+                data: products,
+            };
+
+            res.json(response);
+
+            //await db.ClicksByProduct.increment('numberOfClicks', {by: 1, where: {id: 1}});
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
 
 module.exports = apiController;

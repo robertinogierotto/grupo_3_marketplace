@@ -1,11 +1,8 @@
 import React from 'react';
 import TopBar from './TopBar';
 import Footer from './Footer';
-import CanvasJSReact from '../canvasjs.react';
 import AdvancedChart from './AdvancedChart';
-//var CanvasJSReact = require('./canvasjs.react');
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 
 function AdvancedStatics() {
     return (

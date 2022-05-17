@@ -1,0 +1,30 @@
+.containerProductsClicks {
+    display: flex;
+    margin: 5px;
+    
+}
+.chart {
+    width: 40%;
+    margin: 10px;
+    align-self: center;
+}
+.productCards {
+    width: 55%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.img-insideCard {
+    width: 100px;
+    align-self: center;
+}
+.linkToDetail {
+    position: relative;
+    width: 60%;
+    align-self: center;
+    bottom: 10px;
+}
+.cardProducts {
+    border: 1px solid blue;
+}

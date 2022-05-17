@@ -30,6 +30,7 @@ const product = {
         styles: "styles-productDetails.css",
         productToShow,
       });
+      await db.ClicksByProduct.increment('numberOfClicks', {by: 1, where: {id: req.params.id}});
     } catch (error) {
       console.log(error);
     }
