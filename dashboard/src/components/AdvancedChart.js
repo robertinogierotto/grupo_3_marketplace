@@ -38,8 +38,8 @@ function AdvancedChart() {
                         includeZero: true
                     },
                     toolTip: {
-                        fontColor: 'white',
-                        backgroundColor: "#3598FE",
+                        fontColor: 'red',
+                        backgroundColor: "white",
                     },
                     axisX: {
                         labelWrap: true,
@@ -59,12 +59,12 @@ function AdvancedChart() {
 
     CanvasJS.addColorSet('customColorSet1',
         [
-            '#f3f575',
-            '#b2e79a',
-            '#95d0b3',
-            '#cddfc2',
-            '#f2f0e3',
+            '#050A30',
+            '#000C66',
+            '#0000FF',
             '#3EA0DD',
+            '#7EC8E3',
+            '#B1D4E0',
             '#F5A52A',
             '#23BFAA',
             '#FAA586',
