@@ -146,8 +146,6 @@ const user = {
 
   saveProfile: async (req, res) => {
     try {
-      console.log(req.session.user);
-      console.log(res.locals.user)
       const userToEdit = await db.User.findByPk(req.params.id);
       
       await db.User.update(
