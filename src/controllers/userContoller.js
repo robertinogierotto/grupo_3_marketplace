@@ -159,12 +159,7 @@ const user = {
           where: { id: req.params.id },
         }
       );
-      const user = await db.User.findOne({ where: { id: req.params.id } });
-      delete user.dataValues.password;
       req.session.destroy();
-      req.session.user = user;
-      res.locals.user = user;
-
     } catch (error) {
       console.log(error);
     }
