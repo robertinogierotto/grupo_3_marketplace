@@ -92,7 +92,7 @@ window.addEventListener('load', function () {
 
                 addProductToCart();
                 setTimeout(function () {
-                    window.location.href = "http://localhost:3000/products/cart"
+                    window.location.href = "http://localhost:3001/products/cart"
                 }, 1600);
 
             } else {
@@ -113,12 +113,12 @@ window.addEventListener('load', function () {
 
                     addProductToCart();
                     setTimeout(function () {
-                        window.location.href = "http://localhost:3000/products/cart"
+                        window.location.href = "http://localhost:3001/products/cart"
                     }, 1600);
 
 
                 } else {
-                    window.location.href = "http://localhost:3000/products/cart"
+                    window.location.href = "http://localhost:3001/products/cart"
                 }
             }
 

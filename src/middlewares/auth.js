@@ -24,7 +24,7 @@ module.exports = async (req, res, next) => {
 
         // y existe el usuario en nuestra base
         if (user) {
-          delete user.password;
+          delete user.dataValues.password;
 
           // Se lo pasamos a la sesión a la vista
           req.session.user = user;

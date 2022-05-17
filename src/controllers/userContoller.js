@@ -20,7 +20,7 @@ const user = {
         // check la password
         if (bcrypt.compareSync(password, user.password)) {
           // Eliminamos la pass para no dejarla a la vista
-          delete user.password;
+          delete user.dataValues.password;
           //Guardamos el usuario en session
           req.session.user = user;
 
@@ -146,6 +146,8 @@ const user = {
 
   saveProfile: async (req, res) => {
     try {
+      console.log(req.session.user);
+      console.log(res.locals.user)
       const userToEdit = await db.User.findByPk(req.params.id);
       
       await db.User.update(
@@ -158,9 +160,11 @@ const user = {
         }
       );
       const user = await db.User.findOne({ where: { id: req.params.id } });
-      delete user.password;
+      delete user.dataValues.password;
+      req.session.destroy();
       req.session.user = user;
-      req.locals.user = user;
+      res.locals.user = user;
+
     } catch (error) {
       console.log(error);
     }
