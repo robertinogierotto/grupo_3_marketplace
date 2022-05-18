@@ -56,12 +56,12 @@ function HandleRefresh () {
         return <SmallCard {...staticx} key={i} />;
       })}
       <button className="btn btn-primary position-relative refreshButtons refreshBUsers" onClick={() => HandleRefresh()}>
-        Refrescar Estadisticas
+        Refrescar Estadísticas
       </button>
       <button className="btn btn-primary position-relative refreshButtons refreshBUsers" onClick={() => HandleRestartClicks()}>
-        Re-iniciar Clicks
+        Re-iniciar Estadísticas
       </button>
-      <p className="btn btn-primary position-relative refreshButtons refreshBUsers specialButt">Estadisticas desde: </p>
+      <p className="btn btn-primary position-relative refreshButtons refreshBUsers specialButt">Estadísticas desde: </p>
     </div>
   );
 }

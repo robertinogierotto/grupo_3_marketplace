@@ -71,12 +71,12 @@ function AdvancedChartPie() {
             <div className='chart'>
                 <CanvasJSChart options={optionsPie} />
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRefresh()}>
-                    Refrescar Estadisticas
+                    Refrescar Estadísticas
                 </button>
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRestartClicks()}>
-                    Re-iniciar Clicks
+                    Re-iniciar Estadísticas
                 </button>
-                <p className="btn btn-primary position-relative periodButton">Estadisticas desde: </p>
+                <p className="btn btn-primary position-relative periodButton">Estadísticas desde: </p>
             </div>
             <div className='pagesTable'>
                 <PagesTable {...deleteCounter} />

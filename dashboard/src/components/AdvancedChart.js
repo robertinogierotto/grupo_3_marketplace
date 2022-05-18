@@ -103,12 +103,12 @@ function AdvancedChart() {
             <div className="chart">
                 <CanvasJSChart options={options} />
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRefresh()}>
-                    Refrescar Estadisticas
+                    Refrescar Estadísticas
                 </button>
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRestartClicks()}>
                     Re-iniciar Clicks
                 </button>
-                <p className="btn btn-primary position-relative periodButton">Estadisticas desde: </p>
+                <p className="btn btn-primary position-relative periodButton">Estadísticas desde: </p>
             </div>
             <div className="productCards">
                 {productsByClick.map((product, i) => {
