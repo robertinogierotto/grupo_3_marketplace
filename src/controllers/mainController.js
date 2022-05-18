@@ -12,15 +12,18 @@ const main = {
                 ['discount', 'DESC']
             ]
         });
-        res.render('home', { styles: 'styles-home.css', productosEnOferta })
+        res.render('home', { styles: 'styles-home.css', productosEnOferta });
+        await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Home'}});
     },
-    whoWeAre: (req, res) => {
+    whoWeAre: async (req, res) => {
         res.render('whoWeAre', { styles: 'styles-whoWeAre.css' })
+        await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Quienes Somos'}});
     },
-    contact: (req, res) => {
-        res.render('contact', { styles: 'styles-contact.css' })
+    contact: async (req, res) => {
+        res.render('contact', { styles: 'styles-contact.css' });
+        await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Contacto'}});
     },
-    sendEmail: (req, res) => {
+    sendEmail: async (req, res) => {
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -131,7 +134,7 @@ const main = {
                                                   <tbody>
                                                     <tr>
                                                       <td style="line-height: 24px; font-size: 16px; border-radius: 6px; font-weight: 700 !important; margin: 0;" align="center" bgcolor="#0d6efd">
-                                                        <a href="http://localhost:3000/contact" style="color: #ffffff; font-size: 16px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 6px; line-height: 20px; display: block; font-weight: 700 !important; white-space: nowrap; background-color: #0d6efd; padding: 12px; border: 1px solid #0d6efd;">Escribir nuevo mensaje</a>
+                                                        <a href="http://localhost:3001/contact" style="color: #ffffff; font-size: 16px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 6px; line-height: 20px; display: block; font-weight: 700 !important; white-space: nowrap; background-color: #0d6efd; padding: 12px; border: 1px solid #0d6efd;">Escribir nuevo mensaje</a>
                                                       </td>
                                                     </tr>
                                                   </tbody>
@@ -210,7 +213,7 @@ const main = {
                 console.log('Email sent: ' + info.response);
             }
         });
-
+        await db.SendedComment.increment('numberOfComments', {by: 1, where: {id: 1}});
     }
 }
 module.exports = main;

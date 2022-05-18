@@ -4,8 +4,9 @@ const { validationResult } = require("express-validator");
 const db = require("../database/models");
 
 const user = {
-  login: (req, res) => {
+  login: async (req, res) => {
     res.render("./user/login", { styles: "styles-login.css" });
+    await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Login'}});
   },
   authenticate: async (req, res) => {
     try {
@@ -45,6 +46,7 @@ const user = {
           }
 
           // Finalmente lo mandamos a la home o a la pagina de administrador si es un admin
+          await db.LoggedUser.increment('numberOfUsers', {by: 1, where: {id: 1}});
           if (req.session.user.categoryId == 2) {
             return res.redirect("/admin");
           } else {
@@ -97,8 +99,9 @@ const user = {
       console.log(error);
     }
   },
-  register: (req, res) => {
+  register: async (req, res) => {
     res.render("./user/register", { styles: "styles-register.css" });
+    await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Register'}});
   },
   saveUser: async (req, res) => {
     let errors = validationResult(req);
@@ -123,13 +126,15 @@ const user = {
         await db.User.create(newUser);
 
         res.redirect("/user/login");
+        await db.NewUser.increment('numberOfNewUsers', {by: 1, where: {id: 1}});
       } catch (error) {
         console.log(error);
       }
     }
   },
-  userProfile: (req, res) => {
+  userProfile: async (req, res) => {
     res.render("./user/userProfile", { styles: "styles-userProfile.css" });
+    await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Perfil de Usuario'}});
   },
 
   editProfile: async (req, res) => {

@@ -2,6 +2,9 @@ import React from 'react';
 import TopBar from './TopBar';
 import Footer from './Footer';
 import AdvancedChart from './AdvancedChart';
+import AdvancedChartPie from './AdvancedChartPie';
+import UserStatics from './UserStatics';
+
 
 
 function AdvancedStatics() {
@@ -12,8 +15,14 @@ function AdvancedStatics() {
                 {/*<!-- Main Content -->*/}
                 <div id="content">
                     <TopBar />
-                    <p className='h2 text-primary text-center'> Productos más clickeados</p>
+                    <p className='h2 text-primary position-absolute ml-5'> Productos más clickeados</p>
                     <AdvancedChart/>
+                    <hr/>
+                    <p className='h2 text-primary position-absolute ml-5 mb-5'> Páginas más visitadas</p>
+                    <AdvancedChartPie/>
+                    <hr/>
+                    <p className='h2 text-primary position-relative ml-5 mb-5'> Estadísticas de Usuario</p>
+                    <UserStatics/>
                     <Footer />
                 </div>
             </div>

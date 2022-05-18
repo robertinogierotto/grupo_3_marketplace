@@ -7,7 +7,7 @@ function SmallCard(staticx){
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
-                            <div className={`text-xs font-weight-bold text-${staticx.color} text-uppercase mb-1`}> {staticx.title}</div>
+                            <div className={`text-xs font-weight-bold text-${staticx.color} text-uppercase mb-1 smallCardTitle`}> {staticx.title}</div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800">{staticx.cuantity}</div>
                         </div>
                         <div className="col-auto">

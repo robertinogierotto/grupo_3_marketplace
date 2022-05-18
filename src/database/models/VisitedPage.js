@@ -1,13 +1,19 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'VisitedPage';
     let cols = {
-        id: {
+        page: {
             type: dataTypes.STRING(50),
             primaryKey: true,
         },
         numberOfvisits: {
             type: dataTypes.INTEGER,
             defaultValue: 0
+        },
+        url: {
+            type: dataTypes.STRING(50),
+        },
+        lastRestarted:{ 
+            type: dataTypes.STRING
         }
     };
     let config = {

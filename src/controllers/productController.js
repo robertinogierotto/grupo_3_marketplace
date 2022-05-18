@@ -19,6 +19,7 @@ const product = {
         video,
         gamer
       });
+      await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Productos'}});
     } catch (error) {
       console.log(error);
     }
@@ -31,12 +32,14 @@ const product = {
         productToShow,
       });
       await db.ClicksByProduct.increment('numberOfClicks', {by: 1, where: {id: req.params.id}});
+      await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Detalle de Productos'}});
     } catch (error) {
       console.log(error);
     }
   },
-  productCart: (req, res) => {
+  productCart: async (req, res) => {
     res.render("./products/productCart", { styles: "styles-productCart.css" });
+    await db.VisitedPage.increment('numberOfVisits', {by: 1, where: {page: 'Carrito de Compras'}});
   },
   productSearch: async (req, res) => {
     try {

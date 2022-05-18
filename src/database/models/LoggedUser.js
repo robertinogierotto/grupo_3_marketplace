@@ -9,8 +9,12 @@ module.exports = (sequelize, dataTypes) => {
         numberOfUsers: {
             type: dataTypes.INTEGER,
             defaultValue: 0
+        },
+        lastRestarted:{ 
+            type: dataTypes.STRING
         }
     };
+    
     let config = {
         tableName: 'loggedusers',
         timestamps: false

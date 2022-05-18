@@ -8,6 +8,9 @@ module.exports = (sequelize, dataTypes) => {
         numberOfClicks: {
             type: dataTypes.INTEGER,
             defaultValue: 0
+        },
+        lastRestarted:{ 
+            type: dataTypes.STRING
         }
     };
     let config = {

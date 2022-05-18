@@ -46,7 +46,7 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/AdvancedStatics">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Estadisticas Avanzadas</span></Link>
+                        <span>Estadísticas Avanzadas</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

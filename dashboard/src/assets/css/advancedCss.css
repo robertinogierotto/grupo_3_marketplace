@@ -7,6 +7,11 @@
     width: 40%;
     margin: 10px;
     align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
 }
 .productCards {
     width: 55%;
@@ -27,4 +32,42 @@
 }
 .cardProducts {
     border: 1px solid blue;
+}
+hr {
+    margin: 4rem;
+    border: 0;
+    border-top: 1.5px solid #3598FE;
+}
+.containerPageClicks {
+    display: flex;
+}
+.pagesTable {
+    width: 55%;
+    margin: 10px;
+}
+.smallCardTitle {
+    font-size: 16px;
+}
+.smallCardsStatics {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.refreshButtons {
+    margin: 10px;
+    width: 250px;
+    top: 42px;
+}
+.refreshBUsers {
+    top: -12px;
+    left: 24px;
+}
+.periodButton {
+    margin: 10px;
+    width: 400px;
+    top: 42px;
+}
+.specialButt {
+    width: 400px;
 }

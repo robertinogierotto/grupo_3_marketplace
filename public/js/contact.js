@@ -64,7 +64,7 @@ window.addEventListener('load', function(){
                 confirmButtonText: 'Perfecto!'
               }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'http://localhost:3000';
+                    window.location.href = 'http://localhost:3001';
                 }
               })
         }

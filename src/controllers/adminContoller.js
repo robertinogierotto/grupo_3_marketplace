@@ -37,6 +37,10 @@ const admin = {
         ...req.body,
         image: req.file.filename,
       });
+      await db.ClicksByProduct.create({
+        id: newProduct.id,
+        numberOfClicks: 0
+      })
       res.redirect("/admin/productsList#" + newProduct.id);
     } catch (error) {
       console.log(error);
