@@ -4,6 +4,8 @@
 <%- include('../partials/head') %>
 <script src="/js/editProfileValidation.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/imageChange.js"></script>
+
 
     <body>
         <!------------------------------------------ header -------------------------------------------------->
@@ -18,8 +20,12 @@
                 <form class="editProfile" action="/user/<%= userToEdit.id %>?_method=PUT" method="POST"
                     enctype="multipart/form-data">
                     <!-- ----IMAGEN----  -->
-
-                    <div class="profilePicture">
+                    <div class="profilePicture" id="imagePreview">
+                        <img src="/images/user/<%= userToEdit.profilePicture %>" alt="" class="image-preview__image"> 
+                        <span class="image-preview__default-text"></span>
+                    </div>
+                    
+                    <div class="profilePicture oldPP">
                         <img src="/images/user/<%= userToEdit.profilePicture %>" alt="">
                     </div>
                     <!-- <button type="submit" class="boton">Cambiar Imágen</button> -->

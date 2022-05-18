@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "",
-    "database": "grupo3marketplace",
+    "database": "test3",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

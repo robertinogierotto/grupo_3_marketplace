@@ -1,5 +1,4 @@
 import React from 'react';
-import favicon from '../assets/images/favicon.jpg';
 
 function Footer(){
     return (

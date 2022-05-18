@@ -88,6 +88,31 @@ div img {
   cursor: pointer;
   color: black;
 }
+.userEditProfile .custom-file-upload:hover {
+  background-color: #3598fe;
+color: black;}
+
+.image-preview__image{
+  width:  250px;
+  height: 250px;
+  object-fit: cover;
+}
+.custom-file-upload {
+  width: 30%;
+  border-radius: 4px;
+  background: black;
+  border: grey solid 2px;
+  margin: 20px;
+  align-self: left;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.oldPP {
+  display: none;
+}
 
 @media (min-width: 480px) {
   .home a {
