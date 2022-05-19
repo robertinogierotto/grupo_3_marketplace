@@ -98,6 +98,10 @@ function AdvancedChart() {
         return setDeleteCounter(deleteCounter +=1);
     };
 
+    if(productsByClick.length === 0){
+        return <p></p>;
+    }
+
     return (
         <div className="containerProductsClicks">
             <div className="chart">
@@ -106,9 +110,9 @@ function AdvancedChart() {
                     Refrescar Estadísticas
                 </button>
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRestartClicks()}>
-                    Re-iniciar Clicks
+                    Reiniciar Estadísticas
                 </button>
-                <p className="btn btn-primary position-relative periodButton">Estadísticas desde: </p>
+                <p className="btn btn-info position-relative periodButton anotherButtonClass">Estadísticas desde: {productsByClick[0].ClicksByProduct.lastRestarted} </p>
             </div>
             <div className="productCards">
                 {productsByClick.map((product, i) => {

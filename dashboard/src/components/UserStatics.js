@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 function UserStatics() {
   const [userStatics, setUserStatics] = useState([]);
+  const [userLastModified, setUserLastModified] = useState([]);
   let [deleteCounter, setDeleteCounter] = useState([]);
 
 
@@ -40,6 +41,14 @@ function UserStatics() {
       });
   }, [deleteCounter]);
 
+  useEffect(() => {
+    fetch("api/userStatics")
+        .then((response) => response.json())
+        .then((data) => {
+          setUserLastModified(data.data.lastRestarted);
+        });
+}, [deleteCounter]);
+
   function HandleRestartClicks () {
     fetch("api/userStatics", { method: "DELETE" })
     .then(value => setDeleteCounter(deleteCounter += 1));
@@ -48,6 +57,10 @@ function UserStatics() {
 function HandleRefresh () {
   return setDeleteCounter(deleteCounter +=1);
 };
+
+if(!userLastModified){
+  return <p></p>;
+}
 
   return (
     <div className="smallCardsStatics">
@@ -59,9 +72,9 @@ function HandleRefresh () {
         Refrescar Estadísticas
       </button>
       <button className="btn btn-primary position-relative refreshButtons refreshBUsers" onClick={() => HandleRestartClicks()}>
-        Re-iniciar Estadísticas
+        Reiniciar Estadísticas
       </button>
-      <p className="btn btn-primary position-relative refreshButtons refreshBUsers specialButt">Estadísticas desde: </p>
+      <p className="btn btn-info position-relative refreshButtons refreshBUsers specialButt anotherButtonClass">Estadísticas desde: {userLastModified} </p>
     </div>
   );
 }

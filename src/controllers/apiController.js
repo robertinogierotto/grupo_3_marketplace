@@ -163,7 +163,8 @@ const apiController = {
                     totalUsers: users.length,
                     loggedUsers: loggedUsers.numberOfUsers,
                     comments: comments.numberOfComments,
-                    newUsers: newUsers.numberOfNewUsers
+                    newUsers: newUsers.numberOfNewUsers,
+                    lastRestarted: loggedUsers.lastRestarted
                 }
             };
 

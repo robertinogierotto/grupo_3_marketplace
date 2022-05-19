@@ -71,3 +71,6 @@ hr {
 .specialButt {
     width: 400px;
 }
+.anotherButtonClass {
+    border: blue solid 2px;
+}

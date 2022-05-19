@@ -66,6 +66,10 @@ function AdvancedChartPie() {
         return setDeleteCounter(deleteCounter +=1);
     };
 
+    if(pages.length === 0){
+        return <p></p>;
+    }
+
     return (
         <div className='containerPageClicks'>
             <div className='chart'>
@@ -74,9 +78,9 @@ function AdvancedChartPie() {
                     Refrescar Estadísticas
                 </button>
                 <button className="btn btn-primary position-relative refreshButtons" onClick={() => HandleRestartClicks()}>
-                    Re-iniciar Estadísticas
+                    Reiniciar Estadísticas
                 </button>
-                <p className="btn btn-primary position-relative periodButton">Estadísticas desde: </p>
+                <p className="btn btn-info position-relative periodButton anotherButtonClass">Estadísticas desde: {pages[0].lastRestarted} </p>
             </div>
             <div className='pagesTable'>
                 <PagesTable {...deleteCounter} />
