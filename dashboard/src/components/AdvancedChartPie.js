@@ -26,11 +26,11 @@ function AdvancedChartPie() {
                     data: [{
                         type: "pie",
                         startAngle: 75,
-                        toolTipContent: "<b>{label}</b>: {y}%",
+                        toolTipContent: "<b>{label}</b>: {y} visitas",
                         showInLegend: "true",
                         legendText: "{label}",
                         indexLabelFontSize: 16,
-                        indexLabel: "{label} - {y}%",
+                        indexLabel: "{label}",
                         dataPoints: [
                             { y: data.data[0].numberOfvisits, label: data.data[0].page },
                             { y: data.data[1].numberOfvisits, label: data.data[1].page },
