@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
 
         let errors = [];
         
-        let image = document.querySelector('#files');
+        let image = document.querySelector('.inputImg');
         let name = document.querySelector('#name');
         let price = document.querySelector('#price');
         let discount = document.querySelector('#discount');

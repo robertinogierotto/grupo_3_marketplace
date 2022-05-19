@@ -28,7 +28,7 @@ router.get("/productsList", adminController.productsList);
 router.get("/usersList", adminController.usersList);
 /* para agregar productos */
 router.get("/createProduct", adminController.createProduct);
-router.post("/", upload.single("image"), adminController.addProduct);
+router.post("/", upload.single("inpFile"), adminController.addProduct);
 /* para modificar productos */
 router.get("/editProduct/:id", adminController.editProduct);
 router.put("/:id", upload.single("image"), adminController.saveProduct);
