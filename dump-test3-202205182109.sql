@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: grupo3marketplace
+-- Host: localhost    Database: test3
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.22-MariaDB
 
@@ -14,6 +14,81 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `clicksbyproducts`
+--
+
+DROP TABLE IF EXISTS `clicksbyproducts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clicksbyproducts` (
+  `id` int(11) NOT NULL,
+  `numberOfClicks` int(11) DEFAULT 0,
+  `lastRestarted` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK_19637d65-761d-4b62-b0d7-d2a0d2b9c005` FOREIGN KEY (`id`) REFERENCES `products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clicksbyproducts`
+--
+
+LOCK TABLES `clicksbyproducts` WRITE;
+/*!40000 ALTER TABLE `clicksbyproducts` DISABLE KEYS */;
+INSERT INTO `clicksbyproducts` VALUES (1,2,'18/5/2022 20:46:39'),(2,2,'18/5/2022 20:46:39'),(3,3,'18/5/2022 20:46:39'),(4,3,'18/5/2022 20:46:39'),(5,1,'18/5/2022 20:46:39'),(6,0,'18/5/2022 20:46:39'),(7,1,'18/5/2022 20:46:39'),(8,0,'18/5/2022 20:46:39'),(9,1,'18/5/2022 20:46:39'),(10,0,'18/5/2022 20:46:39'),(11,0,'18/5/2022 20:46:39'),(12,2,'18/5/2022 20:46:39'),(13,0,'18/5/2022 20:46:39'),(14,0,'18/5/2022 20:46:39'),(15,0,'18/5/2022 20:46:39'),(34,0,'18/5/2022 20:46:39'),(35,0,'18/5/2022 20:46:39'),(36,0,'18/5/2022 20:46:39'),(37,0,'18/5/2022 20:46:39'),(38,0,'18/5/2022 20:46:39');
+/*!40000 ALTER TABLE `clicksbyproducts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `loggedusers`
+--
+
+DROP TABLE IF EXISTS `loggedusers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `loggedusers` (
+  `id` int(11) NOT NULL,
+  `numberOfUsers` int(11) DEFAULT 0,
+  `lastRestarted` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `loggedusers`
+--
+
+LOCK TABLES `loggedusers` WRITE;
+/*!40000 ALTER TABLE `loggedusers` DISABLE KEYS */;
+INSERT INTO `loggedusers` VALUES (1,1,'18/5/2022 20:46:54');
+/*!40000 ALTER TABLE `loggedusers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `newusers`
+--
+
+DROP TABLE IF EXISTS `newusers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `newusers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `numberOfNewUsers` int(11) DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `newusers`
+--
+
+LOCK TABLES `newusers` WRITE;
+/*!40000 ALTER TABLE `newusers` DISABLE KEYS */;
+INSERT INTO `newusers` VALUES (1,0);
+/*!40000 ALTER TABLE `newusers` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `products`
@@ -38,7 +113,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `FK_86652ee9-9c2d-4ca2-a1d5-e44cb18a9d10` (`productsCategoryId`),
   CONSTRAINT `FK_86652ee9-9c2d-4ca2-a1d5-e44cb18a9d10` FOREIGN KEY (`productsCategoryId`) REFERENCES `productscategory` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,6 +151,30 @@ INSERT INTO `productscategory` VALUES (1,'gamer'),(2,'video'),(3,'phones');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `sendedcomments`
+--
+
+DROP TABLE IF EXISTS `sendedcomments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sendedcomments` (
+  `id` int(11) NOT NULL,
+  `numberOfComments` int(11) DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sendedcomments`
+--
+
+LOCK TABLES `sendedcomments` WRITE;
+/*!40000 ALTER TABLE `sendedcomments` DISABLE KEYS */;
+INSERT INTO `sendedcomments` VALUES (1,0);
+/*!40000 ALTER TABLE `sendedcomments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -94,7 +193,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `FK_48befb0f-ebf6-4d1e-a562-7f6bc803e5bd` (`categoryId`),
   CONSTRAINT `FK_48befb0f-ebf6-4d1e-a562-7f6bc803e5bd` FOREIGN KEY (`categoryId`) REFERENCES `userscategory` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +202,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Will','Marriaga','usuariopedroperez@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','any-3.png','on',2),(2,'Admin','Test','admtest@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','any-5.png','on',2),(3,'User','Test','usertest@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','any-1.png','on',1);
+INSERT INTO `users` VALUES (1,'Will','Marriaga','usuariopedroperez@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','any-3.png','on',2),(2,'Admin','Test','admtest@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','profilePicture-1652837065789.png','on',2),(3,'User2','Test2','usertest@gmail.com','$2a$10$FGY9yx3FrG9YO3yPTljRzuvRp0V0n9d2TIDArHm/Fqwcdn/pRnjNy','profilePicture-1652914403083.PNG','on',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +244,7 @@ CREATE TABLE `userslog` (
   PRIMARY KEY (`id`),
   KEY `FK_cff6bcf9-4d22-4959-8cbb-1136545c1acd` (`userId`),
   CONSTRAINT `FK_cff6bcf9-4d22-4959-8cbb-1136545c1acd` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,12 +253,38 @@ CREATE TABLE `userslog` (
 
 LOCK TABLES `userslog` WRITE;
 /*!40000 ALTER TABLE `userslog` DISABLE KEYS */;
-INSERT INTO `userslog` VALUES (17,'VKTHjv2z10FvgUDKbnZvQM81rVL+7YiBtPSrxVTxf9pECmyMadhNjFBoe+OqaIDLl7RbnfEW3IoHBijztroI5g==',2),(22,'Je1FcuNBa7nEXhkpU4kquEqqsI0agSCeMv+uu7O5G22qglTGF6B9QFQ4k43cW/aT9P9h1lG3cFwEFxLse6F36A==',2),(23,'BlC39W/jQ1lS91L0a9yz9DQBomAXsVL+rT3AdAFjFq0pEdbJOA3IeVncLkjnTad8jHvYTNKE8a1dbDWemldEZw==',2),(41,'P8JzlOhq/LNofQNWLWJWrSbenrwDedgfaKmGIfyoX69SzMMLZfSgEPbnHRGGUZYVz+jzXNPTjay6OTCarfP0hw==',2);
+INSERT INTO `userslog` VALUES (17,'VKTHjv2z10FvgUDKbnZvQM81rVL+7YiBtPSrxVTxf9pECmyMadhNjFBoe+OqaIDLl7RbnfEW3IoHBijztroI5g==',2),(22,'Je1FcuNBa7nEXhkpU4kquEqqsI0agSCeMv+uu7O5G22qglTGF6B9QFQ4k43cW/aT9P9h1lG3cFwEFxLse6F36A==',2),(23,'BlC39W/jQ1lS91L0a9yz9DQBomAXsVL+rT3AdAFjFq0pEdbJOA3IeVncLkjnTad8jHvYTNKE8a1dbDWemldEZw==',2),(41,'P8JzlOhq/LNofQNWLWJWrSbenrwDedgfaKmGIfyoX69SzMMLZfSgEPbnHRGGUZYVz+jzXNPTjay6OTCarfP0hw==',2),(52,'2eFVjnSu0ohs2L0rTrRXvRCHXw+edsxgdIqk7NP7XeTRnkUQJY2RAS9aTBkuVDpA0DiPMNklh60w91db5zhfwg==',2);
 /*!40000 ALTER TABLE `userslog` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'grupo3marketplace'
+-- Table structure for table `visitedpages`
+--
+
+DROP TABLE IF EXISTS `visitedpages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `visitedpages` (
+  `page` varchar(50) NOT NULL,
+  `numberOfVisits` int(11) DEFAULT 0,
+  `url` varchar(100) DEFAULT NULL,
+  `lastRestarted` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`page`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `visitedpages`
+--
+
+LOCK TABLES `visitedpages` WRITE;
+/*!40000 ALTER TABLE `visitedpages` DISABLE KEYS */;
+INSERT INTO `visitedpages` VALUES ('Carrito de Compras',0,'http://localhost:3001/products/cart','18/5/2022 20:46:47'),('Contacto',1,'http://localhost:3001/contact','18/5/2022 20:46:47'),('Detalle de Productos',15,'http://localhost:3001/products/details/3','18/5/2022 20:46:47'),('Home',2,'http://localhost:3001/','18/5/2022 20:46:47'),('Login',1,'http://localhost:3001/user/login','18/5/2022 20:46:47'),('Perfil de Usuario',0,'http://localhost:3001/user/userProfile','18/5/2022 20:46:47'),('Productos',1,'http://localhost:3001/products','18/5/2022 20:46:47'),('Quienes Somos',1,'http://localhost:3001/whoWeAre','18/5/2022 20:46:47'),('Register',0,'http://localhost:3001/user/register','18/5/2022 20:46:47');
+/*!40000 ALTER TABLE `visitedpages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'test3'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -171,4 +296,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-12 23:17:15
+-- Dump completed on 2022-05-18 21:09:02
