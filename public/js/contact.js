@@ -21,7 +21,7 @@ window.addEventListener('load', function(){
             name.classList.remove('error');
         };
         if (!email.value) {
-            errors.push('Debe su email');
+            errors.push('Debe introducir su email');
             email.classList.add('error');            
         } else {
             email.classList.remove('error');
