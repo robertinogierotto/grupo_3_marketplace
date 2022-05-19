@@ -20,6 +20,7 @@ function AdvancedChartPie() {
                 setOptionsPie({
                     exportEnabled: true,
                     animationEnabled: true,
+                    animationDuration: 4000,
                     title: {
                         text: ""
                     },
