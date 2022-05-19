@@ -33,7 +33,7 @@ function UserStatics() {
           },
           {
             title: "Comentarios enviados en este período",
-            color: "primary",
+            color: "success",
             cuantity: data.data.comments,
             icon: "fa-comment"
           }

@@ -46,8 +46,7 @@ window.addEventListener('load', function(){
                })
             .then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = 'http://localhost:3000';
-                  location.reload();
+                  window.location.href = 'http://localhost:3001/user/userProfile';
                 }
               })
         }

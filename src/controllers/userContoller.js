@@ -139,10 +139,8 @@ const user = {
 
   editProfile: async (req, res) => {
     try {
-      let userToEdit = await db.User.findByPk(req.params.id);
       res.render("./user/editProfile", {
         styles: "styles-editProfile.css",
-        userToEdit,
       });
     } catch (error) {
       console.log(error);
@@ -151,7 +149,7 @@ const user = {
 
   saveProfile: async (req, res) => {
     try {
-      const userToEdit = await db.User.findByPk(req.params.id);
+      const userToEdit = await db.User.findByPk(req.body.id);
       
       await db.User.update(
         {
@@ -159,7 +157,7 @@ const user = {
           profilePicture: req.file ? req.file.filename : userToEdit.profilePicture,
         },
         {
-          where: { id: req.params.id },
+          where: { id: req.body.id },
         }
       );
       req.session.destroy();

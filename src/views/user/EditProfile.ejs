@@ -17,16 +17,16 @@
                 <h1 class="titulo1"> <i class="fas fa-user"></i></i> Datos de Usuario </h1>
                 </div>
                 <ul class="errors"></ul>
-                <form class="editProfile" action="/user/<%= userToEdit.id %>?_method=PUT" method="POST"
+                <form class="editProfile" action="/user/<%= user.id %>?_method=PUT" method="POST"
                     enctype="multipart/form-data">
                     <!-- ----IMAGEN----  -->
                     <div class="profilePicture" id="imagePreview">
-                        <img src="/images/user/<%= userToEdit.profilePicture %>" alt="" class="image-preview__image"> 
+                        <img src="/images/user/<%= user.profilePicture %>" alt="" class="image-preview__image"> 
                         <span class="image-preview__default-text"></span>
                     </div>
                     
                     <div class="profilePicture oldPP">
-                        <img src="/images/user/<%= userToEdit.profilePicture %>" alt="">
+                        <img src="/images/user/<%= user.profilePicture %>" alt="">
                     </div>
                     <!-- <button type="submit" class="boton">Cambiar Imágen</button> -->
                     <label for="files" class="btn">Cambiar Imágen</label>
@@ -35,14 +35,14 @@
                     <!-- ----NOMBRE----  FALTA CONCATENAR EL BIENVENIDO+NOMBRE-->
                     <div class="datosUser">
                         <label for="">Nombre: </label>
-                        <input type="text" id="name" name="name" value=<%=userToEdit.name %>>
+                        <input type="text" id="name" name="name" value='<%= user.name %>'>
                     </div>
-
+                    <input type="hidden" id="id" name="id" value='<%= user.id %>' >
                     <!-- ----APELLIDO----  -->
 
                     <div class="datosUser">
                         <label for="">Apellido: </label>
-                        <input type="text" id="lastName" name="lastName" value=<%=userToEdit.lastName %>>
+                        <input type="text" id="lastName" name="lastName" value=<%=user.lastName %>>
                     </div>
 
 

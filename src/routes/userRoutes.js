@@ -62,7 +62,7 @@ router.post(
   userController.saveUser
 );
 /* para el perfil del usuario */
-router.get("/userProfile/:id", userRoute, userController.userProfile);
-router.get("/editProfile/:id", userRoute, userController.editProfile);
+router.get("/userProfile", userRoute, userController.userProfile);
+router.get("/editProfile", userRoute, userController.editProfile);
 router.put("/:id",upload.single("profilePicture"), userRoute, userController.saveProfile);
 module.exports = router;
