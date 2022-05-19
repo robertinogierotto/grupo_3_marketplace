@@ -54,7 +54,7 @@ main h4 {
   border: grey solid 2px;
   margin-left: 20px;
   background-color: black;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .infoCategoria {
@@ -118,6 +118,34 @@ main h4 {
   border-radius: 20px;
   font-size: 0.8rem;
   margin: 5px;
+}
+.image-preview__image{
+  width:  300px;
+  height: 300px;
+  object-fit: cover;
+}
+.custom-file-upload {
+  width: 30%;
+  border-radius: 4px;
+  background: black;
+  border: grey solid 2px;
+  margin-left: 20px;
+  align-self: left;
+  padding: 3px 5px 3px 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+input[type="file"] {
+display: none;
+}
+.custom-file-upload:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
 }
 
 /* AGREGAR CODIGO ACA PARA MOVILES  */

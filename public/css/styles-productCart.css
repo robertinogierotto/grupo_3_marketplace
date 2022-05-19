@@ -76,6 +76,9 @@
 .plus-btn i, .minus-btn i {
     font-size: 0.8rem;
 }
+.plus-btn:hover, .minus-btn:hover{
+    cursor: pointer;
+}
 .add {
     color: #000000;
     background-color: #ff0000;
@@ -83,6 +86,9 @@
     font-size: 1rem;
     box-sizing: border-box;
     padding: 3px;
+}
+.add:hover{
+    cursor: pointer;
 }
 .q-input {
     width: 30px;
@@ -128,6 +134,7 @@
     font-weight: 600;
     transition: all 0.5s;
     color: white;
+    
 }
 .addproduct {
     padding: 10px;
@@ -142,6 +149,7 @@
 .addproduct:hover, .confirm:hover {
     background-color: yellow;
     color: black;
+    cursor: pointer;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

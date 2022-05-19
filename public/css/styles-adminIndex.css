@@ -54,6 +54,7 @@ main h3 {
 .btn-in:hover {
   background: linear-gradient(yellow, gold);
   color: black;
+  cursor: pointer;
 }
 
 

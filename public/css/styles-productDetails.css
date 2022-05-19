@@ -83,6 +83,7 @@
 .add-to-cart:hover, .buy-now:hover {
     background-color: yellow;
     color: black;
+    cursor: pointer;
 }
 .off {
     color: green;
@@ -156,6 +157,7 @@
 .goBackButton:hover {
     background-color: yellow;
     color: black;
+    cursor: pointer;
 }
 
 

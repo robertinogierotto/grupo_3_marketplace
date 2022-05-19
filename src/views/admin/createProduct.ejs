@@ -12,11 +12,19 @@
             <main class="">
                 <h4 class="tituloProducto">CREAR PRODUCTOS</h4>
                 <form class="productForm" action= "/admin" method="POST" enctype="multipart/form-data">
-                    <div class="imagenLogo">
-                        <img class='imagenLogo1' src="/images/logo-imagen2.png" alt="logo">
-                    </div>
-                    <label for="files" class="btn">Cargar Imagen</label>
-                    <input type="file" id='files' name="image" style="display:none">
+                    
+                    <!-----imagen-->
+                    <div class="imagenLogo" id="imagePreview">
+                        <img src="/images/logo-imagen2.png" alt="" class="image-preview__image"> 
+                        <span class="image-preview__default-text"></span></div>
+                        <br>
+                
+                        <label class="custom-file-upload">
+                            <input type="file" name="inpFile" id="inpFile">
+                            Cargar Imagen
+                        </label>
+                        <!----------->
+                    <br>
                     <div class='formularioProducto'>
                         <ul class="errors"></ul>
                         <input class="infoCategoria short" type="text" name="name" id="name" placeholder="Nombre del Producto" >
@@ -60,5 +68,5 @@
             <!------------------------------------------ footer ---------------------------------------------------->
             <%- include('../partials/footer') %>
     </body>
-
+    <script src="/js/previewImage.js"></script>
 </html>
